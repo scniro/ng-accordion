@@ -1,0 +1,24 @@
+{
+  "name": "ng-accordian",
+  "version": "0.0.1",
+  "homepage": "https://github.com/scniro/ng-accordian",
+  "authors": [
+    "@scniro"
+  ],
+  "description": "A simple, dependency free AngularJS accordian style directive",
+  "main": "ngAccordian.js",
+  "keywords": [
+    "accordian",
+    "angular",
+    "angularjs",
+    "ngaccordian"
+  ],
+  "license": "GPLv2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

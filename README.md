@@ -78,3 +78,7 @@ $scope.content = [
 | ------------------------- |:--------------------------------------------------|
 |  `toggle-icon="chevron"`  | [JSFiddle](http://jsfiddle.net/sniro/1eovLxpo/)	|
 |  `toggle-icon="plus"`     | [JSFiddle](http://jsfiddle.net/sniro/hvczkjeo/)	|     
+
+# Core Team Members
+
+ - [@scniro](https://twitter.com/scniro)
