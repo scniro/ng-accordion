@@ -3,6 +3,10 @@ A simple, dependency free AngularJS accordian style directive
 
 # Getting Started
 
+```
+bower install ng-accordian
+```
+
  * Include the `ngAccordian` module as a dependency in your AngularJS application 
 
 ```javascript
