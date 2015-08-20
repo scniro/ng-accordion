@@ -1,6 +1,6 @@
 {
   "name": "ng-accordian",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/scniro/ng-accordian",
   "authors": [
     "Sal Niro @scniro"
@@ -14,6 +14,9 @@
     "ngaccordian"
   ],
   "license": "GPLv2",
+  "dependencies": {
+    "angular": "^1.2"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
