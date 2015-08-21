@@ -16,7 +16,7 @@ angular.module('app', ['ngAccordian'])
  * Include the `ngAccordian.css` style sheet
 
 ```html
-<link rel="stylesheet" href="/ngAccordian.css" />
+<link rel="stylesheet" href="/ng-accordian.css" />
 ```
 
 # Basic Usage
@@ -64,7 +64,7 @@ $scope.content = [
 **As a standalone dropdown**
 
 ```html
-<toggle content-url="/views/demo-content.html"></toggle>
+<toggle content-url="/views/content.html"></toggle>
 ```
 
 # Attribute Usage
