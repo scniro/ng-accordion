@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>ng-accordian</title>
+
+    <link rel="stylesheet" href="../src/css/ng-accordian.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+</head>
+<body>
+    <div ng-controller="ctrl">
+        <accordian close-others="true"
+                   toggle-icon="chevron">
+            <toggle content-url="template/content.html"></toggle>
+            <toggle content-url="template/content.html"></toggle>
+            <toggle content-url="template/content.html"></toggle>
+        </accordian>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="../src/js/ng-accordian.js"></script>
+</body>
+</html>
