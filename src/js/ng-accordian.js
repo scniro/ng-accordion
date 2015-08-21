@@ -61,8 +61,6 @@
         require: '?^accordian',
         link: function (scope, elem, attrs, parent) {
 
-            console.log(scope.contentUrl);
-
             var config = parent ? parent.getConfiguration() : {};
 
             elem.css('display', 'block');
