@@ -13,7 +13,7 @@ bower install ng-accordian
 angular.module('app', ['ngAccordian'])
 ```
 
- * Include the `ngAccordian.css` style sheet
+ * Include the `ng-accordian.css` style sheet
 
 ```html
 <link rel="stylesheet" href="/ng-accordian.css" />
