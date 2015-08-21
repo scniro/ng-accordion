@@ -24,9 +24,9 @@ angular.module('app', ['ngAccordian'])
 **With templating** via `content-url`
 ```html
 <accordian >
-  <toggle content-url="/some-content.html"></toggle>
-  <toggle content-url="/some-content.html"></toggle>
-  <toggle content-url="/some-content.html"></toggle>
+  <toggle content-url="/views/content.html"></toggle>
+  <toggle content-url="/views/content.html"></toggle>
+  <toggle content-url="/views/content.html"></toggle>
 </accordian>
 ```
 
@@ -39,9 +39,9 @@ angular.module('app', ['ngAccordian'])
 
 ```javascript
 $scope.content = [
-  { 'value': '/views/demo-content.html' },
-  { 'value': '/views/demo-content.html' },
-  { 'value': '/views/demo-content.html' }
+  { 'value': '/views/content.html' },
+  { 'value': '/views/content.html' },
+  { 'value': '/views/content.html' }
 ];
 ```
 
