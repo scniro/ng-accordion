@@ -1,4 +1,8 @@
-﻿toggle {
+﻿accordian {
+    width: 100%;
+}
+
+toggle {
     margin: 0.250em 0 0.250em 0;
 }
 

@@ -20,7 +20,7 @@ function init() {
 
             function getStyle(code) {
                 switch (code) {
-                    case 'chevron': this.style = '<div class="chevron" ng-style="{\'height\':  height  + \'px\', \'width\':  height + \'px\'}" ng-class="{\'open\': toggle}"><div class="chevron" ng-style="{\'height\':  (height / 2) + \'px\', \'width\':  (height / 2) + \'px\', \'left\':  (height / 4) + \'px\', \'top\':  (height / 4) + \'px\'}"></div></div>';
+                    case 'chevron': this.style = '<div class="chevron" ng-style="{\'width\': height + \'px\'}" style="height: 100%;" ng-class="{\'open\': toggle}"><div class="chevron" style="height: 50%; width: 50%; left: 25%; top: 25%"></div></div>';
                         break;
                     case 'plus':
                         this.style = '<div class="plus" ng-style="{\'height\':  ((height * 0.67) | number: 0 ) + \'px\', \'width\':  ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\'}" ng-class="{\'open\': toggle}"><div></div><div></div><div></div><div></div></div>';
