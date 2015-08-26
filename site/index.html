@@ -8,11 +8,15 @@
 </head>
 <body>
     <div ng-controller="ctrl">
-        <accordian close-others="true"
+        <!--<accordian close-others="true"
                    toggle-icon="chevron">
             <toggle content-url="template/content.html"></toggle>
             <toggle content-url="template/content.html"></toggle>
             <toggle content-url="template/content.html"></toggle>
+        </accordian>-->
+
+        <accordian>
+            <toggle ng-repeat="o in values" content-url="template/scoped-content.html" model-name="o" ng-model="o"></toggle>
         </accordian>
     </div>
 

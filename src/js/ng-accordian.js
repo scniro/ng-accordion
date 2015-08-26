@@ -58,16 +58,23 @@ function init() {
                 scope: {
                     content: '@',
                     contentUrl: '@',
-                    toggleIcon: '@'
+                    toggleIcon: '@',
+                    modelName: '@'
                 },
-                require: '?^accordian',
+                require: ['?^accordian', '?^ngModel'],
                 link: function (scope, elem, attrs, parent) {
 
-                    var config = parent ? parent.getConfiguration() : {};
+                    var config = parent[0] ? parent[0].getConfiguration() : {};
+
+                    if (parent[1]) {
+                        $timeout(function () {
+                            scope[scope.modelName] = parent[1].$modelValue;
+                        });
+                    }
 
                     elem.css('display', 'block');
 
-                    var style = scope.toggleIcon ? accordianStyleFactory.getStyle(scope.toggleIcon) : parent ? config.toggleIcon : '';
+                    var style = scope.toggleIcon ? accordianStyleFactory.getStyle(scope.toggleIcon) : parent[0] ? config.toggleIcon : '';
 
                     var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" ng-html="content" class="toggle-body"></div>';
 

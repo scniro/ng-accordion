@@ -12,5 +12,18 @@ app.controller('ctrl', function ($scope) {
         { 'value': '<span>yo!</span>' },
         { 'value': '<span>yo!</span>' }
     ];
+
+    $scope.values = [
+        {
+            'name': 'bob',
+            'age': 20
+        }, {
+            'name': 'susy',
+            'age': 24
+        }, {
+            'name': 'daisy',
+            'age': 26
+        }
+    ];
 });
 
