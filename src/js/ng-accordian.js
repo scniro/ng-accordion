@@ -1,5 +1,14 @@
 ﻿
 function init() {
+
+    function NgAccordianException(message) {
+        this.name = 'MyException';
+        this.message = message;
+    }
+
+    NgAccordianException.prototype = new Error();
+    NgAccordianException.prototype.constructor = NgAccordianException;
+
     angular.module('ngAccordian', [])
         .factory('accordianStyleFactory', [function () {
 
@@ -64,6 +73,10 @@ function init() {
                 require: ['?^accordian', '?^ngModel'],
                 link: function (scope, elem, attrs, parent) {
 
+                    if (parent[1] && !scope.modelName) {
+                        throw new NgAccordianException('ngAccordian: ng-model requires attribute model-name to be specified.');
+                    }
+
                     var config = parent[0] ? parent[0].getConfiguration() : {};
 
                     if (parent[1]) {
@@ -76,7 +89,13 @@ function init() {
 
                     var style = scope.toggleIcon ? accordianStyleFactory.getStyle(scope.toggleIcon) : parent[0] ? config.toggleIcon : '';
 
+                    //var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" class="toggle-body">' + ctx.html() + '</div>';
+
+
+
                     var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" ng-html="content" class="toggle-body"></div>';
+
+                    console.log(scope.content);
 
                     var tpl =
                         '<div class="toggle-header" ng-click="toggleBody()">' +

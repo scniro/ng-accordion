@@ -1,6 +1,6 @@
 ﻿var app = angular.module('app', ['ngAccordian']);
 
-app.controller('ctrl', function ($scope) {
+app.controller('ctrl', function($scope) {
     $scope.content = [
         { 'value': '/views/demo-content.html' },
         { 'value': '/views/demo-content.html' },
@@ -25,5 +25,7 @@ app.controller('ctrl', function ($scope) {
             'age': 26
         }
     ];
+
+    $scope.scopeContent = '<span>yo {{ o.name }}</span>';
 });
 

@@ -13,10 +13,15 @@
             <toggle content-url="template/content.html"></toggle>
             <toggle content-url="template/content.html"></toggle>
             <toggle content-url="template/content.html"></toggle>
-        </accordian>-->
+        </accordian>
 
         <accordian>
             <toggle ng-repeat="o in values" content-url="template/scoped-content.html" model-name="o" ng-model="o"></toggle>
+        </accordian>-->
+
+
+        <accordian>
+            <toggle ng-repeat="o in values" content="{{ scopeContent }}" model-name="o" ng-model="o"></toggle>
         </accordian>
     </div>
 
