@@ -1,0 +1,20 @@
+{
+  "name": "ng-accordian",
+  "version": "0.0.7",
+  "description": "A simple, dependency free AngularJS accordian style directive",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scniro/ng-accordian.git"
+  },
+  "author": "Sal Niro @scniro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scniro/ng-accordian/issues"
+  },
+  "homepage": "https://github.com/scniro/ng-accordian#readme"
+}
