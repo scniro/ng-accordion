@@ -7,10 +7,10 @@ app.controller('ctrl', function($scope) {
         { 'value': '/views/demo-content.html' }
     ];
 
-    $scope.content2 = [
-        { 'value': '<span>yo!</span>' },
-        { 'value': '<span>yo!</span>' },
-        { 'value': '<span>yo!</span>' }
+    $scope.staticContent = [
+        { 'value': '<span> er </span>' },
+        { 'value': '<span> um </span>' },
+        { 'value': '<span> eh </span>' }
     ];
 
     $scope.values = [

@@ -1,8 +1,7 @@
-﻿
-function init() {
+﻿function init() {
 
     function NgAccordianException(message) {
-        this.name = 'MyException';
+        this.name = 'NgAccordianException';
         this.message = message;
     }
 
@@ -12,27 +11,13 @@ function init() {
     angular.module('ngAccordian', [])
         .factory('accordianStyleFactory', [function () {
 
-            (function () {
-                var css = '.plus div { width: 50%; height: 50%; float: left; box-sizing: border-box; } .chevron { position: relative; box-sizing: border-box; }',
-                    head = document.head || document.getElementsByTagName('head')[0],
-                    style = document.createElement('style');
-
-                style.type = 'text/css';
-                if (style.styleSheet) {
-                    style.styleSheet.cssText = css;
-                } else {
-                    style.appendChild(document.createTextNode(css));
-                }
-
-                head.appendChild(style);
-            }());
-
             function getStyle(code) {
                 switch (code) {
-                    case 'chevron': this.style = '<div class="chevron" ng-style="{\'width\': height + \'px\'}" style="height: 100%;" ng-class="{\'open\': toggle}"><div class="chevron" style="height: 50%; width: 50%; left: 25%; top: 25%"></div></div>';
+                    case 'chevron':
+                        this.style = '<div class="chevron" ng-style="{\'width\': height + \'px\'}" style="height: 100%;" ng-class="{\'open\': toggle}"><div class="chevron" style="height: 50%; width: 50%; left: 25%; top: 25%"></div></div>';
                         break;
                     case 'plus':
-                        this.style = '<div class="plus" ng-style="{\'height\':  ((height * 0.67) | number: 0 ) + \'px\', \'width\':  ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\'}" ng-class="{\'open\': toggle}"><div></div><div></div><div></div><div></div></div>';
+                        this.style = '<div class="plus" ng-style="{\'width\':  ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\'}"  style="height: 66.6667%" ng-class="{\'open\': toggle}"><div></div><div></div><div></div><div></div></div>';
                         break;
                     default:
                         this.style = '';
@@ -89,13 +74,7 @@ function init() {
 
                     var style = scope.toggleIcon ? accordianStyleFactory.getStyle(scope.toggleIcon) : parent[0] ? config.toggleIcon : '';
 
-                    //var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" class="toggle-body">' + ctx.html() + '</div>';
-
-
-
                     var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" ng-html="content" class="toggle-body"></div>';
-
-                    console.log(scope.content);
 
                     var tpl =
                         '<div class="toggle-header" ng-click="toggleBody()">' +

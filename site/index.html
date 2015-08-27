@@ -8,17 +8,40 @@
 </head>
 <body>
     <div ng-controller="ctrl">
-        <!--<accordian close-others="true"
-                   toggle-icon="chevron">
+
+        <hr />
+        <h2>static template url</h2>
+
+        <accordian toggle-icon="chevron">
             <toggle content-url="template/content.html"></toggle>
             <toggle content-url="template/content.html"></toggle>
             <toggle content-url="template/content.html"></toggle>
         </accordian>
 
-        <accordian>
-            <toggle ng-repeat="o in values" content-url="template/scoped-content.html" model-name="o" ng-model="o"></toggle>
-        </accordian>-->
+        <hr />
+        <h2>scoped template url</h2>
 
+        <accordian toggle-icon="plus">
+            <toggle ng-repeat="o in values" content-url="template/scoped-content.html" model-name="o" ng-model="o"></toggle>
+        </accordian>
+
+        <h2>explicit</h2>
+
+        <accordian>
+            <toggle content-url="template/scoped-content.html" model-name="o" ng-model="values[0]"></toggle>
+            <toggle content-url="template/scoped-content.html" model-name="o" ng-model="values[1]"></toggle>
+            <toggle content-url="template/scoped-content.html" model-name="o" ng-model="values[2]"></toggle>
+        </accordian>
+
+        <hr />
+        <h2>static content</h2>
+
+        <accordian>
+            <toggle ng-repeat="c in staticContent" content="{{ c.value }}"></toggle>
+        </accordian>
+
+        <hr />
+        <h2>static scoped content</h2>
 
         <accordian>
             <toggle ng-repeat="o in values" content="{{ scopeContent }}" model-name="o" ng-model="o"></toggle>
