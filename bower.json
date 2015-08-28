@@ -11,15 +11,19 @@
     "accordian",
     "angular",
     "angularjs",
-    "ngaccordian"
+	"ngaccordian",
+	"angularui",
+	"angularstrap",
+	"bootstrap"
   ],
-  "license": "GPLv2",
+  "license": "GPL-2.0",
   "dependencies": {
     "angular": "^1.2"
   },
   "ignore": [
     "**/.*",
-    "bower_components",
-    "site"
+	"bower_components",
+	"node_modules",
+	"site"
   ]
 }

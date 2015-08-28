@@ -12,26 +12,33 @@ toggle {
   background-color: #CCC; }
 
 .chevron {
+  -webkit-transform: rotate(0);
   transform: rotate(0);
   transition: all 0.15s linear;
   position: relative;
   box-sizing: border-box; }
 
 .chevron.open {
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   transition: all 0.15s linear; }
 
 .chevron > div {
   border-right: .25em solid white;
   border-bottom: .25em solid white;
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg); }
 
 .plus {
+  -webkit-transform: rotate(0);
   transform: rotate(0);
+  transition: -webkit-transform 0.15s linear;
   transition: transform 0.15s linear; }
 
 .plus.open {
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+  transition: -webkit-transform 0.15s linear;
   transition: transform 0.15s linear; }
 
 .plus div {

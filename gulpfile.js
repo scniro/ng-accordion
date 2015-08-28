@@ -3,10 +3,15 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var rename = require('gulp-rename');
+var minifyCss = require('gulp-minify-css');
 
 gulp.task('compress', function () {
 	return gulp.src('src/js/*.js')
 		.pipe(uglify())
+		.pipe(rename({
+			suffix: '.min'
+		}))
 		.pipe(gulp.dest('dist'));
 });
 
@@ -20,6 +25,17 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest('src/css'));
 });
 
+gulp.task('minify-css', function () {
+	return gulp.src('src/css/*.css')
+		.pipe(minifyCss())
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(gulp.dest('dist'));
+});
+
 gulp.task('sass:watch', function () {
 	gulp.watch('src/sass/*.scss', ['sass']);
 });
+
+gulp.task('build', ['sass', 'minify-css', 'compress']);
