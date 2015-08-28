@@ -1,24 +1,60 @@
-﻿header {
-	width: 100%;
-	border-bottom: solid 2px dodgerblue;
-	box-sizing: border-box;
+﻿html, body, div, form, fieldset, legend, label {
+	margin: 0;
+	padding: 0;
 }
 
-header h1 {
-	font-family: lobster;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
+
+th, td {
+	text-align: left;
+	vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6, th, td, caption {
+	font-weight: normal;
+}
+
+img {
+	border: 0;
+}
+
+header {
+	color: tomato;
+	width: 100%;
+	border-bottom: solid 1px #ccc;
+	box-sizing: border-box;
+	padding: 0 2.000em;
+}
+
+	header h1 {
+		font-family: lobster;
+		display: inline;
+		font-size: 42pt;
+		text-shadow: 1px 1px #ccc;
+	}
+
+	header a {
+		font-size: 42pt;
+		float: right;
+		line-height: 130%;
+		color: dodgerblue;
+		text-shadow: 1px 1px #ccc;
+	}
 
 section.pane {
 	width: 50%;
 	box-sizing: border-box;
 }
 
-section.pane.left {
-	float: left;
-	border-right: solid 1px dodgerblue;
-}
+	section.pane.left {
+		float: left;
+		border-right: solid 1px dodgerblue;
+	}
 
-section.pane.right {
-	float: right;
-	border-left: solid 1px dodgerblue;
-}
+	section.pane.right {
+		float: right;
+		border-left: solid 1px dodgerblue;
+	}
