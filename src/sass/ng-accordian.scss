@@ -1,90 +1,96 @@
-﻿accordian {
-    width: 100%;
-}
+﻿$icon-color: #FFF;
+$toggle-header-color: #CCC;
+$toggle-header-height: 3.000em;
+$accordian-border-color: #CCC;
 
-toggle {
-    margin: 0.250em 0 0.250em 0;
-}
+accordian {
+	width: 100%;
 
-.toggle-body {
-    border: solid 0.063em #CCC;
-}
+	toggle {
+		margin: 0.250em 0 0.250em 0;
 
-.toggle-header {
-    height: 3.000em;
-    background-color: #CCC;
+		.toggle-body {
+			border: solid 0.063em $accordian-border-color;
+		}
+
+		.toggle-header {
+			height: $toggle-header-height;
+			background-color: $toggle-header-color;
+		}
+	}
 }
 
 .chevron {
-    transform: rotate(0);
-    transition: all .15s linear;
-    position: relative;
-    box-sizing: border-box;
+	transform: rotate(0);
+	transition: all 0.15s linear;
+	position: relative;
+	box-sizing: border-box;
+
+	&.open {
+		transform: rotate(90deg);
+		transition: all 0.15s linear;
+	}
+
+	> div {
+		border-right: 0.250em solid $icon-color;
+		border-bottom: 0.25em solid $icon-color;
+		transform: rotate(-45deg);
+	}
 }
-
-    .chevron.open {
-        transform: rotate(90deg);
-        transition: all .15s linear;
-    }
-
-    .chevron > div {
-        border-right: .25em solid white;
-        border-bottom: .25em solid white;
-        transform: rotate(-45deg);
-    }
 
 .plus {
-    transform: rotate(0);
-    transition: transform .15s linear;
+	transform: rotate(90deg);
+	transition: transform 0.15s linear;
+
+	&.open {
+		transform: rotate(90deg);
+		transition: transform 0.15s linear;
+	}
+
+	div {
+		width: 50%;
+		height: 50%;
+		float: left;
+		box-sizing: border-box;
+
+		&:nth-child(1) {
+			border-bottom: solid 0.125em $icon-color;
+			border-right: solid 0.125em $icon-color;
+
+			.open & {
+				transition: border 0.15s;
+				border-bottom-width: 0;
+			}
+		}
+
+		&:nth-child(2) {
+			border-bottom: solid 0.125em $icon-color;
+			border-left: solid 0.125em $icon-color;
+
+			.open & {
+				transition: border 0.15s;
+				border-bottom-width: 0;
+			}
+		}
+
+		&:nth-child(3) {
+			border-top: solid 0.125em $icon-color;
+			border-right: solid 0.125em $icon-color;
+
+			.open & {
+				transition: border 0.15s;
+				border-top-width: 0;
+			}
+		}
+
+		&:nth-child(4) {
+			border-top: solid 0.125em $icon-color;
+			border-left: solid 0.125em $icon-color;
+
+			.open & {
+				transition: border 0.15s;
+				border-top-width: 0;
+			}
+		}
+	}
 }
-    .plus.open {
-        transform: rotate(90deg);
-        transition: transform .15s linear;
-    }
-
-    .plus div {
-        width: 50%;
-        height: 50%;
-        float: left;
-        box-sizing: border-box;
-    }
-
-        .plus div:nth-child(1) {
-            border-bottom: solid 0.125em white;
-            border-right: solid 0.125em white;
-        }
-
-        .plus div:nth-child(2) {
-            border-bottom: solid 0.125em white;
-            border-left: solid 0.125em white;
-        }
-
-        .plus div:nth-child(3) {
-            border-top: solid 0.125em white;
-            border-right: solid 0.125em white;
-        }
-
-        .plus div:nth-child(4) {
-            border-top: solid 0.125em white;
-            border-left: solid 0.125em white;
-        }
-
-    .plus.open div:nth-child(1) {
-        transition: border .15s;
-        border-bottom-width: 0;
-    }
-
-    .plus.open div:nth-child(2) {
-        transition: border .15s;
-        border-bottom-width: 0;
-    }
-
-    .plus.open div:nth-child(3) {
-        transition: border .15s;
-        border-top-width: 0;
-    }
-
-    .plus.open div:nth-child(4) {
-        transition: border .15s;
-        border-top-width: 0;
-    }
