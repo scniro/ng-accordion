@@ -36,6 +36,11 @@ header {
 		text-shadow: 1px 1px #ccc;
 	}
 
+	header a {
+		text-decoration: none;
+		color: inherit;
+	}
+
 	header a:nth-child(2) {
 		font-size: 42pt;
 		float: right;
@@ -83,6 +88,13 @@ li {
 .content {
 	float: left;
 	width: calc(100% - 200px);
+	overflow-y: auto;
+	overflow:auto; 
+	position:absolute; 
+	top: 87px; 
+	left:0px; 
+	right:0px; 
+	bottom:0px
 }
 
 .spine {
@@ -95,4 +107,8 @@ li {
     border: 1px solid black;
 	clear: both;
 	padding: 0 1em;
+}
+
+body {
+	overflow: hidden;
 }

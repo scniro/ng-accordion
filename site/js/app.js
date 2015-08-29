@@ -14,12 +14,12 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 			templateUrl: 'view/home.html'
 		})
 		.state('basic', {
-			url: 'basic',
+			url: '/basic',
 			controller: 'ctrl',
 			templateUrl: 'view/basic.html'
 		})
 		.state('configuration', {
-			url: 'configuration',
+			url: '/configuration',
 			controller: 'ctrl',
 			templateUrl: 'view/configuration.html'
 		});
@@ -75,17 +75,7 @@ app.directive('tabs', ['$http', function ($http) {
 		},
 		link: function (scope, elem, attrs) {
 
-			//scope.content = [];
-
-			//angular.forEach(scope.tabs, function (value, key) {
-
-			//	$http.get(value.url).success(function (response) {
-			//		scope.url = response;
-			//	});
-			//});
-
 			scope.currentTab = scope.tabs[scope.selected].url;
-
 
 			scope.onClickTab = function (tab) {
 				scope.currentTab = tab.url;
@@ -98,27 +88,11 @@ app.directive('tabs', ['$http', function ($http) {
 	}
 }]);
 
-app.directive('ngHtml', [
-		'$compile', function($compile) {
-			return function(scope, elem, attrs) {
-				if (attrs.ngHtml) {
-					elem.html(scope.$eval(attrs.ngHtml));
-					$compile(elem.contents())(scope);
-				}
-				scope.$watch(attrs.ngHtml, function(newValue, oldValue) {
-					if (newValue && newValue !== oldValue) {
-						elem.html(newValue);
-						$compile(elem.contents())(scope);
-					}
-				});
-			};
-		}
-	])
-	.directive('prism', [
-		function() {
+app.directive('prism', [
+		function () {
 			return {
 				restrict: 'A',
-				link: function($scope, element, attrs) {
+				link: function ($scope, element, attrs) {
 					element.ready(function () {
 
 						Prism.highlightElement(element[0]);
@@ -126,5 +100,5 @@ app.directive('ngHtml', [
 				}
 			}
 		}
-	]);
+]);
 
