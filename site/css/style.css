@@ -36,7 +36,7 @@ header {
 		text-shadow: 1px 1px #ccc;
 	}
 
-	header a {
+	header a:nth-child(2) {
 		font-size: 42pt;
 		float: right;
 		line-height: 135%;
@@ -51,10 +51,48 @@ section.pane {
 
 	section.pane.left {
 		float: left;
-		border-right: solid 1px dodgerblue;
 	}
 
 	section.pane.right {
 		float: right;
-		border-left: solid 1px dodgerblue;
 	}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	float: left;
+	border: 1px solid #000;
+	border-bottom-width: 0;
+	padding: 5px 5px 0px 5px;
+	background-color: #CCC;
+
+	cursor: pointer;
+}
+
+
+.active {
+	background-color: #FFF;
+	color: #000;
+}
+
+
+.content {
+	float: left;
+	width: calc(100% - 200px);
+}
+
+.spine {
+	width: 200px;
+	float: right;
+	background-color: tomato;
+}
+
+#mainView {
+    border: 1px solid black;
+	clear: both;
+	padding: 0 1em;
+}

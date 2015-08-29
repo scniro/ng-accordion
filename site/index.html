@@ -1,61 +1,42 @@
 ﻿<!DOCTYPE html>
 <html ng-app="app">
 <head>
+	<base href="/site/" />
 	<title>ng-accordian</title>
 
 	<link rel="stylesheet" href="../src/css/ng-accordian.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="lib/prism.css" />
 	<link rel="stylesheet" href="css/style.css" />
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+	<script src="lib/prism.js"></script>
 </head>
 <body>
-	<div ng-controller="ctrl">
+	<div>
 
 		<header>
-			<h1>ng-accordian</h1>
+			<h1><a ui-sref="home">ng-accordian</a></h1>
 
 			<a href="https://github.com/scniro/ng-accordian" target="_blank"><i class="fa fa-github"></i></a>
 		</header>
 
-		<!--<section class="pane left">left</section>
+		<div ui-view class="content"></div>
 
-		<section class="pane right">right</section>-->
-
-		<!--<h2>static template url</h2>
-
-		<accordian toggle-icon="chevron">
-			<toggle content-url="template/content.html"></toggle>
-			<toggle content-url="template/content.html"></toggle>
-			<toggle content-url="template/content.html"></toggle>
-		</accordian>
-
-		<h2>scoped template url</h2>
-
-		<accordian toggle-icon="plus">
-			<toggle ng-repeat="o in values" content-url="template/scoped-content.html" model-name="o" ng-model="o"></toggle>
-		</accordian>
-
-		<h2>explicit</h2>
-
-		<accordian>
-			<toggle content-url="template/scoped-content.html" model-name="o" ng-model="values[0]"></toggle>
-			<toggle content-url="template/scoped-content.html" model-name="o" ng-model="values[1]"></toggle>
-			<toggle content-url="template/scoped-content.html" model-name="o" ng-model="values[2]"></toggle>
-		</accordian>
-
-		<h2>static content</h2>
-
-		<accordian>
-			<toggle ng-repeat="c in staticContent" content="{{ c.value }}"></toggle>
-		</accordian>
-
-		<h2>static scoped content</h2>
-
-		<accordian>
-			<toggle ng-repeat="o in values" content="{{ scopeContent }}" model-name="o" ng-model="o"></toggle>
-		</accordian>-->
+		<aside class="spine">
+			<div>
+				<a ui-sref="home">getting started</a>
+			</div>
+			<div>
+				<a ui-sref="basic">basic</a>
+			</div>
+			<div>
+				<a ui-sref="configuration">configuration</a>
+			</div>
+		</aside>
 	</div>
 
 	<script src="js/app.js"></script>
