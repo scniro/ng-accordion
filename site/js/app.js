@@ -1,5 +1,4 @@
-﻿
-var app = angular.module('app', ['ngAccordian', 'ui.router']);
+﻿var app = angular.module('app', ['ngAccordian', 'ui.router']);
 
 app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -10,49 +9,26 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 	$stateProvider
 		.state('home', {
 			url: '/',
-			controller: 'ctrl',
-			templateUrl: 'view/home.html'
+			controller: 'gettingStartedCtrl',
+			templateUrl: 'view/getting-started.html'
 		})
 		.state('basic', {
 			url: '/basic',
-			controller: 'ctrl',
+			controller: 'basicCtrl',
 			templateUrl: 'view/basic.html'
 		})
 		.state('configuration', {
 			url: '/configuration',
-			controller: 'ctrl',
+			controller: 'configurationCtrl',
 			templateUrl: 'view/configuration.html'
 		});
 });
 
+app.controller('gettingStartedCtrl', function ($scope) {
+	$scope.intro = 'getting started';
+});
 
-app.controller('ctrl', function ($scope) {
-	$scope.content = [
-        { 'value': '/views/demo-content.html' },
-        { 'value': '/views/demo-content.html' },
-        { 'value': '/views/demo-content.html' }
-	];
-
-	$scope.staticContent = [
-        { 'value': '<span> er </span>' },
-        { 'value': '<span> um </span>' },
-        { 'value': '<span> eh </span>' }
-	];
-
-	$scope.values = [
-        {
-        	'name': 'bob',
-        	'age': 20
-        }, {
-        	'name': 'susy',
-        	'age': 24
-        }, {
-        	'name': 'daisy',
-        	'age': 26
-        }
-	];
-
-	$scope.scopeContent = '<span>yo {{ o.name }}</span>';
+app.controller('basicCtrl', function ($scope) {
 
 	$scope.basic = [
 		{
@@ -61,6 +37,19 @@ app.controller('ctrl', function ($scope) {
 		}, {
 			title: 'JavaScript',
 			url: 'template/accordian/basic/javascript.html'
+		}
+	];
+});
+
+app.controller('configurationCtrl', function ($scope) {
+
+	$scope.configuration = [
+		{
+			title: 'Markup',
+			url: 'template/accordian/configuration/markup.html'
+		}, {
+			title: 'JavaScript',
+			url: 'template/accordian/configuration/javascript.html'
 		}
 	];
 });
@@ -88,17 +77,14 @@ app.directive('tabs', ['$http', function ($http) {
 	}
 }]);
 
-app.directive('prism', [
-		function () {
-			return {
-				restrict: 'A',
-				link: function ($scope, element, attrs) {
-					element.ready(function () {
-
-						Prism.highlightElement(element[0]);
-					});
-				}
-			}
+app.directive('prism', [function () {
+	return {
+		restrict: 'A',
+		link: function ($scope, element, attrs) {
+			element.ready(function () {
+				Prism.highlightElement(element[0]);
+			});
 		}
-]);
+	}
+}]);
 

@@ -1,4 +1,4 @@
-﻿/// <binding ProjectOpened='sass:watch' />
+﻿/// <binding ProjectOpened='sass:watch, sass-site:watch' />
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
@@ -16,6 +16,16 @@ gulp.task('sass', function () {
 			cascade: false
 		}))
 		.pipe(gulp.dest('src/css'));
+});
+
+gulp.task('sass-site', function () {
+	return gulp.src('site/sass/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
+		.pipe(gulp.dest('site/css'));
 });
 
 gulp.task('minify-css', ['clean-css-dist'], function () {
@@ -52,6 +62,10 @@ gulp.task('clean-js-dist', function (done) {
 
 gulp.task('sass:watch', function () {
 	gulp.watch('src/sass/*.scss', ['sass']);
+});
+
+gulp.task('sass-site:watch', function () {
+	gulp.watch('site/sass/*.scss', ['sass-site']);
 });
 
 gulp.task('build', ['sass', 'minify-css', 'minify-js']);

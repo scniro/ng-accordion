@@ -1,0 +1,89 @@
+﻿header {
+	color: tomato;
+	width: 100%;
+	border-bottom: solid 1px #ccc;
+	box-sizing: border-box;
+	padding: 0.500em 2.000em;
+}
+
+header h1 {
+	font-family: lobster;
+	display: inline;
+	font-size: 42pt;
+	text-shadow: 1px 1px #ccc;
+}
+
+header a {
+	text-decoration: none;
+	color: inherit;
+}
+
+header a:nth-child(2) {
+	font-size: 42pt;
+	float: right;
+	line-height: 135%;
+	color: dodgerblue;
+	text-shadow: 1px 1px #ccc;
+}
+
+section.pane {
+	width: 50%;
+	box-sizing: border-box;
+}
+
+section.pane.left {
+	float: left;
+}
+
+section.pane.right {
+	float: right;
+}
+
+.content {
+	padding-top: 2em;
+	padding-left: 2em;
+	overflow-y: auto;
+	overflow: auto;
+	position: absolute;
+	top: 87px;
+	left: 12em;
+	right: 0px;
+	bottom: 0px;
+	border-left: solid 1px #ccc;
+}
+
+.spine {
+	width: 12em;
+	padding-left: 2em;
+	padding-top: 2em;
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+ol {
+	list-style: none;
+	padding-left: 0;
+
+	li {
+		div {
+			float: left;
+			height: 6px;
+			width: 20px;
+			margin-top: 4px;
+			border-bottom: solid 1px #ccc;
+			border-left: solid 1px #ccc;
+			margin-right: 8px;
+		}
+	}
+}
+
+body {
+	overflow: hidden;
+	min-width: 54em;
+}

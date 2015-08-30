@@ -1,0 +1,35 @@
+﻿tabs {
+
+	.header {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		top: 1px;
+
+		li {
+			float: left;
+			cursor: pointer;
+			padding: 0.500em 1.000em;
+
+			&.active {
+				background-color: #f5f2f0;
+				border-top: solid 1px #CCC;
+				border-left: solid 1px #CCC;
+				border-right: solid 1px #CCC;
+				border-bottom: solid 1px transparent;
+			}
+
+			&:not(.active):hover {
+				background-color: #CCC;
+				border-bottom: solid 1px #CCC;
+			}
+		}
+	}
+
+	.body {
+		clear: both;
+		background-color: #f5f2f0;
+		border: solid 1px #ccc;
+	}
+}
