@@ -41,13 +41,13 @@ header {
 		color: inherit;
 	}
 
-	header a:nth-child(2) {
-		font-size: 42pt;
-		float: right;
-		line-height: 135%;
-		color: dodgerblue;
-		text-shadow: 1px 1px #ccc;
-	}
+		header a:nth-child(2) {
+			font-size: 42pt;
+			float: right;
+			line-height: 135%;
+			color: dodgerblue;
+			text-shadow: 1px 1px #ccc;
+		}
 
 section.pane {
 	width: 50%;
@@ -74,7 +74,6 @@ li {
 	border-bottom-width: 0;
 	padding: 5px 5px 0px 5px;
 	background-color: #CCC;
-
 	cursor: pointer;
 }
 
@@ -89,12 +88,13 @@ li {
 	float: left;
 	width: calc(100% - 200px);
 	overflow-y: auto;
-	overflow:auto; 
-	position:absolute; 
-	top: 87px; 
-	left:0px; 
-	right:0px; 
-	bottom:0px
+	overflow: auto;
+	position: absolute;
+	top: 87px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	min-width: calc(48em - 200px);
 }
 
 .spine {
@@ -104,11 +104,12 @@ li {
 }
 
 #mainView {
-    border: 1px solid black;
+	border: 1px solid black;
 	clear: both;
 	padding: 0 1em;
 }
 
 body {
 	overflow: hidden;
+	min-width: 48em;
 }
