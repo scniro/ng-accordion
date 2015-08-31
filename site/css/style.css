@@ -21,10 +21,10 @@ header {
   width: 100%;
   border-bottom: solid 1px #ccc;
   box-sizing: border-box;
-  padding: 0.5em 2em; }
+  padding: 0.5em 2em;
+  height: 6.000em; }
 
 header h1 {
-  font-family: lobster;
   display: inline;
   font-size: 42pt;
   text-shadow: 1px 1px #ccc; }
@@ -56,7 +56,7 @@ section.pane.right {
   overflow-y: auto;
   overflow: auto;
   position: absolute;
-  top: 87px;
+  top: 6em;
   left: 12em;
   right: 0px;
   bottom: 0px;
@@ -64,26 +64,41 @@ section.pane.right {
 
 .spine {
   width: 12em;
-  padding-left: 2em;
   padding-top: 2em; }
   .spine a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: dodgerblue; }
     .spine a:hover {
       text-decoration: underline; }
-
-ol {
-  list-style: none;
-  padding-left: 0; }
-  ol li div {
-    float: left;
-    height: 6px;
-    width: 20px;
-    margin-top: 4px;
-    border-bottom: solid 1px #ccc;
-    border-left: solid 1px #ccc;
-    margin-right: 8px; }
+  .spine ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 0; }
+    .spine ol li {
+      padding-top: 0.125em;
+      padding-bottom: 0.125em; }
+      .spine ol li span {
+        display: block;
+        padding-left: 2em; }
+        .spine ol li span.separator {
+          background-color: dodgerblue;
+          color: white; }
+      .spine ol li.root div {
+        border-bottom: solid 1px #ccc; }
+      .spine ol li.sub {
+        padding-left: 2em; }
+        .spine ol li.sub div {
+          border-bottom: solid 1px #ccc;
+          border-left: solid 1px #ccc; }
+      .spine ol li div {
+        float: left;
+        height: 6px;
+        width: 20px;
+        margin-top: 6px;
+        margin-right: 8px; }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   overflow: hidden;
   min-width: 54em; }
 

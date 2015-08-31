@@ -1,6 +1,6 @@
 ﻿var app = angular.module('app', ['ngAccordian', 'ui.router']);
 
-app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
 	$locationProvider.html5Mode({
 		enabled: true
@@ -13,22 +13,32 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 			templateUrl: 'view/getting-started.html'
 		})
 		.state('basic', {
-			url: '/basic',
+			url: '/examples/basic',
 			controller: 'basicCtrl',
-			templateUrl: 'view/basic.html'
+			templateUrl: 'view/examples/basic.html'
 		})
 		.state('configuration', {
-			url: '/configuration',
+			url: '/examples/configuration',
 			controller: 'configurationCtrl',
-			templateUrl: 'view/configuration.html'
+			templateUrl: 'view/examples/configuration.html'
+		})
+		.state('attributes', {
+			url: '/attributes',
+			controller: 'attributesCtrl',
+			templateUrl: 'view/attributes.html'
+		})
+		.state('icons', {
+			url: '/icons',
+			controller: 'iconsCtrl',
+			templateUrl: 'view/icons.html'
 		});
-});
+}]);
 
-app.controller('gettingStartedCtrl', function ($scope) {
+app.controller('gettingStartedCtrl', ['$scope', function ($scope) {
 	$scope.intro = 'getting started';
-});
+}]);
 
-app.controller('basicCtrl', function ($scope) {
+app.controller('basicCtrl', ['$scope', function ($scope) {
 
 	$scope.basic = [
 		{
@@ -39,9 +49,9 @@ app.controller('basicCtrl', function ($scope) {
 			url: 'template/accordian/basic/javascript.html'
 		}
 	];
-});
+}]);
 
-app.controller('configurationCtrl', function ($scope) {
+app.controller('configurationCtrl', ['$scope', function ($scope) {
 
 	$scope.configuration = [
 		{
@@ -52,7 +62,15 @@ app.controller('configurationCtrl', function ($scope) {
 			url: 'template/accordian/configuration/javascript.html'
 		}
 	];
-});
+}]);
+
+app.controller('attributesCtrl', ['$scope', function ($scope) {
+
+}]);
+
+app.controller('iconsCtrl', ['$scope', function ($scope) {
+
+}]);
 
 app.directive('tabs', ['$http', function ($http) {
 	return {
@@ -87,4 +105,3 @@ app.directive('prism', [function () {
 		}
 	}
 }]);
-

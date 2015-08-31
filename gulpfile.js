@@ -47,14 +47,12 @@ gulp.task('minify-js', ['clean-js-dist'], function () {
 });
 
 gulp.task('clean-css-dist', function (done) {
-
 	var file = 'dist/ng-accordian.min.css';
 	util.log(util.colors.green('cleaning'), ' -- ', util.colors.yellow(file));
 	del(file, done);
 });
 
 gulp.task('clean-js-dist', function (done) {
-
 	var file = 'dist/ng-accordian.min.js';
 	util.log(util.colors.green('cleaning'), ' -- ', util.colors.yellow(file));
 	del(file, done);

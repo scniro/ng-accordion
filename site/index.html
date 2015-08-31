@@ -5,7 +5,7 @@
 	<title>ngAccordian</title>
 
 	<link rel="stylesheet" href="../src/css/ng-accordian.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="lib/prism.css" />
 	<link rel="stylesheet" href="css/style.css" />
@@ -26,16 +26,26 @@
 		</header>
 
 		<aside class="spine">
-			<div>
-				<a ui-sref="home">getting started</a>
-			</div>
-			<div class="separator">examples</div>
-
 			<ol>
+				<li class="root">
+					<div></div><a ui-sref="home"><span>getting started</span></a>
+				</li>
 				<li>
-					<div></div><a ui-sref="basic">basic</a></li>
-				<li>
-					<div></div><a ui-sref="configuration">configuration</a>
+					<span class="separator">examples</span>
+				</li>
+
+				<li class="sub">
+					<div></div><a ui-sref="basic"><span>basic</span></a></li>
+				<li class="sub">
+					<div></div><a ui-sref="configuration"><span>configuration</span></a>
+				</li>
+
+				<li class="root">
+					<div></div><a ui-sref="attributes"><span>attributes</span></a>
+				</li>
+
+				<li class="root">
+					<div></div><a ui-sref="icons"><span>icons</span></a>
 				</li>
 			</ol>
 		</aside>
