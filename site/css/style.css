@@ -16,41 +16,31 @@ h1, h2, h3, h4, h5, h6, th, td, caption {
 img {
   border: 0; }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  min-width: 54em; }
+
 header {
-  color: tomato;
   width: 100%;
   border-bottom: solid 1px #ccc;
   box-sizing: border-box;
   padding: 0.5em 2em;
   height: 6.000em; }
+  header h1 {
+    display: inline;
+    font-size: 42pt; }
+  header a {
+    text-decoration: none;
+    color: inherit; }
+    header a:nth-child(2) {
+      font-size: 42pt;
+      float: right;
+      line-height: 135%;
+      color: dodgerblue;
+      text-shadow: 1px 1px #ccc; }
 
-header h1 {
-  display: inline;
-  font-size: 42pt;
-  text-shadow: 1px 1px #ccc; }
-
-header a {
-  text-decoration: none;
-  color: inherit; }
-
-header a:nth-child(2) {
-  font-size: 42pt;
-  float: right;
-  line-height: 135%;
-  color: dodgerblue;
-  text-shadow: 1px 1px #ccc; }
-
-section.pane {
-  width: 50%;
-  box-sizing: border-box; }
-
-section.pane.left {
-  float: left; }
-
-section.pane.right {
-  float: right; }
-
-.content {
+section.content {
   padding-top: 2em;
   padding-left: 2em;
   overflow-y: auto;
@@ -58,49 +48,51 @@ section.pane.right {
   position: absolute;
   top: 6em;
   left: 12em;
-  right: 0px;
-  bottom: 0px;
+  right: 0;
+  bottom: 0;
   border-left: solid 1px #ccc; }
+  section.content section.pane {
+    width: 50%;
+    box-sizing: border-box; }
+    section.content section.pane.left {
+      float: left; }
+    section.content section.pane.right {
+      float: right; }
 
-.spine {
+aside.spine {
   width: 12em;
   padding-top: 2em; }
-  .spine a {
+  aside.spine a {
     text-decoration: none;
     color: dodgerblue; }
-    .spine a:hover {
+    aside.spine a:hover {
       text-decoration: underline; }
-  .spine ol {
+  aside.spine ol {
     list-style: none;
     padding-left: 0;
     margin: 0; }
-    .spine ol li {
+    aside.spine ol li {
       padding-top: 0.125em;
       padding-bottom: 0.125em; }
-      .spine ol li span {
+      aside.spine ol li span {
         display: block;
         padding-left: 2em; }
-        .spine ol li span.separator {
-          background-color: dodgerblue;
+        aside.spine ol li span.separator {
+          background-color: #ccc;
           color: white; }
-      .spine ol li.root div {
+      aside.spine ol li.root div {
         border-bottom: solid 1px #ccc; }
-      .spine ol li.sub {
+      aside.spine ol li.sub {
         padding-left: 2em; }
-        .spine ol li.sub div {
+        aside.spine ol li.sub div {
           border-bottom: solid 1px #ccc;
           border-left: solid 1px #ccc; }
-      .spine ol li div {
+      aside.spine ol li div {
         float: left;
         height: 6px;
         width: 20px;
         margin-top: 6px;
         margin-right: 8px; }
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
-  min-width: 54em; }
 
 code[class*="language-"], pre[class*="language-"] {
   /*background-color: #f5f5f5*/ }

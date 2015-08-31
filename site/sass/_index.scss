@@ -1,45 +1,36 @@
-﻿header {
-	color: tomato;
+﻿body {
+	font-family: 'Open Sans', sans-serif;
+	overflow: hidden;
+	min-width: 54em;
+}
+
+header {
 	width: 100%;
 	border-bottom: solid 1px #ccc;
 	box-sizing: border-box;
 	padding: 0.500em 2.000em;
 	height: 6.000em;
+
+	h1 {
+		display: inline;
+		font-size: 42pt;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+
+		&:nth-child(2) {
+			font-size: 42pt;
+			float: right;
+			line-height: 135%;
+			color: dodgerblue;
+			text-shadow: 1px 1px #ccc;
+		}
+	}
 }
 
-header h1 {
-	display: inline;
-	font-size: 42pt;
-	text-shadow: 1px 1px #ccc;
-}
-
-header a {
-	text-decoration: none;
-	color: inherit;
-}
-
-header a:nth-child(2) {
-	font-size: 42pt;
-	float: right;
-	line-height: 135%;
-	color: dodgerblue;
-	text-shadow: 1px 1px #ccc;
-}
-
-section.pane {
-	width: 50%;
-	box-sizing: border-box;
-}
-
-section.pane.left {
-	float: left;
-}
-
-section.pane.right {
-	float: right;
-}
-
-.content {
+section.content {
 	padding-top: 2em;
 	padding-left: 2em;
 	overflow-y: auto;
@@ -47,12 +38,25 @@ section.pane.right {
 	position: absolute;
 	top: 6em;
 	left: 12em;
-	right: 0px;
-	bottom: 0px;
+	right: 0;
+	bottom: 0;
 	border-left: solid 1px #ccc;
+
+	section.pane {
+		width: 50%;
+		box-sizing: border-box;
+
+		&.left {
+			float: left;
+		}
+
+		&.right {
+			float: right;
+		}
+	}
 }
 
-.spine {
+aside.spine {
 	width: 12em;
 	padding-top: 2em;
 
@@ -79,7 +83,7 @@ section.pane.right {
 				padding-left: 2em;
 
 				&.separator {
-					background-color: dodgerblue;
+					background-color: #ccc;
 					color: white;
 				}
 			}
@@ -106,10 +110,4 @@ section.pane.right {
 			}
 		}
 	}
-}
-
-body {
-	font-family: 'Open Sans', sans-serif;
-	overflow: hidden;
-	min-width: 54em;
 }
