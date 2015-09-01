@@ -1,12 +1,12 @@
 ﻿body {
 	font-family: 'Open Sans', sans-serif;
 	overflow: hidden;
-	min-width: 54em;
+	min-width: 54.000em;
 }
 
 header {
 	width: 100%;
-	border-bottom: solid 1px #ccc;
+	border-bottom: solid 0.063em $gray-darker;
 	box-sizing: border-box;
 	padding: 0.500em 2.000em;
 	height: 6.000em;
@@ -24,23 +24,22 @@ header {
 			font-size: 42pt;
 			float: right;
 			line-height: 135%;
-			color: dodgerblue;
-			text-shadow: 1px 1px #ccc;
+			color: $link;
 		}
 	}
 }
 
 section.content {
-	padding-top: 2em;
-	padding-left: 2em;
+	padding-top: 2.000em;
+	padding-left: 2.000em;
 	overflow-y: auto;
 	overflow: auto;
 	position: absolute;
-	top: 6em;
-	left: 12em;
+	top: 6.000em;
+	left: 12.000em;
 	right: 0;
 	bottom: 0;
-	border-left: solid 1px #ccc;
+	border-left: solid 0.063em $gray-darker;
 
 	section.pane {
 		width: 50%;
@@ -57,12 +56,12 @@ section.content {
 }
 
 aside.spine {
-	width: 12em;
-	padding-top: 2em;
+	width: 12.000em;
+	padding-top: 2.000em;
 
 	a {
 		text-decoration: none;
-		color: dodgerblue;
+		color: $link;
 
 		&:hover {
 			text-decoration: underline;
@@ -80,33 +79,28 @@ aside.spine {
 
 			span {
 				display: block;
-				padding-left: 2em;
-
-				&.separator {
-					background-color: #ccc;
-					color: white;
-				}
+				padding-left: 2.000em;
 			}
 
 			&.root div {
-				border-bottom: solid 1px #ccc;
+				border-bottom: solid 0.063em $gray-darker;
 			}
 
 			&.sub {
-				padding-left: 2em;
+				padding-left: 2.000em;
 
 				div {
-					border-bottom: solid 1px #ccc;
-					border-left: solid 1px #ccc;
+					border-bottom: solid 0.063em $gray-darker;
+					border-left: solid 0.063em $gray-darker;
 				}
 			}
 
 			div {
 				float: left;
-				height: 6px;
-				width: 20px;
-				margin-top: 6px;
-				margin-right: 8px;
+				height: 0.375em;
+				width: 1.250em;
+				margin-top: 0.375em;
+				margin-right: 0.500em;
 			}
 		}
 	}

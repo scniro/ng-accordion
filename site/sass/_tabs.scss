@@ -5,7 +5,7 @@
 		padding: 0;
 		margin: 0;
 		position: relative;
-		top: 1px;
+		top: 0.063em;
 
 		li {
 			float: left;
@@ -13,23 +13,23 @@
 			padding: 0.500em 1.000em;
 
 			&.active {
-				background-color: #f5f2f0;
-				border-top: solid 1px #CCC;
-				border-left: solid 1px #CCC;
-				border-right: solid 1px #CCC;
-				border-bottom: solid 1px transparent;
+				background-color: $gray-lighter;
+				border-top: solid 0.063em $gray-darker;
+				border-left: solid 0.063em $gray-darker;
+				border-right: solid 0.063em $gray-darker;
+				border-bottom: solid 0.063em transparent;
 			}
 
 			&:not(.active):hover {
-				background-color: #CCC;
-				border-bottom: solid 1px #CCC;
+				background-color: $gray-darker;
+				border-bottom: solid 0.063em $gray-darker;
 			}
 		}
 	}
 
 	.body {
 		clear: both;
-		background-color: #f5f2f0;
-		border: solid 1px #ccc;
+		background-color: $gray-lighter;
+		border: solid 0.063em $gray-darker;
 	}
 }
