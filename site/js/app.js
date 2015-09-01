@@ -72,7 +72,7 @@ app.controller('iconsCtrl', ['$scope', function ($scope) {
 
 }]);
 
-app.directive('tabs', ['$http', function ($http) {
+app.directive('tabs', [function () {
 	return {
 		restrict: 'E',
 		templateUrl: 'template/tabs.html',
@@ -98,7 +98,7 @@ app.directive('tabs', ['$http', function ($http) {
 app.directive('prism', [function () {
 	return {
 		restrict: 'A',
-		link: function ($scope, element, attrs) {
+		link: function (scope, element, attrs) {
 			element.ready(function () {
 				Prism.highlightElement(element[0]);
 			});
