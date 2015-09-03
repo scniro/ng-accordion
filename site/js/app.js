@@ -65,11 +65,9 @@ app.controller('configurationCtrl', ['$scope', function ($scope) {
 }]);
 
 app.controller('attributesCtrl', ['$scope', function ($scope) {
-
 }]);
 
 app.controller('iconsCtrl', ['$scope', function ($scope) {
-
 }]);
 
 app.directive('tabs', [function () {
