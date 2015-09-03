@@ -19,7 +19,8 @@ img {
 body {
   font-family: 'Open Sans', sans-serif;
   overflow: hidden;
-  min-width: 54.000em; }
+  min-width: 58.000em;
+  overflow-x: auto; }
 
 header {
   width: 100%;
