@@ -40,8 +40,7 @@ header {
       color: dodgerblue; }
 
 section.content {
-  padding-top: 2.000em;
-  padding-left: 2.000em;
+  padding: 2.000em;
   overflow-y: auto;
   overflow: auto;
   position: absolute;
@@ -49,7 +48,8 @@ section.content {
   left: 12.000em;
   right: 0;
   bottom: 0;
-  border-left: solid 0.063em #ccc; }
+  border-left: solid 0.063em #ccc;
+  min-width: 42.000em; }
   section.content section.pane {
     width: 50%;
     box-sizing: border-box; }
