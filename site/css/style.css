@@ -96,6 +96,9 @@ toggle p {
   font-size: 10pt;
   line-height: 200%; }
 
+pre {
+  margin: 0 !important; }
+
 code[class*="language-"], pre[class*="language-"] {
   /*background-color: #f5f5f5*/ }
 
