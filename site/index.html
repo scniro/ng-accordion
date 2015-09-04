@@ -1,19 +1,27 @@
 ﻿<!DOCTYPE html>
 <html ng-app="app" class="ng-cloak">
 <head>
-	<base href="/site/" />
+	<script type="text/javascript">
+
+		window.base = document.location.hostname === 'localhost' ? '' : '/ng-accordian/';
+
+		if (document.location.hostname === 'localhost') {
+			document.write("<base href='/site/'>");
+		}
+	</script>
 	<title>ngAccordian</title>
 
-	<link rel="stylesheet" href="../src/css/ng-accordian.css" />
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="lib/prism.css" />
-	<link rel="stylesheet" href="css/style.css" />
+
+	<script>
+		document.write('\x3Clink rel="stylesheet" href="' + window.base + '../src/css/ng-accordian.css">\x3C/link>');
+		document.write('\x3Clink rel="stylesheet" href="' + window.base + 'lib/prism.css">\x3C/link>');
+		document.write('\x3Clink rel="stylesheet" href="' + window.base + 'css/style.css">\x3C/link>');
+	</script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-
-	<script src="lib/prism.js"></script>
 </head>
 <body>
 	<style>
@@ -65,10 +73,12 @@
 		</aside>
 
 		<section ui-view class="content"></section>
-
 	</div>
 
-	<script src="js/app.js"></script>
-	<script src="../src/js/ng-accordian.js"></script>
+	<script>
+		document.write('\x3Cscript type="text/javascript" src="' + window.base + 'lib/prism.js">\x3C/script>');
+		document.write('\x3Cscript type="text/javascript" src="' + window.base + 'js/app.js">\x3C/script>');
+		document.write('\x3Cscript type="text/javascript" src="' + window.base + '../src/js/ng-accordian.js">\x3C/script>');
+	</script>
 </body>
 </html>

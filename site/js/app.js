@@ -1,5 +1,9 @@
 ﻿var app = angular.module('app', ['ngAccordian', 'ui.router']);
 
+app.constant('tplBase', document.location.hostname === 'localhost' ? '/site/' : '/ng-accordian/');
+
+app.constant('srcBase', document.location.hostname === 'localhost' ? '' : '/ng-accordian/');
+
 app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
 	$locationProvider.html5Mode({
@@ -44,6 +48,18 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 		});
 }]);
 
+app.run([
+	'$rootScope', 'tplBase', 'srcBase', function ($rootScope, tplBase, srcBase) {
+		$rootScope.tplBase = tplBase;
+		//$rootScope.srcBase = srcBase;
+
+		$rootScope.scripts = [
+			{ 'src': 'js/app.js' },
+			{ 'src': '../src/js/ng-accordian.js' }
+		];
+	}
+]);
+
 app.controller('gettingStartedCtrl', ['$scope', function ($scope) {
 	$scope.intro = 'getting started';
 }]);
@@ -55,7 +71,7 @@ app.controller('basicCtrl', ['$scope', function ($scope) {
 	];
 }]);
 
-app.controller('configurationCtrl', ['$scope', function ($scope) {
+app.controller('configurationCtrl', ['$scope', 'tplBase', function ($scope, tplBase) {
 
 	$scope.tabs = [
 		{ 'title': 'Markup', 'url': 'template/accordian/configuration/markup.html' },
@@ -63,9 +79,9 @@ app.controller('configurationCtrl', ['$scope', function ($scope) {
 	];
 
 	$scope.content = [
-		{ 'value': '/site/template/accordian/configuration/accordian-content.html' },
-		{ 'value': '/site/template/accordian/configuration/accordian-content.html' },
-		{ 'value': '/site/template/accordian/configuration/accordian-content.html' }
+		{ 'value': tplBase + 'template/accordian/configuration/accordian-content.html' },
+		{ 'value': tplBase + 'template/accordian/configuration/accordian-content.html' },
+		{ 'value': tplBase + 'template/accordian/configuration/accordian-content.html' }
 	];
 }]);
 
