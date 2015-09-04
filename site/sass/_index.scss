@@ -44,9 +44,11 @@ section.content {
 	section.pane {
 		width: 50%;
 		box-sizing: border-box;
+		padding-right: 2.000em;
 
 		&.left {
 			float: left;
+
 		}
 
 		&.right {
@@ -104,4 +106,10 @@ aside.spine {
 			}
 		}
 	}
+}
+
+toggle p {
+	padding: 1.000em;
+	font-size: 10pt;
+	line-height: 200%;
 }

@@ -40,27 +40,22 @@ app.controller('gettingStartedCtrl', ['$scope', function ($scope) {
 
 app.controller('basicCtrl', ['$scope', function ($scope) {
 
-	$scope.basic = [
-		{
-			title: 'Markup',
-			url: 'template/accordian/basic/markup.html'
-		}, {
-			title: 'JavaScript',
-			url: 'template/accordian/basic/javascript.html'
-		}
+	$scope.tabs = [
+		{ 'title': 'Markup', 'url': 'template/accordian/basic/markup.html' }
 	];
 }]);
 
 app.controller('configurationCtrl', ['$scope', function ($scope) {
 
-	$scope.configuration = [
-		{
-			title: 'Markup',
-			url: 'template/accordian/configuration/markup.html'
-		}, {
-			title: 'JavaScript',
-			url: 'template/accordian/configuration/javascript.html'
-		}
+	$scope.tabs = [
+		{ 'title': 'Markup', 'url': 'template/accordian/configuration/markup.html' },
+		{ 'title': 'JavaScript', 'url': 'template/accordian/configuration/javascript.html' }
+	];
+
+	$scope.content = [
+		{ 'value': '/site/template/accordian/configuration/accordian-content.html' },
+		{ 'value': '/site/template/accordian/configuration/accordian-content.html' },
+		{ 'value': '/site/template/accordian/configuration/accordian-content.html' }
 	];
 }]);
 

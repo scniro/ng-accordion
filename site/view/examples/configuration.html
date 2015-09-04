@@ -1,7 +1,10 @@
 ﻿<section class="pane left">
-	<span>configuration</span>
+	<accordian close-others="true"
+			   toggle-icon="chevron">
+		<toggle ng-repeat="c in content" content-url="c.value"></toggle>
+	</accordian>
 </section>
 
 <section class="pane right">
-	<tabs tabs="configuration" selected="0"></tabs>
+	<tabs tabs="tabs" selected="0"></tabs>
 </section>

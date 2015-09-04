@@ -1,7 +1,7 @@
 accordian {
   width: 100%; }
   accordian toggle {
-    margin: 0.25em 0 0.25em 0; }
+    margin-bottom: 0.250em; }
     accordian toggle .toggle-body {
       border: solid 0.063em #CCC; }
     accordian toggle .toggle-header {
