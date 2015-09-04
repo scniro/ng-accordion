@@ -107,7 +107,8 @@ tabs .header {
   padding: 0;
   margin: 0;
   position: relative;
-  top: 0.063em; }
+  top: 0.063em;
+  margin-top: -0.063em; }
   tabs .header li {
     float: left;
     cursor: pointer;
