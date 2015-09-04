@@ -45,8 +45,8 @@
 					}
 				}
 
-				$rootScope.$on('close', function () {
-					$rootScope.$broadcast('closeChild');
+				$rootScope.$on('closeOthers', function () {
+					$rootScope.$broadcast('close');
 				});
 			}]
 		}
@@ -95,14 +95,14 @@
 
 				scope.height = elem[0].firstChild.clientHeight;
 
-				scope.$on('closeChild', function () {
+				scope.$on('close', function () {
 					scope.toggle = false;
 				});
 
 				scope.toggleBody = function () {
 
 					if (!scope.toggle)
-						scope.$emit('close');
+						scope.$emit('closeOthers');
 
 					scope.toggle = scope.toggle ? false : true;
 				}
