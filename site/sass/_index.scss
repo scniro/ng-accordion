@@ -1,7 +1,8 @@
 ﻿body {
 	font-family: 'Open Sans', sans-serif;
 	overflow: hidden;
-	min-width: 54.000em;
+	min-width: 58.000em;
+	overflow-x: auto;
 }
 
 header {
@@ -30,8 +31,7 @@ header {
 }
 
 section.content {
-	padding-top: 2.000em;
-	padding-left: 2.000em;
+	padding: 2.000em;
 	overflow-y: auto;
 	overflow: auto;
 	position: absolute;
@@ -40,6 +40,7 @@ section.content {
 	right: 0;
 	bottom: 0;
 	border-left: solid 0.063em $gray-darker;
+	min-width: 42.000em;
 
 	section.pane {
 		width: 50%;
