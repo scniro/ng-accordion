@@ -51,6 +51,8 @@ section.content {
   bottom: 0;
   border-left: solid 0.063em #ccc;
   min-width: 42.000em; }
+  section.content h1 {
+    margin-top: 0; }
   section.content section.pane {
     width: 50%;
     box-sizing: border-box;
