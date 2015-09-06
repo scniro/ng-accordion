@@ -89,6 +89,10 @@ aside.spine {
 				padding-left: 2.000em;
 			}
 
+			&.static {
+				color: $gray-darker;
+			}
+
 			&.root div {
 				border-bottom: solid 0.063em $gray-darker;
 			}

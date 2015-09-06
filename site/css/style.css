@@ -80,6 +80,8 @@ aside.spine {
       aside.spine ol li span {
         display: block;
         padding-left: 2.000em; }
+      aside.spine ol li.static {
+        color: #ccc; }
       aside.spine ol li.root div {
         border-bottom: solid 0.063em #ccc; }
       aside.spine ol li.sub {

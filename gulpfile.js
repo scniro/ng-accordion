@@ -1,11 +1,18 @@
 ﻿/// <binding ProjectOpened='sass:watch, sass-site:watch' />
 var gulp = require('gulp');
+
 var uglify = require('gulp-uglify');
+
 var sass = require('gulp-sass');
+
 var autoprefixer = require('gulp-autoprefixer');
+
 var rename = require('gulp-rename');
+
 var minifyCss = require('gulp-minify-css');
+
 var del = require('del');
+
 var util = require('gulp-util');
 
 gulp.task('sass', function () {
