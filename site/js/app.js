@@ -31,10 +31,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 			controller: 'contentStringsCtrl',
 			templateUrl: 'view/examples/content-strings.html'
 		})
-		.state('ngModel', {
-			url: '/examples/ngModel',
-			controller: 'ngModelCtrl',
-			templateUrl: 'view/examples/ng-model.html'
+		.state('modelBinding', {
+			url: '/examples/model-binding',
+			controller: 'modelBindingCtrl',
+			templateUrl: 'view/examples/model-binding.html'
 		})
 		.state('attributes', {
 			url: '/attributes',
@@ -93,12 +93,12 @@ app.controller('contentStringsCtrl', ['$scope', function ($scope) {
 	];
 }]);
 
-app.controller('ngModelCtrl', ['$scope', function ($scope) {
+app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'template/accordian/ng-model/markup.html' },
-		{ 'title': 'Template', 'url': 'template/accordian/ng-model/ng-model-template.html' },
-		{ 'title': 'JavaScript', 'url': 'template/accordian/ng-model/javascript.html' }
+		{ 'title': 'Markup', 'url': 'template/accordian/model-binding/markup.html' },
+		{ 'title': 'Template', 'url': 'template/accordian/model-binding/model-binding-template.html' },
+		{ 'title': 'JavaScript', 'url': 'template/accordian/model-binding/javascript.html' }
 	];
 }]);
 
