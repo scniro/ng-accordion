@@ -81,13 +81,13 @@
 				var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" ng-html="content" class="toggle-body"></div>';
 
 				var tpl =
-	                '<div class="toggle-header" ng-click="toggleBody()">' +
-	                    style +
-	                '</div>' +
-	                '</div>' +
-	                    '<div ng-class="{\'open\': toggle}">' +
-	                    content +
-	                '</div>';
+				'<div class="toggle-header" ng-click="toggleBody()">' +
+					style +
+				'</div>' +
+				'</div>' +
+					'<div ng-class="{\'open\': toggle}">' +
+					content +
+				'</div>';
 
 				elem.append(angular.element(tpl));
 
