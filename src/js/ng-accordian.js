@@ -35,7 +35,8 @@
 		return {
 			scope: {
 				closeOthers: '@',
-				toggleIcon: '@'
+				toggleIcon: '@',
+				timing: '@'
 			},
 			controller: ['$rootScope', '$scope', function ($rootScope, $scope) {
 				this.getConfiguration = function () {
@@ -113,6 +114,8 @@
 		return {
 			restrict: 'C',
 			link: function (scope, elem, attrs) {
+
+				console.log(scope);
 
 				scope.$watch('toggle', function (n, o) {
 
