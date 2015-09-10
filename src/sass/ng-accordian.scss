@@ -5,30 +5,29 @@ $accordian-border-color: #CCC;
 
 accordian {
 	width: 100%;
+}
 
-	toggle {
-		margin-bottom: 0.250em;
+toggle {
+	margin-bottom: 0.250em;
 
-		.toggle-body {
-			border: solid 0.063em $accordian-border-color;
-		}
+	.toggle-body {
+		border: solid 0.063em $accordian-border-color;
+	}
 
-		.toggle-header {
-			height: $toggle-header-height;
-			background-color: $toggle-header-color;
-		}
+	.toggle-header {
+		height: $toggle-header-height;
+		background-color: $toggle-header-color;
 	}
 }
 
 .chevron {
 	transform: rotate(0);
-	transition: all 0.15s linear;
+	/*transition: all 0.15s linear;*/
 	position: relative;
 	box-sizing: border-box;
 
 	&.open {
 		transform: rotate(90deg);
-		transition: all 0.15s linear;
 	}
 
 	> div {

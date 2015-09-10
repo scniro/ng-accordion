@@ -1,23 +1,23 @@
 accordian {
   width: 100%; }
-  accordian toggle {
-    margin-bottom: 0.250em; }
-    accordian toggle .toggle-body {
-      border: solid 0.063em #CCC; }
-    accordian toggle .toggle-header {
-      height: 3em;
-      background-color: #CCC; }
+
+toggle {
+  margin-bottom: 0.250em; }
+  toggle .toggle-body {
+    border: solid 0.063em #CCC; }
+  toggle .toggle-header {
+    height: 3em;
+    background-color: #CCC; }
 
 .chevron {
   -webkit-transform: rotate(0);
   transform: rotate(0);
-  transition: all 0.15s linear;
+  /*transition: all 0.15s linear;*/
   position: relative;
   box-sizing: border-box; }
   .chevron.open {
     -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    transition: all 0.15s linear; }
+    transform: rotate(90deg); }
   .chevron > div {
     border-right: 0.25em solid #FFF;
     border-bottom: 0.25em solid #FFF;

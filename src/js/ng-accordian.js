@@ -12,9 +12,10 @@
 	.factory('accordianStyleFactory', [function () {
 
 		function getStyle(code) {
+
 			switch (code) {
 				case 'chevron':
-					this.style = '<div class="chevron" ng-style="{\'width\': height + \'px\'}" style="height: 100%;" ng-class="{\'open\': toggle}"><div class="chevron" style="height: 50%; width: 50%; left: 25%; top: 25%"></div></div>';
+					this.style = '<div class="chevron" ng-style="{\'width\': height + \'px\', \'transition\': \'all \' + timing + \' linear\'}" style="height: 100%;" ng-class="{\'open\': toggle}"><div class="chevron" style="height: 50%; width: 50%; left: 25%; top: 25%"></div></div>';
 					break;
 				case 'plus':
 					this.style = '<div class="plus" ng-style="{\'width\':  ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\'}"  style="height: 66.6667%" ng-class="{\'open\': toggle}"><div></div><div></div><div></div><div></div></div>';
@@ -39,10 +40,12 @@
 				timing: '@'
 			},
 			controller: ['$rootScope', '$scope', function ($rootScope, $scope) {
+
 				this.getConfiguration = function () {
 					return {
 						'closeOthers': JSON.parse($scope.closeOthers || false) || false,
-						'toggleIcon': accordianStyleFactory.getStyle($scope.toggleIcon || 0)
+						'toggleIcon': accordianStyleFactory.getStyle($scope.toggleIcon || 0),
+						'timing': $scope.timing + 's'
 					}
 				}
 
@@ -96,6 +99,8 @@
 
 				scope.height = elem[0].firstChild.clientHeight;
 
+				scope.timing = scope.config.timing;
+
 				scope.$on('close', function () {
 					scope.toggle = false;
 				});
@@ -119,7 +124,7 @@
 
 				scope.$watch('toggle', function (n, o) {
 
-					var css = n ? { 'max-height': elem[0].scrollHeight + 'px', 'transition': 'all .2s ease-out' } : { 'max-height': 0, 'transition': 'all .2s ease-out' }
+					var css = n ? { 'max-height': elem[0].scrollHeight + 'px', 'transition': 'all ' + scope.$parent.timing + ' ease-out' } : { 'max-height': 0, 'transition': 'all ' + scope.$parent.timing + ' ease-out' }
 					elem.css(css);
 				});
 			}
