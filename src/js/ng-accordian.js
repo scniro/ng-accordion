@@ -45,7 +45,7 @@
 					return {
 						'closeOthers': JSON.parse($scope.closeOthers || false) || false,
 						'toggleIcon': accordianStyleFactory.getStyle($scope.toggleIcon || 0),
-						'timing': $scope.timing + 's'
+						'timing': $scope.timing
 					}
 				}
 
@@ -99,7 +99,7 @@
 
 				scope.height = elem[0].firstChild.clientHeight;
 
-				scope.timing = scope.config.timing;
+				scope.timing = scope.config.timing ? scope.config.timing : attrs.timing;
 
 				scope.$on('close', function () {
 					scope.toggle = false;
@@ -120,7 +120,7 @@
 			restrict: 'C',
 			link: function (scope, elem, attrs) {
 
-				console.log(scope);
+
 
 				scope.$watch('toggle', function (n, o) {
 
