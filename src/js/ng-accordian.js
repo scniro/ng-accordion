@@ -32,7 +32,7 @@
 			getStyle: getStyle
 		}
 	}])
-	.directive('accordian', ['accordianStyleFactory', '$timeout', function (accordianStyleFactory, $timeout) {
+	.directive('accordian', ['accordianStyleFactory', function (accordianStyleFactory) {
 		return {
 			scope: {
 				closeOthers: '@',
@@ -40,7 +40,6 @@
 				timing: '@'
 			},
 			controller: ['$scope', function ($scope) {
-
 				this.getConfiguration = function () {
 					return {
 						'closeOthers': JSON.parse($scope.closeOthers || false) || false,
@@ -81,7 +80,7 @@
 				var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" ng-html="content" class="toggle-body"></div>';
 
 				var tpl =
-				'<div class="toggle-header" ng-click="toggleBody($event)" >' + //ng-class="{\'open\': toggle}"
+				'<div class="toggle-header" ng-click="toggleBody($event)" >' +
 					style +
 				'</div>' +
 				'</div>' +
@@ -150,7 +149,7 @@
 }
 
 (function () {
-	if (typeof define === 'function' && define.amd) {
+	if (typeof define === 'function' && define.amd) { // RequireJS aware
 		define(['angular'], function () {
 			init();
 		});

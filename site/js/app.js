@@ -36,6 +36,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 			controller: 'modelBindingCtrl',
 			templateUrl: 'view/examples/model-binding.html'
 		})
+		.state('standalone', {
+			url: '/examples/standalone',
+			controller: 'standaloneCtrl',
+			templateUrl: 'view/examples/standalone.html'
+		})
 		.state('attributes', {
 			url: '/attributes',
 			controller: 'attributesCtrl',
@@ -99,6 +104,13 @@ app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 		{ 'title': 'Markup', 'url': 'template/accordian/model-binding/markup.html' },
 		{ 'title': 'Template', 'url': 'template/accordian/model-binding/model-binding-template.html' },
 		{ 'title': 'JavaScript', 'url': 'template/accordian/model-binding/javascript.html' }
+	];
+}]);
+
+app.controller('standaloneCtrl', ['$scope', function ($scope) {
+
+	$scope.tabs = [
+		{ 'title': 'Markup', 'url': 'template/accordian/standalone/markup.html' }
 	];
 }]);
 
