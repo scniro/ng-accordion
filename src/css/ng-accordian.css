@@ -8,6 +8,8 @@ toggle {
   toggle .toggle-header {
     height: 3em;
     background-color: #CCC; }
+  toggle.open .toggle-header {
+    background-color: dodgerblue; }
 
 .chevron {
   -webkit-transform: rotate(0);

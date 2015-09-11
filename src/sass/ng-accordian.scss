@@ -7,6 +7,7 @@ accordian {
 	width: 100%;
 }
 
+
 toggle {
 	margin-bottom: 0.250em;
 
@@ -17,6 +18,12 @@ toggle {
 	.toggle-header {
 		height: $toggle-header-height;
 		background-color: $toggle-header-color;
+	}
+
+	&.open {
+		.toggle-header {
+			background-color: dodgerblue;
+		}
 	}
 }
 
