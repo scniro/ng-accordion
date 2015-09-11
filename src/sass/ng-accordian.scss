@@ -38,31 +38,24 @@ toggle {
 
 .plus {
 	transform: rotate(0deg);
-	/*transition: transform 0.2s linear;*/
 
 	&.open {
 		transform: rotate(90deg);
-		/*transition: transform 0.2s linear;*/
 
 		div {
-
 			&:nth-child(1) {
-				transition: border 0.2s;
 				border-bottom-width: 0;
 			}
 
 			&:nth-child(2) {
-				transition: border 0.2s;
 				border-bottom-width: 0;
 			}
 
 			&:nth-child(3) {
-				transition: border 0.2s;
 				border-top-width: 0;
 			}
 
 			&:nth-child(4) {
-				transition: border 0.2s;
 				border-top-width: 0;
 			}
 		}

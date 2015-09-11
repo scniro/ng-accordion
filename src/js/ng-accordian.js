@@ -18,7 +18,7 @@
 					this.style = '<div class="chevron" ng-style="{\'width\': height + \'px\', \'transition\': \'transform \' + timing + \' linear\'}" style="height: 100%;" ng-class="{\'open\': toggle}"><div class="chevron" style="height: 50%; width: 50%; left: 25%; top: 25%"></div></div>';
 					break;
 				case 'plus':
-					this.style = '<div class="plus" ng-style="{\'width\':  ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\', \'transition\': \'transform \' + timing + \' linear\'}"  style="height: 66.6667%" ng-class="{\'open\': toggle}"><div></div><div></div><div></div><div></div></div>';
+					this.style = '<div class="plus" ng-style="{\'width\':  ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\', \'transition\': \'transform \' + timing + \' linear\'}"  style="height: 66.6667%" ng-class="{\'open\': toggle}"><div ng-style="{\'transition\': \'border \' + timing }"></div><div ng-style="{\'transition\': \'border \' + timing }"></div><div ng-style="{\'transition\': \'border \' + timing }"></div><div ng-style="{\'transition\': \'border \' + timing }"></div></div>';
 					break;
 				default:
 					this.style = '';

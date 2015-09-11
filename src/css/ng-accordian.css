@@ -25,23 +25,17 @@ toggle {
 
 .plus {
   -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  /*transition: transform 0.2s linear;*/ }
+  transform: rotate(0deg); }
   .plus.open {
     -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    /*transition: transform 0.2s linear;*/ }
+    transform: rotate(90deg); }
     .plus.open div:nth-child(1) {
-      transition: border 0.2s;
       border-bottom-width: 0; }
     .plus.open div:nth-child(2) {
-      transition: border 0.2s;
       border-bottom-width: 0; }
     .plus.open div:nth-child(3) {
-      transition: border 0.2s;
       border-top-width: 0; }
     .plus.open div:nth-child(4) {
-      transition: border 0.2s;
       border-top-width: 0; }
   .plus div {
     width: 50%;
