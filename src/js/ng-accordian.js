@@ -39,36 +39,7 @@
 				toggleIcon: '@',
 				timing: '@'
 			},
-			link: function(scope, elem, attrs) {
-				scope.relay= function(parent) {
-
-					//console.log(parent)
-
-					//console.log(angular.element(parent).children())
-					console.log(angular.element(parent))
-
-					angular.forEach(angular.element(parent).children(), function (value) {
-						//$timeout(function() {
-						//console.log(angular.element(value).scope())
-
-						//console.log(angular.element(value).scope())
-
-						//console.log(value)
-						
-
-							for (var cs = angular.element(value).scope().$$childHead; cs; cs = cs.$$nextSibling) {
-								// cs is child scope
-
-								//cs.close()
-
-								//console.log(cs)
-							}
-						//});
-
-					});
-				}
-			},
-			controller: ['$rootScope', '$scope', function ($rootScope, $scope) {
+			controller: ['$scope', function ($scope) {
 
 				this.getConfiguration = function () {
 					return {
@@ -77,19 +48,6 @@
 						'timing': $scope.timing
 					}
 				}
-
-				$rootScope.$on('closeOthers', function (e, p) {
-					//$rootScope.$broadcast('close');
-
-					$scope.relay(p);
-
-
-					//s.targetScope.close()
-
-					//console.log(s)
-
-					//console.log(parent)
-				});
 			}]
 		}
 	}])
@@ -140,20 +98,11 @@
 
 				scope.timing = scope.config.timing ? scope.config.timing : attrs.timing;
 
-				//scope.$on('close', function () {
-				//	scope.toggle = false;
-				//});
-
-				scope.close = function () {
-
-					scope.toggle = false;
-				}
-
 				scope.toggleBody = function ($event) {
 
 					$event.stopPropagation();
 
-					var toclose = scope.toggle ? false : true;
+					var closing = scope.toggle ? false : true;
 
 					var toggle = angular.element($event.currentTarget).parent();
 
@@ -161,33 +110,11 @@
 					
 					if (accordian[0].nodeName === 'ACCORDIAN') {
 						angular.forEach(accordian.children().children(), function (value) {
-
-							angular.element(value).scope().close()
-
-							//angular.element(value).removeClass('open');
-
-							//console.log(toggle.scope())
-
-							
+							angular.element(value).scope().toggle = false;
 						});
 					}
 
-					scope.toggle = toclose;
-
-					//toggle.addClass('open')
-
-					//scope.toggle = scope.toggle ? false : true;
-
-					//if (elem[0].parentElement.nodeName === "ACCORDIAN") {
-					//	if (!scope.toggle)
-					//		scope.$emit('closeOthers', elem[0].parentElement);
-					//}
-
-
-//if (!scope.toggle)
-					//	scope.$emit('closeOthers', { parent: parent });
-
-					//scope.toggle = scope.toggle ? false : true;
+					scope.toggle = closing;
 				}
 			}
 		}
@@ -197,11 +124,7 @@
 			restrict: 'C',
 			link: function (scope, elem, attrs) {
 
-				//var css = { 'max-height': 0, 'transition': 'all ' + scope.$parent.timing + ' ease-out' }
-				//elem.css(css);
-
 				scope.$watch('toggle', function (n, o) {
-
 					var css = n ? { 'max-height': elem[0].scrollHeight + 'px', 'transition': 'all ' + scope.$parent.timing + ' ease-out' } : { 'max-height': 0, 'transition': 'all ' + scope.$parent.timing + ' ease-out' }
 					elem.css(css);
 				});
