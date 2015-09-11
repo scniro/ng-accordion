@@ -15,10 +15,10 @@
 
 			switch (code) {
 				case 'chevron':
-					this.style = '<div class="chevron" ng-style="{\'width\': height + \'px\', \'transition\': \'all \' + timing + \' linear\'}" style="height: 100%;" ng-class="{\'open\': toggle}"><div class="chevron" style="height: 50%; width: 50%; left: 25%; top: 25%"></div></div>';
+					this.style = '<div class="chevron" ng-style="{\'width\': height + \'px\', \'transition\': \'transform \' + timing + \' linear\'}" style="height: 100%;" ng-class="{\'open\': toggle}"><div class="chevron" style="height: 50%; width: 50%; left: 25%; top: 25%"></div></div>';
 					break;
 				case 'plus':
-					this.style = '<div class="plus" ng-style="{\'width\':  ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\'}"  style="height: 66.6667%" ng-class="{\'open\': toggle}"><div></div><div></div><div></div><div></div></div>';
+					this.style = '<div class="plus" ng-style="{\'width\':  ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\', \'transition\': \'transform \' + timing + \' linear\'}"  style="height: 66.6667%" ng-class="{\'open\': toggle}"><div></div><div></div><div></div><div></div></div>';
 					break;
 				default:
 					this.style = '';
@@ -104,14 +104,16 @@
 
 					var closing = scope.toggle ? false : true;
 
-					var toggle = angular.element($event.currentTarget).parent();
+					if (scope.config.closeOthers) {
+						var toggle = angular.element($event.currentTarget).parent();
 
-					var accordian = toggle.parent();
-					
-					if (accordian[0].nodeName === 'ACCORDIAN') {
-						angular.forEach(accordian.children().children(), function (value) {
-							angular.element(value).scope().toggle = false;
-						});
+						var accordian = toggle.parent();
+
+						if (accordian[0].nodeName === 'ACCORDIAN') {
+							angular.forEach(accordian.children().children(), function (value) {
+								angular.element(value).scope().toggle = false;
+							});
+						}
 					}
 
 					scope.toggle = closing;

@@ -12,7 +12,6 @@ toggle {
 .chevron {
   -webkit-transform: rotate(0);
   transform: rotate(0);
-  /*transition: all 0.15s linear;*/
   position: relative;
   box-sizing: border-box; }
   .chevron.open {
@@ -25,15 +24,25 @@ toggle {
     transform: rotate(-45deg); }
 
 .plus {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  transition: -webkit-transform 0.15s linear;
-  transition: transform 0.15s linear; }
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  /*transition: transform 0.2s linear;*/ }
   .plus.open {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
-    transition: -webkit-transform 0.15s linear;
-    transition: transform 0.15s linear; }
+    /*transition: transform 0.2s linear;*/ }
+    .plus.open div:nth-child(1) {
+      transition: border 0.2s;
+      border-bottom-width: 0; }
+    .plus.open div:nth-child(2) {
+      transition: border 0.2s;
+      border-bottom-width: 0; }
+    .plus.open div:nth-child(3) {
+      transition: border 0.2s;
+      border-top-width: 0; }
+    .plus.open div:nth-child(4) {
+      transition: border 0.2s;
+      border-top-width: 0; }
   .plus div {
     width: 50%;
     height: 50%;
@@ -42,24 +51,12 @@ toggle {
     .plus div:nth-child(1) {
       border-bottom: solid 0.125em #FFF;
       border-right: solid 0.125em #FFF; }
-      .open .plus div:nth-child(1) {
-        transition: border 0.15s;
-        border-bottom-width: 0; }
     .plus div:nth-child(2) {
       border-bottom: solid 0.125em #FFF;
       border-left: solid 0.125em #FFF; }
-      .open .plus div:nth-child(2) {
-        transition: border 0.15s;
-        border-bottom-width: 0; }
     .plus div:nth-child(3) {
       border-top: solid 0.125em #FFF;
       border-right: solid 0.125em #FFF; }
-      .open .plus div:nth-child(3) {
-        transition: border 0.15s;
-        border-top-width: 0; }
     .plus div:nth-child(4) {
       border-top: solid 0.125em #FFF;
       border-left: solid 0.125em #FFF; }
-      .open .plus div:nth-child(4) {
-        transition: border 0.15s;
-        border-top-width: 0; }

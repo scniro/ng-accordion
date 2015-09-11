@@ -22,7 +22,6 @@ toggle {
 
 .chevron {
 	transform: rotate(0);
-	/*transition: all 0.15s linear;*/
 	position: relative;
 	box-sizing: border-box;
 
@@ -38,12 +37,35 @@ toggle {
 }
 
 .plus {
-	transform: rotate(90deg);
-	transition: transform 0.15s linear;
+	transform: rotate(0deg);
+	/*transition: transform 0.2s linear;*/
 
 	&.open {
 		transform: rotate(90deg);
-		transition: transform 0.15s linear;
+		/*transition: transform 0.2s linear;*/
+
+		div {
+
+			&:nth-child(1) {
+				transition: border 0.2s;
+				border-bottom-width: 0;
+			}
+
+			&:nth-child(2) {
+				transition: border 0.2s;
+				border-bottom-width: 0;
+			}
+
+			&:nth-child(3) {
+				transition: border 0.2s;
+				border-top-width: 0;
+			}
+
+			&:nth-child(4) {
+				transition: border 0.2s;
+				border-top-width: 0;
+			}
+		}
 	}
 
 	div {
@@ -55,41 +77,21 @@ toggle {
 		&:nth-child(1) {
 			border-bottom: solid 0.125em $icon-color;
 			border-right: solid 0.125em $icon-color;
-
-			.open & {
-				transition: border 0.15s;
-				border-bottom-width: 0;
-			}
 		}
 
 		&:nth-child(2) {
 			border-bottom: solid 0.125em $icon-color;
 			border-left: solid 0.125em $icon-color;
-
-			.open & {
-				transition: border 0.15s;
-				border-bottom-width: 0;
-			}
 		}
 
 		&:nth-child(3) {
 			border-top: solid 0.125em $icon-color;
 			border-right: solid 0.125em $icon-color;
-
-			.open & {
-				transition: border 0.15s;
-				border-top-width: 0;
-			}
 		}
 
 		&:nth-child(4) {
 			border-top: solid 0.125em $icon-color;
 			border-left: solid 0.125em $icon-color;
-
-			.open & {
-				transition: border 0.15s;
-				border-top-width: 0;
-			}
 		}
 	}
 }
