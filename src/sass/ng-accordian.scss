@@ -9,6 +9,7 @@ accordian {
 
 toggle {
 	margin-bottom: 0.250em;
+	cursor: pointer;
 
 	.toggle-body {
 		border: solid 0.063em $accordian-border-color;
