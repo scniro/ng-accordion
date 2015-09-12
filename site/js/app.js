@@ -107,8 +107,14 @@ app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
 		{ 'title': 'Markup', 'url': 'template/accordian/model-binding/markup.html' },
-		{ 'title': 'Template', 'url': 'template/accordian/model-binding/model-binding-template.html' },
+		{ 'title': 'Template', 'url': 'template/accordian/model-binding/model-binding-template-display.html' },
 		{ 'title': 'JavaScript', 'url': 'template/accordian/model-binding/javascript.html' }
+	];
+
+	$scope.content = [
+		{ 'value': 'I\'m a model value!' },
+		{ 'value': 'I\'m a model value!' },
+		{ 'value': 'I\'m a model value!' }
 	];
 }]);
 

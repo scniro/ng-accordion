@@ -54,14 +54,16 @@
 		return {
 			scope: {
 				content: '=',
-				contentUrl: '=',
+				contentUrl: '@',
 				toggleIcon: '@',
-				modelName: '@'
+				model: '='
 			},
 			require: ['?^accordian', '?^ngModel'],
 			link: function (scope, elem, attrs, parent) {
 
-				if (parent[1] && !scope.modelName) {
+				console.log(scope.content);
+
+				if (parent[1] && !attrs.modelName) {
 					throw new NgAccordianException('ngAccordian: ng-model requires attribute model-name to be specified.');
 				}
 
@@ -69,7 +71,7 @@
 
 				if (parent[1]) {
 					$timeout(function () {
-						scope[scope.modelName] = parent[1].$modelValue;
+						scope[attrs.modelName] = parent[1].$modelValue;
 					});
 				}
 
