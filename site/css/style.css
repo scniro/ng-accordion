@@ -105,6 +105,16 @@ toggle p {
 pre {
   margin: 0 !important; }
 
+table th {
+  font-weight: bolder; }
+
+table td, table th {
+  padding: 1.000em;
+  border: solid 1px #ccc; }
+  table td hr.separator, table th hr.separator {
+    border: 0;
+    border-bottom: dotted 1px #ccc; }
+
 pre[class*="language-shell"] {
   background-color: #383838; }
   pre[class*="language-shell"] code {

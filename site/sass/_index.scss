@@ -54,7 +54,6 @@ section.content {
 
 		&.left {
 			float: left;
-
 		}
 
 		&.right {
@@ -126,4 +125,23 @@ toggle p {
 
 pre {
 	margin: 0 !important;
+}
+
+table {
+
+	th {
+		font-weight: bolder;
+	}
+
+	td, th {
+
+		hr.separator {
+			border: 0;
+			border-bottom: dotted 1px $gray-darker;
+			
+		}
+
+		padding: 1.000em;
+		border: solid 1px $gray-darker;
+	}
 }
