@@ -53,7 +53,7 @@
 	.directive('toggle', ['$compile', 'accordianStyleFactory', '$timeout', function ($compile, accordianStyleFactory, $timeout) {
 		return {
 			scope: {
-				content: '@',
+				content: '=',
 				contentUrl: '=',
 				toggleIcon: '@',
 				modelName: '@'
@@ -108,7 +108,7 @@
 
 						var accordian = toggle.parent();
 
-						if (accordian[0].nodeName === 'ACCORDIAN') {
+						if (accordian[0].nodeName.toUpperCase() === 'ACCORDIAN') {
 							angular.forEach(accordian.children().children(), function (value) {
 								angular.element(value).scope().toggle = false;
 							});
@@ -126,7 +126,7 @@
 			link: function (scope, elem, attrs) {
 
 				scope.$watch('toggle', function (n, o) {
-					var css = n ? { 'max-height': elem[0].scrollHeight + 'px', 'transition': 'all ' + scope.$parent.timing + ' ease-out' } : { 'max-height': 0, 'transition': 'all ' + scope.$parent.timing + ' ease-out' }
+					var css = n ? { 'max-height': elem[0].scrollHeight + 'px', 'transition': 'all ' + scope.timing + ' ease-out' } : { 'max-height': 0, 'transition': 'all ' + scope.timing + ' ease-out' }
 					elem.css(css);
 				});
 			}

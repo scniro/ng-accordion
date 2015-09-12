@@ -1,7 +1,11 @@
 ﻿<h1>content strings</h1>
 
 <section class="pane left">
-	<span>content strings</span>
+	<accordian close-others="true"
+			   timing="0.2s"
+			   toggle-icon="chevron">
+		<toggle ng-repeat="c in content" content="c.value"></toggle>
+	</accordian>
 </section>
 
 <section class="pane right">

@@ -56,7 +56,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 app.run([
 	'$rootScope', 'tplBase', 'srcBase', function ($rootScope, tplBase, srcBase) {
 		$rootScope.tplBase = tplBase;
-		//$rootScope.srcBase = srcBase;
 
 		$rootScope.scripts = [
 			{ 'src': 'js/app.js' },
@@ -95,6 +94,12 @@ app.controller('contentStringsCtrl', ['$scope', function ($scope) {
 	$scope.tabs = [
 		{ 'title': 'Markup', 'url': 'template/accordian/content-strings/markup.html' },
 		{ 'title': 'JavaScript', 'url': 'template/accordian/content-strings/javascript.html' }
+	];
+
+	$scope.content = [
+		{ 'value': '<p><span>hey, I\'m a string!</span></p>'  },
+		{ 'value': '<p><span>hey, I\'m a string!</span></p>' },
+		{ 'value': '<p><span>hey, I\'m a string!</span></p>' }
 	];
 }]);
 
