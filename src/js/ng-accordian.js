@@ -54,14 +54,12 @@
 		return {
 			scope: {
 				content: '=',
-				contentUrl: '@',
+				contentUrl: '=',
 				toggleIcon: '@',
 				model: '='
 			},
 			require: ['?^accordian', '?^ngModel'],
 			link: function (scope, elem, attrs, parent) {
-
-				console.log(scope.content);
 
 				if (parent[1] && !attrs.modelName) {
 					throw new NgAccordianException('ngAccordian: ng-model requires attribute model-name to be specified.');
