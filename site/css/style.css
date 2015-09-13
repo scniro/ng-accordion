@@ -112,12 +112,79 @@ table th {
   font-weight: bolder; }
 
 table td, table th {
-  padding: 1.000em;
+  padding: 1.500em;
   border: solid 1px #ccc; }
   table td hr.separator, table th hr.separator {
     border: 0;
     border-bottom: dashed 1px #ccc;
     margin: 0.750em 0; }
+
+.icon-example {
+  width: 3.000em;
+  background-color: #ccc;
+  height: 3.000em; }
+  .icon-example .chevron {
+    position: relative;
+    box-sizing: border-box;
+    height: 3.000em;
+    width: 3.000em;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    transition: all 0.15s linear; }
+    .icon-example .chevron.open {
+      -webkit-transform: translate(0, -10%) rotate(90deg);
+      transform: translate(0, -10%) rotate(90deg); }
+    .icon-example .chevron > div {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      height: 1.500em;
+      width: 1.500em;
+      transition: all 0.15s linear;
+      border-right: .25em solid white;
+      border-bottom: .25em solid white;
+      position: relative;
+      box-sizing: border-box;
+      top: 0.75em;
+      left: 0.75em; }
+  .icon-example .plus {
+    padding: 0.5em;
+    height: 2.000em;
+    width: 2.000em;
+    background-color: #ccc;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    transition: all 0.15s linear;
+    border-radius: 50%; }
+    .icon-example .plus.open {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      transition: all 0.15s linear; }
+      .icon-example .plus.open div:nth-child(1) {
+        border-bottom-width: 0; }
+      .icon-example .plus.open div:nth-child(2) {
+        border-bottom-width: 0; }
+      .icon-example .plus.open div:nth-child(3) {
+        border-top-width: 0; }
+      .icon-example .plus.open div:nth-child(4) {
+        border-top-width: 0; }
+    .icon-example .plus div {
+      width: 50%;
+      height: 50%;
+      float: left;
+      box-sizing: border-box;
+      transition: border 0.15s; }
+      .icon-example .plus div:nth-child(1) {
+        border-bottom: solid 0.125em white;
+        border-right: solid 0.125em white; }
+      .icon-example .plus div:nth-child(2) {
+        border-bottom: solid 0.125em white;
+        border-left: solid 0.125em white; }
+      .icon-example .plus div:nth-child(3) {
+        border-top: solid 0.125em white;
+        border-right: solid 0.125em white; }
+      .icon-example .plus div:nth-child(4) {
+        border-top: solid 0.125em white;
+        border-left: solid 0.125em white; }
 
 pre, code {
   font-size: 10pt; }

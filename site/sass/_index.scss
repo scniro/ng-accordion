@@ -144,10 +144,102 @@ table {
 			border: 0;
 			border-bottom: dashed 1px $gray-darker;
 			margin: 0.750em 0;
-			
 		}
 
-		padding: 1.000em;
+		padding: 1.500em;
 		border: solid 1px $gray-darker;
+	}
+}
+
+.icon-example {
+	width: 3.000em;
+	background-color: $gray-darker;
+	height: 3.000em;
+
+	.chevron {
+		position: relative;
+		box-sizing: border-box;
+		height: 3.000em;
+		width: 3.000em;
+		transform: rotate(0);
+		transition: all .15s linear;
+
+		&.open {
+			transform: translate(0, -10%) rotate(90deg);
+		}
+
+		> div {
+			transform: rotate(-45deg);
+			height: 1.500em;
+			width: 1.500em;
+			transition: all .15s linear;
+			border-right: .25em solid white;
+			border-bottom: .25em solid white;
+			position: relative;
+			box-sizing: border-box;
+			top: 0.75em;
+			left: 0.75em;
+		}
+	}
+
+	.plus {
+		padding: 0.5em;
+		height: 2.000em;
+		width: 2.000em;
+		background-color: $gray-darker;
+		transform: rotate(0);
+		transition: all .15s linear;
+		border-radius: 50%;
+
+		&.open {
+			transform: rotate(90deg);
+			transition: all .15s linear;
+
+			div {
+				&:nth-child(1) {
+					border-bottom-width: 0;
+				}
+
+				&:nth-child(2) {
+					border-bottom-width: 0;
+				}
+
+				&:nth-child(3) {
+					border-top-width: 0;
+				}
+
+				&:nth-child(4) {
+					border-top-width: 0;
+				}
+			}
+		}
+
+		div {
+			width: 50%;
+			height: 50%;
+			float: left;
+			box-sizing: border-box;
+			transition: border .15s;
+
+			&:nth-child(1) {
+				border-bottom: solid 0.125em white;
+				border-right: solid 0.125em white;
+			}
+
+			&:nth-child(2) {
+				border-bottom: solid 0.125em white;
+				border-left: solid 0.125em white;
+			}
+
+			&:nth-child(3) {
+				border-top: solid 0.125em white;
+				border-right: solid 0.125em white;
+			}
+
+			&:nth-child(4) {
+				border-top: solid 0.125em white;
+				border-left: solid 0.125em white;
+			}
+		}
 	}
 }

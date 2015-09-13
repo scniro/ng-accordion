@@ -16,8 +16,8 @@ toggle {
   position: relative;
   box-sizing: border-box; }
   .chevron.open {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); }
+    -webkit-transform: translate(0, -10%) rotate(90deg);
+    transform: translate(0, -10%) rotate(90deg); }
   .chevron > div {
     border-right: 0.25em solid #FFF;
     border-bottom: 0.25em solid #FFF;
