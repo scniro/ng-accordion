@@ -63,6 +63,9 @@ section.content {
       section.content section.pane.left.attributes {
         width: 75%;
         font-size: 10pt; }
+      section.content section.pane.left.icons {
+        width: 50%;
+        font-size: 10pt; }
     section.content section.pane.right {
       float: right; }
 
@@ -122,7 +125,8 @@ table td, table th {
 .icon-example {
   width: 3.000em;
   background-color: #ccc;
-  height: 3.000em; }
+  height: 3.000em;
+  font-size: 12pt; }
   .icon-example .chevron {
     position: relative;
     box-sizing: border-box;
@@ -132,8 +136,8 @@ table td, table th {
     transform: rotate(0);
     transition: all 0.15s linear; }
     .icon-example .chevron.open {
-      -webkit-transform: translate(0, -10%) rotate(90deg);
-      transform: translate(0, -10%) rotate(90deg); }
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg); }
     .icon-example .chevron > div {
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
@@ -144,8 +148,8 @@ table td, table th {
       border-bottom: .25em solid white;
       position: relative;
       box-sizing: border-box;
-      top: 0.75em;
-      left: 0.75em; }
+      top: 0.750em;
+      left: 0.500em; }
   .icon-example .plus {
     padding: 0.5em;
     height: 2.000em;

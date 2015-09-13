@@ -1,16 +1,37 @@
 ﻿<h1>icons</h1>
 
-<div class="icon-example">
-	<div class="chevron" ng-init="chevrontoggle = false" ng-click="chevrontoggle = chevrontoggle ? false : true" ng-class="{'open': chevrontoggle}">
-		<div></div>
-	</div>
-</div>
-
-<div class="icon-example">
-	<div class="plus" ng-init="plustoggle = false" ng-click="plustoggle = plustoggle ? false : true" ng-class="{'open': plustoggle}">
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-</div>
+<section class="pane left icons">
+	<table>
+		<thead>
+			<tr>
+				<th>icon</th>
+				<th>example</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code prism class="language-markup">&lt;accordian toggle-icon="chevron"></code></td>
+				<td>
+					<div class="icon-example">
+						<div class="chevron" ng-init="chevrontoggle = false" ng-click="chevrontoggle = chevrontoggle ? false : true" ng-class="{'open': chevrontoggle}">
+							<div></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><code prism class="language-markup">&lt;accordian toggle-icon="plus"></code></td>
+				<td>
+					<div class="icon-example">
+						<div class="plus" ng-init="plustoggle = false" ng-click="plustoggle = plustoggle ? false : true" ng-class="{'open': plustoggle}">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

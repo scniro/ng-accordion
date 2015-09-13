@@ -12,7 +12,12 @@ toggle {
 	cursor: pointer;
 
 	.toggle-body {
-		border: solid 0.063em $accordian-border-color;
+
+		&.border {
+			border-left: solid 0.063em $accordian-border-color;
+			border-right: solid 0.063em $accordian-border-color;
+			border-bottom: solid 0.063em $accordian-border-color;
+		}
 	}
 
 	.toggle-header {
@@ -27,7 +32,7 @@ toggle {
 	box-sizing: border-box;
 
 	&.open {
-		transform: translate(0, -10%) rotate(90deg);
+		transform: rotate(90deg);
 	}
 
 	> div {

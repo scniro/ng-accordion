@@ -15,7 +15,7 @@
 
 			switch (code) {
 				case 'chevron':
-					this.style = '<div class="chevron" ng-style="{\'width\': height + \'px\', \'transition\': \'transform \' + timing + \' linear\'}" style="height: 100%;" ng-class="{\'open\': toggle}"><div class="chevron" style="height: 50%; width: 50%; left: 25%; top: 25%"></div></div>';
+					this.style = '<div class="chevron" ng-style="{\'width\': height + \'px\', \'transition\': \'transform \' + timing + \' linear\'}" style="height: 100%;" ng-class="{\'open\': toggle}"><div class="chevron" style="height: 50%; width: 50%; left: 12.5%; top: 25%"></div></div>';
 					break;
 				case 'plus':
 					this.style = '<div class="plus" ng-style="{\'width\':  ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\', \'transition\': \'transform \' + timing + \' linear\'}"  style="height: 66.6667%" ng-class="{\'open\': toggle}"><div ng-style="{\'transition\': \'border \' + timing }"></div><div ng-style="{\'transition\': \'border \' + timing }"></div><div ng-style="{\'transition\': \'border \' + timing }"></div><div ng-style="{\'transition\': \'border \' + timing }"></div></div>';
@@ -120,14 +120,52 @@
 			}
 		}
 	}])
-	.directive('toggleBody', [function () {
+	.directive('toggleBody', ['$timeout', function ($timeout) {
 		return {
 			restrict: 'C',
 			link: function (scope, elem, attrs) {
 
+				function transitionToMilliseconds(value) {
+					var num = parseFloat(value, 10),
+						unit = value.match(/m?s/),
+						milliseconds;
+
+					if (unit) {
+						unit = unit[0];
+					}
+
+					switch (unit) {
+						case 's':
+							milliseconds = num * 1000;
+							break;
+						case 'ms':
+							milliseconds = num;
+							break;
+						default:
+							milliseconds = 0;
+							break;
+					}
+
+					return milliseconds;
+				}
+
 				scope.$watch('toggle', function (n, o) {
-					var css = n ? { 'max-height': elem[0].scrollHeight + 'px', 'transition': 'all ' + scope.timing + ' ease-out' } : { 'max-height': 0, 'transition': 'all ' + scope.timing + ' ease-out' }
+
+					if (!scope.transition) {
+						scope.transition = transitionToMilliseconds(scope.timing);
+						console.log(scope.transition);
+					}
+
+					var css = n ? { 'max-height': elem[0].scrollHeight + 'px', 'transition': 'max-height ' + scope.timing + ' ease-out' } : { 'max-height': 0, 'transition': 'max-height ' + scope.timing + ' ease-out' }
 					elem.css(css);
+
+					if (n) {
+						elem.addClass('border');
+					} else {
+						$timeout(function () {
+							elem.removeClass('border');
+						}, scope.transition);
+					}
 				});
 			}
 		}

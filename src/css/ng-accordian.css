@@ -4,8 +4,10 @@ accordian {
 toggle {
   margin-bottom: 0.250em;
   cursor: pointer; }
-  toggle .toggle-body {
-    border: solid 0.063em #CCC; }
+  toggle .toggle-body.border {
+    border-left: solid 0.063em #CCC;
+    border-right: solid 0.063em #CCC;
+    border-bottom: solid 0.063em #CCC; }
   toggle .toggle-header {
     height: 3em;
     background-color: #CCC; }
@@ -16,8 +18,8 @@ toggle {
   position: relative;
   box-sizing: border-box; }
   .chevron.open {
-    -webkit-transform: translate(0, -10%) rotate(90deg);
-    transform: translate(0, -10%) rotate(90deg); }
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
   .chevron > div {
     border-right: 0.25em solid #FFF;
     border-bottom: 0.25em solid #FFF;
