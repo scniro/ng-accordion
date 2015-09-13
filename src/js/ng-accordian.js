@@ -130,20 +130,13 @@
 						unit = value.match(/m?s/),
 						milliseconds;
 
-					if (unit) {
+					if (unit)
 						unit = unit[0];
-					}
 
 					switch (unit) {
-						case 's':
-							milliseconds = num * 1000;
-							break;
-						case 'ms':
-							milliseconds = num;
-							break;
-						default:
-							milliseconds = 0;
-							break;
+						case 's': milliseconds = num * 1000; break;
+						case 'ms': milliseconds = num; break;
+						default: milliseconds = 0; break;
 					}
 
 					return milliseconds;
@@ -151,9 +144,8 @@
 
 				scope.$watch('toggle', function (n, o) {
 
-					if (!scope.transition) {
+					if (!scope.transition && scope.timing) {
 						scope.transition = transitionToMilliseconds(scope.timing);
-						console.log(scope.transition);
 					}
 
 					var css = n ? { 'max-height': elem[0].scrollHeight + 'px', 'transition': 'max-height ' + scope.timing + ' ease-out' } : { 'max-height': 0, 'transition': 'max-height ' + scope.timing + ' ease-out' }

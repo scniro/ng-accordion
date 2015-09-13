@@ -157,9 +157,9 @@ app.directive('tabs', [function () {
 app.directive('prism', [function () {
 	return {
 		restrict: 'A',
-		link: function (scope, element, attrs) {
-			element.ready(function () {
-				Prism.highlightElement(element[0]);
+		link: function (scope, elem, attrs) {
+			elem.ready(function () {
+				Prism.highlightElement(elem[0]);
 			});
 		}
 	}

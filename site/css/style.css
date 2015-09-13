@@ -126,7 +126,8 @@ table td, table th {
   width: 3.000em;
   background-color: #ccc;
   height: 3.000em;
-  font-size: 12pt; }
+  font-size: 12pt;
+  cursor: pointer; }
   .icon-example .chevron {
     position: relative;
     box-sizing: border-box;
@@ -148,8 +149,8 @@ table td, table th {
       border-bottom: .25em solid white;
       position: relative;
       box-sizing: border-box;
-      top: 0.750em;
-      left: 0.500em; }
+      top: 25%;
+      left: 12.5%; }
   .icon-example .plus {
     padding: 0.5em;
     height: 2.000em;
