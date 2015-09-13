@@ -54,6 +54,11 @@ section.content {
 
 		&.left {
 			float: left;
+
+			&.attributes {
+				width: 75%;
+				font-size: 10pt;
+			}
 		}
 
 		&.right {
@@ -137,7 +142,8 @@ table {
 
 		hr.separator {
 			border: 0;
-			border-bottom: dotted 1px $gray-darker;
+			border-bottom: dashed 1px $gray-darker;
+			margin: 0.750em 0;
 			
 		}
 

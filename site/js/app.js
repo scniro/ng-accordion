@@ -112,9 +112,9 @@ app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 	];
 
 	$scope.content = [
-		{ 'value': 'I\'m a model value!' },
-		{ 'value': 'I\'m a model value!' },
-		{ 'value': 'I\'m a model value!' }
+		{ 'value': 'I\'m a model!' },
+		{ 'value': 'I\'m a model!' },
+		{ 'value': 'I\'m a model!' }
 	];
 }]);
 

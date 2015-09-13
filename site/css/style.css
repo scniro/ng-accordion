@@ -60,6 +60,9 @@ section.content {
     padding-right: 2.000em; }
     section.content section.pane.left {
       float: left; }
+      section.content section.pane.left.attributes {
+        width: 75%;
+        font-size: 10pt; }
     section.content section.pane.right {
       float: right; }
 
@@ -113,7 +116,11 @@ table td, table th {
   border: solid 1px #ccc; }
   table td hr.separator, table th hr.separator {
     border: 0;
-    border-bottom: dotted 1px #ccc; }
+    border-bottom: dashed 1px #ccc;
+    margin: 0.750em 0; }
+
+pre, code {
+  font-size: 10pt; }
 
 pre[class*="language-shell"] {
   background-color: #383838; }
