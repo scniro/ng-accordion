@@ -1,6 +1,6 @@
 ﻿$icon-color: #FFF;
 $toggle-header-color: #CCC;
-$toggle-header-height: 3.000em;
+$toggle-header-height: 2.000em;
 $accordian-border-color: #CCC;
 
 accordian {
@@ -36,8 +36,10 @@ toggle {
 	}
 
 	> div {
-		border-right: 0.250em solid $icon-color;
-		border-bottom: 0.25em solid $icon-color;
+		border-right-style: solid;
+		border-right-color: $icon-color;
+		border-bottom-style: solid;
+		border-bottom-color: $icon-color;
 		transform: rotate(-45deg);
 	}
 }
@@ -50,19 +52,19 @@ toggle {
 
 		div {
 			&:nth-child(1) {
-				border-bottom-width: 0;
+				border-bottom-width: 0 !important;
 			}
 
 			&:nth-child(2) {
-				border-bottom-width: 0;
+				border-bottom-width: 0 !important;
 			}
 
 			&:nth-child(3) {
-				border-top-width: 0;
+				border-top-width: 0 !important;
 			}
 
 			&:nth-child(4) {
-				border-top-width: 0;
+				border-top-width: 0 !important;
 			}
 		}
 	}
@@ -74,23 +76,43 @@ toggle {
 		box-sizing: border-box;
 
 		&:nth-child(1) {
-			border-bottom: solid 0.125em $icon-color;
-			border-right: solid 0.125em $icon-color;
+			/*border-bottom: solid 0.125em $icon-color;
+			border-right: solid 0.125em $icon-color;*/
+
+			border-right-style: solid;
+			border-right-color: $icon-color;
+			border-bottom-style: solid;
+			border-bottom-color: $icon-color;
 		}
 
 		&:nth-child(2) {
-			border-bottom: solid 0.125em $icon-color;
-			border-left: solid 0.125em $icon-color;
+			/*border-bottom: solid 0.125em $icon-color;
+			border-left: solid 0.125em $icon-color;*/
+
+			border-left-style: solid;
+			border-left-color: $icon-color;
+			border-bottom-style: solid;
+			border-bottom-color: $icon-color;
 		}
 
 		&:nth-child(3) {
-			border-top: solid 0.125em $icon-color;
-			border-right: solid 0.125em $icon-color;
+			/*border-top: solid 0.125em $icon-color;
+			border-right: solid 0.125em $icon-color;*/
+
+			border-right-style: solid;
+			border-right-color: $icon-color;
+			border-top-style: solid;
+			border-top-color: $icon-color;
 		}
 
 		&:nth-child(4) {
-			border-top: solid 0.125em $icon-color;
-			border-left: solid 0.125em $icon-color;
+			/*border-top: solid 0.125em $icon-color;
+			border-left: solid 0.125em $icon-color;*/
+
+			border-top-style: solid;
+			border-top-color: $icon-color;
+			border-left-style: solid;
+			border-left-color: $icon-color;
 		}
 	}
 }

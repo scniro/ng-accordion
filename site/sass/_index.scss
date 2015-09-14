@@ -190,14 +190,13 @@ table {
 	}
 
 	.plus {
-		padding: 0.5em;
+		padding: 0.500em;
 		height: 2.000em;
 		width: 2.000em;
 		background-color: $gray-darker;
 		transform: rotate(0);
 		transition: all .15s linear;
 		border-radius: 50%;
-
 
 		&.open {
 			transform: rotate(90deg);

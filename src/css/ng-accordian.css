@@ -9,7 +9,7 @@ toggle {
     border-right: solid 0.063em #CCC;
     border-bottom: solid 0.063em #CCC; }
   toggle .toggle-header {
-    height: 3em;
+    height: 2em;
     background-color: #CCC; }
 
 .chevron {
@@ -21,8 +21,10 @@ toggle {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg); }
   .chevron > div {
-    border-right: 0.25em solid #FFF;
-    border-bottom: 0.25em solid #FFF;
+    border-right-style: solid;
+    border-right-color: #FFF;
+    border-bottom-style: solid;
+    border-bottom-color: #FFF;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
@@ -33,27 +35,43 @@ toggle {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg); }
     .plus.open div:nth-child(1) {
-      border-bottom-width: 0; }
+      border-bottom-width: 0 !important; }
     .plus.open div:nth-child(2) {
-      border-bottom-width: 0; }
+      border-bottom-width: 0 !important; }
     .plus.open div:nth-child(3) {
-      border-top-width: 0; }
+      border-top-width: 0 !important; }
     .plus.open div:nth-child(4) {
-      border-top-width: 0; }
+      border-top-width: 0 !important; }
   .plus div {
     width: 50%;
     height: 50%;
     float: left;
     box-sizing: border-box; }
     .plus div:nth-child(1) {
-      border-bottom: solid 0.125em #FFF;
-      border-right: solid 0.125em #FFF; }
+      /*border-bottom: solid 0.125em $icon-color;
+			border-right: solid 0.125em $icon-color;*/
+      border-right-style: solid;
+      border-right-color: #FFF;
+      border-bottom-style: solid;
+      border-bottom-color: #FFF; }
     .plus div:nth-child(2) {
-      border-bottom: solid 0.125em #FFF;
-      border-left: solid 0.125em #FFF; }
+      /*border-bottom: solid 0.125em $icon-color;
+			border-left: solid 0.125em $icon-color;*/
+      border-left-style: solid;
+      border-left-color: #FFF;
+      border-bottom-style: solid;
+      border-bottom-color: #FFF; }
     .plus div:nth-child(3) {
-      border-top: solid 0.125em #FFF;
-      border-right: solid 0.125em #FFF; }
+      /*border-top: solid 0.125em $icon-color;
+			border-right: solid 0.125em $icon-color;*/
+      border-right-style: solid;
+      border-right-color: #FFF;
+      border-top-style: solid;
+      border-top-color: #FFF; }
     .plus div:nth-child(4) {
-      border-top: solid 0.125em #FFF;
-      border-left: solid 0.125em #FFF; }
+      /*border-top: solid 0.125em $icon-color;
+			border-left: solid 0.125em $icon-color;*/
+      border-top-style: solid;
+      border-top-color: #FFF;
+      border-left-style: solid;
+      border-left-color: #FFF; }
