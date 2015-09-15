@@ -152,6 +152,7 @@ table td, table th {
       top: 25%;
       left: 12.5%; }
   .icon-example .plus {
+    height: 66.6667%;
     padding: 0.500em;
     height: 2.000em;
     width: 2.000em;
@@ -176,8 +177,7 @@ table td, table th {
       width: 50%;
       height: 50%;
       float: left;
-      box-sizing: border-box;
-      transition: border 0.15s; }
+      box-sizing: border-box; }
       .icon-example .plus div:nth-child(1) {
         border-bottom: solid 0.125em white;
         border-right: solid 0.125em white; }

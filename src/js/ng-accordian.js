@@ -13,23 +13,31 @@
 
 		function getStyle(code) {
 
-
-
 			switch (code) {
 				case 'chevron':
-					this.style = '<div class="chevron" ng-style="{\'width\': height + \'px\', \'transition\': \'transform \' + timing + \' linear\'}" style="height: 100%;" ng-class="{\'open\': toggle}"><div class="chevron" style="height: 50%; width: 50%; left: 12.5%; top: 25%" ng-style="{\'border-bottom-width\': (height / 12) + \'px\',  \'border-right-width\': (height / 12) + \'px\'}"></div></div>';
-					break;
-				case 'plus':
-					this.style = '<div class="plus" ng-style="{\'width\':  ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\', \'transition\': \'transform \' + timing + \' linear\'}"  style="height: 66.6667%" ng-class="{\'open\': toggle}">' +
-						'<div ng-style="{\'transition\': \'border-bottom-width \' + timing, \'border-bottom-width\': (height / 24) + \'px\', \'border-right-width\': (height / 24) + \'px\' }"></div>' +
-						'<div ng-style="{\'transition\': \'border-bottom-width \' + timing, \'border-bottom-width\': (height / 24) + \'px\', \'border-left-width\': (height / 24) + \'px\' }"></div>' +
-						'<div ng-style="{\'transition\': \'border-top-width \' + timing, \'border-top-width\': (height / 24) + \'px\', \'border-right-width\': (height / 24) + \'px\' }"></div>' +
-						'<div ng-style="{\'transition\': \'border-top-width \' + timing, \'border-top-width\': (height / 24) + \'px\', \'border-left-width\': (height / 24) + \'px\' }"></div>' +
+					this.style =
+						'<div class="icon chevron" ' +
+							'ng-style="{\'width\': height + \'px\', \'transition\': \'transform \' + timing + \' ease\'}" ' +
+							'ng-class="{\'open\': toggle}">' +
+							'<div ng-style="{\'border-bottom-width\': (height / 12) + \'px\',  \'border-right-width\': (height / 12) + \'px\'}"></div>' +
 						'</div>';
 					break;
+				case 'plus':
+					this.style =
+						'<div class="icon plus" ' +
+							'ng-style="{\'width\': ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\', \'transition\': \'transform \' + timing + \' ease\'}" ' +
+							'ng-class="{\'open\': toggle}">' +
+								'<div ng-style="{\'border-bottom-width\': (height / 24 | number: 0) + \'px\', \'border-right-width\': (height / 24 | number: 0) + \'px\' }"></div>' +
+								'<div ng-style="{\'border-bottom-width\': (height / 24 | number: 0) + \'px\', \'border-left-width\':  (height / 24 | number: 0) + \'px\' }"></div>' +
+								'<div ng-style="{\'border-top-width\':    (height / 24 | number: 0) + \'px\', \'border-right-width\': (height / 24 | number: 0) + \'px\' }"></div>' +
+								'<div ng-style="{\'border-top-width\':    (height / 24 | number: 0) + \'px\', \'border-left-width\':  (height / 24 | number: 0) + \'px\' }"></div>' +
+						'</div>';
+					break;
+				default :
+					this.style = '';
 			}
 
-			return this.style || '';
+			return this.style;
 		};
 
 		return {

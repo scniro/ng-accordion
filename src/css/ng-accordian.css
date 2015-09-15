@@ -9,69 +9,65 @@ toggle {
     border-right: solid 0.063em #CCC;
     border-bottom: solid 0.063em #CCC; }
   toggle .toggle-header {
-    height: 2em;
+    height: 3em;
     background-color: #CCC; }
 
-.chevron {
-  -webkit-transform: rotate(0);
-  transform: rotate(0);
-  position: relative;
-  box-sizing: border-box; }
-  .chevron.open {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); }
-  .chevron > div {
-    border-right-style: solid;
-    border-right-color: #FFF;
-    border-bottom-style: solid;
-    border-bottom-color: #FFF;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-
-.plus {
+.icon {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg); }
-  .plus.open {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); }
-    .plus.open div:nth-child(1) {
-      border-bottom-width: 0 !important; }
-    .plus.open div:nth-child(2) {
-      border-bottom-width: 0 !important; }
-    .plus.open div:nth-child(3) {
-      border-top-width: 0 !important; }
-    .plus.open div:nth-child(4) {
-      border-top-width: 0 !important; }
-  .plus div {
-    width: 50%;
-    height: 50%;
-    float: left;
+  .icon div {
     box-sizing: border-box; }
-    .plus div:nth-child(1) {
-      /*border-bottom: solid 0.125em $icon-color;
-			border-right: solid 0.125em $icon-color;*/
+  .icon.chevron {
+    height: 100%; }
+    .icon.chevron.open {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg); }
+    .icon.chevron > div {
       border-right-style: solid;
       border-right-color: #FFF;
       border-bottom-style: solid;
-      border-bottom-color: #FFF; }
-    .plus div:nth-child(2) {
-      /*border-bottom: solid 0.125em $icon-color;
-			border-left: solid 0.125em $icon-color;*/
-      border-left-style: solid;
-      border-left-color: #FFF;
-      border-bottom-style: solid;
-      border-bottom-color: #FFF; }
-    .plus div:nth-child(3) {
-      /*border-top: solid 0.125em $icon-color;
-			border-right: solid 0.125em $icon-color;*/
-      border-right-style: solid;
-      border-right-color: #FFF;
-      border-top-style: solid;
-      border-top-color: #FFF; }
-    .plus div:nth-child(4) {
-      /*border-top: solid 0.125em $icon-color;
-			border-left: solid 0.125em $icon-color;*/
-      border-top-style: solid;
-      border-top-color: #FFF;
-      border-left-style: solid;
-      border-left-color: #FFF; }
+      border-bottom-color: #FFF;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      position: relative;
+      height: 50%;
+      width: 50%;
+      left: 12.5%;
+      top: 25%; }
+  .icon.plus {
+    height: 66.6667%; }
+    .icon.plus.open {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg); }
+      .icon.plus.open div:nth-child(1) {
+        border-bottom-width: 0 !important; }
+      .icon.plus.open div:nth-child(2) {
+        border-bottom-width: 0 !important; }
+      .icon.plus.open div:nth-child(3) {
+        border-top-width: 0 !important; }
+      .icon.plus.open div:nth-child(4) {
+        border-top-width: 0 !important; }
+    .icon.plus div {
+      width: 50%;
+      height: 50%;
+      float: left; }
+      .icon.plus div:nth-child(1) {
+        border-right-style: solid;
+        border-right-color: #FFF;
+        border-bottom-style: solid;
+        border-bottom-color: #FFF; }
+      .icon.plus div:nth-child(2) {
+        border-left-style: solid;
+        border-left-color: #FFF;
+        border-bottom-style: solid;
+        border-bottom-color: #FFF; }
+      .icon.plus div:nth-child(3) {
+        border-right-style: solid;
+        border-right-color: #FFF;
+        border-top-style: solid;
+        border-top-color: #FFF; }
+      .icon.plus div:nth-child(4) {
+        border-top-style: solid;
+        border-top-color: #FFF;
+        border-left-style: solid;
+        border-left-color: #FFF; }
