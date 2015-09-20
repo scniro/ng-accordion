@@ -24,6 +24,7 @@ toggle {
     .toggle-header {
 
         > span {
+            float: left;
             color: $toggle-header-text-color;
         }
 
