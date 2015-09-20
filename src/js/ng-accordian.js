@@ -92,7 +92,7 @@
 
 				var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" ng-html="content" class="toggle-body"></div>';
 
-				var heading = scope.heading ? '<span>' + scope.heading + '</span>' : '';
+				var heading = scope.heading ? '<span ng-style="{\'font-size\': (height * 0.6667) + \'px\'}">' + scope.heading + '</span>' : '';
 
 				var tpl =
 				'<div class="toggle-header" ng-click="toggleBody($event)" >' +
