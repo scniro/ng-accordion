@@ -33,7 +33,7 @@
 								'<div ng-style="{\'border-top-width\':    (height / 24 | number: 0) + \'px\', \'border-left-width\':  (height / 24 | number: 0) + \'px\' }"></div>' +
 						'</div>';
 					break;
-				default :
+				default:
 					this.style = '';
 			}
 
@@ -68,7 +68,8 @@
 				content: '=',
 				contentUrl: '=',
 				toggleIcon: '@',
-				model: '='
+				model: '=',
+				heading: '@'
 			},
 			require: ['?^accordian', '?^ngModel'],
 			link: function (scope, elem, attrs, parent) {
@@ -91,9 +92,11 @@
 
 				var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" ng-html="content" class="toggle-body"></div>';
 
+				var heading = scope.heading ? '<span>' + scope.heading + '</span>' : '';
+
 				var tpl =
 				'<div class="toggle-header" ng-click="toggleBody($event)" >' +
-					style +
+					style + heading +
 				'</div>' +
 				'</div>' +
 					'<div ng-class="{\'open\': toggle}">' +
