@@ -1,5 +1,6 @@
 ﻿$icon-color: #FFF;
 $toggle-header-color: #CCC;
+$toggle-header-text-color: #FFF;
 $toggle-header-height: 3.000em;
 $accordian-border-color: #CCC;
 
@@ -21,6 +22,10 @@ toggle {
     }
 
     .toggle-header {
+
+        > span {
+            color: $toggle-header-text-color;
+        }
 
         height: $toggle-header-height;
         background-color: $toggle-header-color;

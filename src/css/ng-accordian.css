@@ -11,6 +11,8 @@ toggle {
   toggle .toggle-header {
     height: 3em;
     background-color: #CCC; }
+    toggle .toggle-header > span {
+      color: #FFF; }
 
 .icon {
   -webkit-transform: rotate(0deg);
