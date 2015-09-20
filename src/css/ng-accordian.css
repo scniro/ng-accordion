@@ -14,7 +14,8 @@ toggle {
 
 .icon {
   -webkit-transform: rotate(0deg);
-  transform: rotate(0deg); }
+  transform: rotate(0deg);
+  float: left; }
   .icon div {
     box-sizing: border-box; }
   .icon.chevron {
