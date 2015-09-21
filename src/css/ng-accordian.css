@@ -13,6 +13,7 @@ toggle {
     background-color: #CCC; }
     toggle .toggle-header > span {
       float: left;
+      line-height: 200%;
       color: #FFF; }
 
 .icon {
