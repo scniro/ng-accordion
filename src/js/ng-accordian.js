@@ -94,8 +94,6 @@
 
 				var heading = scope.heading ? '<span ng-style="{\'font-size\': (height * 0.50 | number: 0) + \'px\'}">' + scope.heading + '</span>' : '';
 
-				//var heading = scope.heading ? '<span ng-style="{\'font-size\': (height * 0.50 | number: 0) + \'px\', \'padding\': (height / 8 | number: 0) + \'px\'}">' + scope.heading + '</span>' : '';
-
 				var tpl =
 				'<div class="toggle-header" ng-click="toggleBody($event)" >' +
 					style + heading +
