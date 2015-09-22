@@ -69,7 +69,7 @@
 				contentUrl: '=',
 				toggleIcon: '@',
 				model: '=',
-				heading: '@'
+				heading: '='
 			},
 			require: ['?^accordian', '?^ngModel'],
 			link: function (scope, elem, attrs, parent) {

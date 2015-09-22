@@ -97,9 +97,9 @@ app.controller('contentStringsCtrl', ['$scope', function ($scope) {
 	];
 
 	$scope.content = [
-		{ 'value': '<p><span>hey, I\'m a string!</span></p>'  },
-		{ 'value': '<p><span>hey, I\'m a string!</span></p>' },
-		{ 'value': '<p><span>hey, I\'m a string!</span></p>' }
+		{ 'value': '<p><span>hey, I\'m a string!</span></p>', 'heading': 'cool stuff' },
+		{ 'value': '<p><span>hey, I\'m a string!</span></p>', 'heading': 'cool stuff' },
+		{ 'value': '<p><span>hey, I\'m a string!</span></p>', 'heading': 'cool stuff' }
 	];
 }]);
 
