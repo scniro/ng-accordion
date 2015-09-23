@@ -163,6 +163,21 @@ table {
 			}
 		}
 	}
+
+	&.icons {
+
+
+		td {
+			padding: 0.5em;
+		}
+
+		tr {
+
+			td:first-of-type {
+				background-color: #f5f2f0;
+			}
+		}
+	}
 }
 
 .icon-example {

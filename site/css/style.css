@@ -125,6 +125,12 @@ table td, table th {
 table.attributes tr td:last-of-type {
   background-color: #f5f2f0; }
 
+table.icons td {
+  padding: 0.5em; }
+
+table.icons tr td:first-of-type {
+  background-color: #f5f2f0; }
+
 .icon-example {
   width: 3.000em;
   background-color: #ccc;
