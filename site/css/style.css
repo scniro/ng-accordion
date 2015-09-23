@@ -122,6 +122,9 @@ table td, table th {
     border-bottom: dashed 1px #ccc;
     margin: 0.750em 0; }
 
+table.attributes tr td:last-of-type {
+  background-color: #f5f2f0; }
+
 .icon-example {
   width: 3.000em;
   background-color: #ccc;
