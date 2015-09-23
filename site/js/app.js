@@ -71,7 +71,8 @@ app.controller('gettingStartedCtrl', ['$scope', function ($scope) {
 app.controller('basicCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'template/accordian/basic/markup.html' }
+		{ 'title': 'Markup', 'url': 'template/accordian/basic/markup.html' },
+		{ 'title': 'CSS', 'url': 'template/accordian/basic/css.html' }
 	];
 }]);
 
@@ -79,7 +80,8 @@ app.controller('configurationCtrl', ['$scope', 'tplBase', function ($scope, tplB
 
 	$scope.tabs = [
 		{ 'title': 'Markup', 'url': 'template/accordian/configuration/markup.html' },
-		{ 'title': 'JavaScript', 'url': 'template/accordian/configuration/javascript.html' }
+		{ 'title': 'JavaScript', 'url': 'template/accordian/configuration/javascript.html' },
+		{ 'title': 'CSS', 'url': 'template/accordian/configuration/css.html' }
 	];
 
 	$scope.content = [
@@ -93,7 +95,8 @@ app.controller('contentStringsCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
 		{ 'title': 'Markup', 'url': 'template/accordian/content-strings/markup.html' },
-		{ 'title': 'JavaScript', 'url': 'template/accordian/content-strings/javascript.html' }
+		{ 'title': 'JavaScript', 'url': 'template/accordian/content-strings/javascript.html' },
+		{ 'title': 'CSS', 'url': 'template/accordian/content-strings/css.html' }
 	];
 
 	$scope.content = [
@@ -108,7 +111,8 @@ app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 	$scope.tabs = [
 		{ 'title': 'Markup', 'url': 'template/accordian/model-binding/markup.html' },
 		{ 'title': 'Template', 'url': 'template/accordian/model-binding/model-binding-template-display.html' },
-		{ 'title': 'JavaScript', 'url': 'template/accordian/model-binding/javascript.html' }
+		{ 'title': 'JavaScript', 'url': 'template/accordian/model-binding/javascript.html' },
+		{ 'title': 'CSS', 'url': 'template/accordian/model-binding/css.html' }
 	];
 
 	$scope.content = [
@@ -121,7 +125,8 @@ app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 app.controller('standaloneCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'template/accordian/standalone/markup.html' }
+		{ 'title': 'Markup', 'url': 'template/accordian/standalone/markup.html' },
+		{ 'title': 'CSS', 'url': 'template/accordian/standalone/css.html' }
 	];
 }]);
 
