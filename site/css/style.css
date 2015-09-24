@@ -31,7 +31,8 @@ header {
   header h1 {
     display: inline;
     font-size: 42pt;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    color: #383838; }
   header a {
     text-decoration: none;
     color: inherit; }
@@ -88,7 +89,7 @@ aside.spine {
         display: block;
         padding-left: 2.000em; }
       aside.spine ol li.static {
-        color: #ccc; }
+        color: #383838; }
       aside.spine ol li.root div {
         border-bottom: solid 0.063em #ccc; }
       aside.spine ol li.sub {

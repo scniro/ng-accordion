@@ -16,6 +16,7 @@ header {
 		display: inline;
 		font-size: 42pt;
 		letter-spacing: 2px;
+		color: #383838;
 	}
 
 	a {
@@ -100,7 +101,7 @@ aside.spine {
 			}
 
 			&.static {
-				color: $gray-darker;
+				color: #383838;
 			}
 
 			&.root div {
