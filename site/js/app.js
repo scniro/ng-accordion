@@ -41,6 +41,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 			controller: 'standaloneCtrl',
 			templateUrl: 'view/examples/standalone.html'
 		})
+		.state('events', {
+			url: '/events',
+			controller: 'eventsCtrl',
+			templateUrl: 'view/events.html'
+		})
 		.state('attributes', {
 			url: '/attributes',
 			controller: 'attributesCtrl',
@@ -131,6 +136,20 @@ app.controller('standaloneCtrl', ['$scope', function ($scope) {
 	$scope.tabs = [
 		{ 'title': 'Markup', 'url': 'template/accordian/standalone/markup.html' },
 		{ 'title': 'CSS', 'url': 'template/accordian/standalone/css.html' }
+	];
+}]);
+
+app.controller('eventsCtrl', ['$scope', function ($scope) {
+	$scope.content = [
+		{ 'value': '<p><span>stuff</span></p>' },
+		{ 'value': '<p><span>stuff</span></p>' },
+		{ 'value': '<p><span>stuff</span></p>' }
+	];
+
+	$scope.content2 = [
+		{ 'value': '<p><span>stuff</span></p>' },
+		{ 'value': '<p><span>stuff</span></p>' },
+		{ 'value': '<p><span>stuff</span></p>' }
 	];
 }]);
 

@@ -4,18 +4,9 @@ section.basic {
 	toggle {
 		margin-bottom: 4px;
 	}
-
-	toggle .toggle-header {
-		height: 48px;
-		background-color: #CCC;
-	}
-
-	toggle .toggle-body.border {
-		border: none;
-	}
 }
 
-section.configuration {
+section.configuration, section.events {
 	toggle {
 		margin-bottom: 2px;
 	}

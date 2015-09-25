@@ -51,6 +51,31 @@
 				toggleIcon: '@',
 				timing: '@'
 			},
+			link: function (scope, elem, attrs) {
+				if (attrs.handle) {
+					scope.$root[attrs.handle] = scope;
+
+					scope.collapse = function (index) {
+						if (index) {
+							angular.element(elem.children().children()[index]).scope().toggle = false;
+						} else {
+							angular.forEach(elem.children().children(), function (value) {
+								angular.element(value).scope().toggle = false;
+							});
+						}
+					}
+
+					scope.expand = function (index) {
+						if (index) {
+							angular.element(elem.children().children()[index]).scope().toggle = true;
+						} else {
+							angular.forEach(elem.children().children(), function (value) {
+								angular.element(value).scope().toggle = true;
+							});
+						}
+					}
+				}
+			},
 			controller: ['$scope', function ($scope) {
 				this.getConfiguration = function () {
 					return {
@@ -73,6 +98,18 @@
 			},
 			require: ['?^accordian', '?^ngModel'],
 			link: function (scope, elem, attrs, parent) {
+
+				if (attrs.handle) {
+					scope.$root[attrs.handle] = scope;
+
+					scope.collapse = function () {
+						scope.toggle = false;
+					}
+
+					scope.expand = function () {
+						scope.toggle = true;
+					}
+				}
 
 				if (parent[1] && !attrs.modelName) {
 					throw new NgAccordianException('ngAccordian: ng-model requires attribute model-name to be specified.');

@@ -4,8 +4,6 @@ accordian {
 toggle {
   margin-bottom: 0.250em;
   cursor: pointer; }
-  toggle .toggle-body.border {
-    border: solid 0.063em #CCC; }
   toggle .toggle-header {
     height: 3em;
     background-color: #CCC; }

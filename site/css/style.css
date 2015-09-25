@@ -215,24 +215,17 @@ pre[class*="language-shell"] {
 section.basic toggle {
   margin-bottom: 4px; }
 
-section.basic toggle .toggle-header {
-  height: 48px;
-  background-color: #CCC; }
-
-section.basic toggle .toggle-body.border {
-  border: none; }
-
-section.configuration toggle {
+section.configuration toggle, section.events toggle {
   margin-bottom: 2px; }
 
-section.configuration toggle .toggle-header {
+section.configuration toggle .toggle-header, section.events toggle .toggle-header {
   height: 36px;
   background-color: #7a7a7a; }
 
-section.configuration toggle .toggle-body.border {
+section.configuration toggle .toggle-body.border, section.events toggle .toggle-body.border {
   border: solid 1px #7a7a7a; }
 
-section.configuration toggle .toggle-header .icon.plus div {
+section.configuration toggle .toggle-header .icon.plus div, section.events toggle .toggle-header .icon.plus div {
   border-color: #414141; }
 
 section.content-strings toggle {

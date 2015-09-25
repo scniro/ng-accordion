@@ -2,7 +2,7 @@
 $toggle-header-color: #CCC;
 $toggle-header-text-color: #FFF;
 $toggle-header-height: 3.000em;
-$accordian-border-color: #CCC;
+
 
 accordian {
     width: 100%;
@@ -11,13 +11,6 @@ accordian {
 toggle {
     margin-bottom: 0.250em;
     cursor: pointer;
-
-    .toggle-body {
-
-        &.border {
-            border: solid 0.063em $accordian-border-color;
-        }
-    }
 
     .toggle-header {
 
