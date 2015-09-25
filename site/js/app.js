@@ -2,8 +2,6 @@
 
 app.constant('tplBase', document.location.hostname === 'localhost' ? '/site/' : '/ng-accordian/');
 
-app.constant('srcBase', document.location.hostname === 'localhost' ? '' : '/ng-accordian/');
-
 app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
 	$locationProvider.html5Mode({
@@ -63,16 +61,14 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 		});
 }]);
 
-app.run([
-	'$rootScope', 'tplBase', 'srcBase', function ($rootScope, tplBase, srcBase) {
+app.run(['$rootScope', 'tplBase', function ($rootScope, tplBase) {
 		$rootScope.tplBase = tplBase;
 
 		$rootScope.scripts = [
 			{ 'src': 'js/app.js' },
 			{ 'src': '../src/js/ng-accordian.js' }
 		];
-	}
-]);
+	}]);
 
 app.controller('gettingStartedCtrl', ['$scope', function ($scope) {
 	$scope.intro = 'getting started';
@@ -180,8 +176,6 @@ app.controller('methodsCtrl', ['$scope', function ($scope) {
 	$scope.$on('toggle:expand', function (e) {
 		console.log('toggle:expand');
 	});
-
-	
 }]);
 
 app.controller('callbacksCtrl', ['$scope', function ($scope) {
