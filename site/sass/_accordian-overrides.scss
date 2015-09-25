@@ -1,4 +1,6 @@
-﻿section.basic {
+﻿/* -- ACCORDIAN OVERRIDES -- */
+
+section.basic {
 	toggle {
 		margin-bottom: 4px;
 	}
@@ -9,6 +11,90 @@
 	}
 
 	toggle .toggle-body.border {
-		border: solid 1px #CCC;
+		border: none;
+	}
+}
+
+section.configuration {
+	toggle {
+		margin-bottom: 2px;
+	}
+
+	toggle .toggle-header {
+		height: 36px;
+		background-color: #7a7a7a;
+	}
+
+	toggle .toggle-body.border {
+		border: solid 1px #7a7a7a;
+	}
+
+	toggle .toggle-header .icon.plus div {
+		border-color: #414141;
+	}
+}
+
+section.content-strings {
+	toggle {
+		margin-bottom: 2px;
+	}
+
+	toggle .toggle-header {
+		height: 24px;
+		background-color: #99A7BB;
+	}
+
+	toggle .toggle-header:hover {
+		background-color: #8893a4;
+	}
+
+	toggle .toggle-body.border {
+		border: solid 1px #99A7BB;
+	}
+
+	toggle .toggle-header span {
+		color: #E8EA3B;
+	}
+
+	toggle .toggle-header .icon.chevron div {
+		border-color: #5b636f;
+	}
+}
+
+section.model-binding {
+	toggle {
+		margin-bottom: 4px;
+	}
+
+	toggle .toggle-header {
+		height: 48px;
+		background-color: #A2AFA1;
+	}
+
+	toggle .toggle-body.border {
+		border: solid 1px #A2AFA1;
+	}
+
+	toggle .toggle-header .icon {
+		float: right;
+	}
+}
+
+section.standalone {
+	toggle {
+		margin-bottom: 4px;
+	}
+
+	toggle .toggle-header {
+		height: 48px;
+		background-color: #7ACBFF;
+	}
+
+	toggle .toggle-body.border {
+		border: solid 1px #7ACBFF;
+	}
+
+	toggle .toggle-header .icon.plus div {
+		border-color: #f14be3;
 	}
 }

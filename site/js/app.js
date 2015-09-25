@@ -87,6 +87,7 @@ app.controller('configurationCtrl', ['$scope', 'tplBase', function ($scope, tplB
 	$scope.content = [
 		{ 'value': tplBase + 'template/accordian/configuration/accordian-content.html' },
 		{ 'value': tplBase + 'template/accordian/configuration/accordian-content.html' },
+		{ 'value': tplBase + 'template/accordian/configuration/accordian-content.html' },
 		{ 'value': tplBase + 'template/accordian/configuration/accordian-content.html' }
 	];
 }]);
@@ -100,6 +101,9 @@ app.controller('contentStringsCtrl', ['$scope', function ($scope) {
 	];
 
 	$scope.content = [
+		{ 'value': '<p><span>hey, I\'m a string!</span></p>', 'heading': 'cool stuff' },
+		{ 'value': '<p><span>hey, I\'m a string!</span></p>', 'heading': 'cool stuff' },
+		{ 'value': '<p><span>hey, I\'m a string!</span></p>', 'heading': 'cool stuff' },
 		{ 'value': '<p><span>hey, I\'m a string!</span></p>', 'heading': 'cool stuff' },
 		{ 'value': '<p><span>hey, I\'m a string!</span></p>', 'heading': 'cool stuff' },
 		{ 'value': '<p><span>hey, I\'m a string!</span></p>', 'heading': 'cool stuff' }

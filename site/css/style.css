@@ -211,6 +211,7 @@ pre[class*="language-shell"] {
     text-shadow: none;
     color: white; }
 
+/* -- ACCORDIAN OVERRIDES -- */
 section.basic toggle {
   margin-bottom: 4px; }
 
@@ -219,7 +220,65 @@ section.basic toggle .toggle-header {
   background-color: #CCC; }
 
 section.basic toggle .toggle-body.border {
-  border: solid 1px #CCC; }
+  border: none; }
+
+section.configuration toggle {
+  margin-bottom: 2px; }
+
+section.configuration toggle .toggle-header {
+  height: 36px;
+  background-color: #7a7a7a; }
+
+section.configuration toggle .toggle-body.border {
+  border: solid 1px #7a7a7a; }
+
+section.configuration toggle .toggle-header .icon.plus div {
+  border-color: #414141; }
+
+section.content-strings toggle {
+  margin-bottom: 2px; }
+
+section.content-strings toggle .toggle-header {
+  height: 24px;
+  background-color: #99A7BB; }
+
+section.content-strings toggle .toggle-header:hover {
+  background-color: #8893a4; }
+
+section.content-strings toggle .toggle-body.border {
+  border: solid 1px #99A7BB; }
+
+section.content-strings toggle .toggle-header span {
+  color: #E8EA3B; }
+
+section.content-strings toggle .toggle-header .icon.chevron div {
+  border-color: #5b636f; }
+
+section.model-binding toggle {
+  margin-bottom: 4px; }
+
+section.model-binding toggle .toggle-header {
+  height: 48px;
+  background-color: #A2AFA1; }
+
+section.model-binding toggle .toggle-body.border {
+  border: solid 1px #A2AFA1; }
+
+section.model-binding toggle .toggle-header .icon {
+  float: right; }
+
+section.standalone toggle {
+  margin-bottom: 4px; }
+
+section.standalone toggle .toggle-header {
+  height: 48px;
+  background-color: #7ACBFF; }
+
+section.standalone toggle .toggle-body.border {
+  border: solid 1px #7ACBFF; }
+
+section.standalone toggle .toggle-header .icon.plus div {
+  border-color: #f14be3; }
 
 tabs .header {
   list-style: none;
