@@ -63,6 +63,8 @@
 								angular.element(value).scope().toggle = false;
 							});
 						}
+
+						scope.$root[attrs.handle].$emit(attrs.handle + ':collapse', index);
 					}
 
 					scope.expand = function (index) {
@@ -73,6 +75,12 @@
 								angular.element(value).scope().toggle = true;
 							});
 						}
+
+						scope.$root[attrs.handle].$emit(attrs.handle + ':expand', index);
+					}
+
+					scope.callback = function(event, data) {
+						console.log('cb')
 					}
 				}
 			},
@@ -81,7 +89,8 @@
 					return {
 						'closeOthers': JSON.parse($scope.closeOthers || false) || false,
 						'toggleIcon': accordianStyleFactory.getStyle($scope.toggleIcon || 0),
-						'timing': $scope.timing
+						'timing': $scope.timing,
+						'callback': $scope.callback
 					}
 				}
 			}]
@@ -115,7 +124,7 @@
 					throw new NgAccordianException('ngAccordian: ng-model requires attribute model-name to be specified.');
 				}
 
-				scope.config = parent[0] ? parent[0].getConfiguration() : {};
+				scope.parent = parent[0] ? parent[0].getConfiguration() : {};
 
 				if (parent[1]) {
 					$timeout(function () {
@@ -125,7 +134,7 @@
 
 				elem.css('display', 'block');
 
-				var style = scope.toggleIcon ? accordianStyleFactory.getStyle(scope.toggleIcon) : parent[0] ? scope.config.toggleIcon : '';
+				var style = scope.toggleIcon ? accordianStyleFactory.getStyle(scope.toggleIcon) : parent[0] ? scope.parent.toggleIcon : '';
 
 				var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" ng-html="content" class="toggle-body"></div>';
 
@@ -147,7 +156,7 @@
 
 				scope.height = elem[0].firstChild.clientHeight;
 
-				scope.timing = scope.config.timing ? scope.config.timing : attrs.timing;
+				scope.timing = scope.parent.timing ? scope.parent.timing : attrs.timing;
 
 				scope.toggleBody = function ($event) {
 
@@ -155,7 +164,7 @@
 
 					var closing = scope.toggle ? false : true;
 
-					if (scope.config.closeOthers) {
+					if (scope.parent.closeOthers) {
 						var toggle = angular.element($event.currentTarget).parent();
 
 						var accordian = toggle.parent();
@@ -168,6 +177,8 @@
 					}
 
 					scope.toggle = closing;
+
+					scope.parent.callback();
 				}
 			}
 		}

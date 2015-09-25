@@ -41,10 +41,15 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 			controller: 'standaloneCtrl',
 			templateUrl: 'view/examples/standalone.html'
 		})
-		.state('events', {
-			url: '/events',
-			controller: 'eventsCtrl',
-			templateUrl: 'view/events.html'
+		.state('methods', {
+			url: '/methods',
+			controller: 'methodsCtrl',
+			templateUrl: 'view/methods.html'
+		})
+		.state('callbacks', {
+			url: '/callbacks',
+			controller: 'callbacksCtrl',
+			templateUrl: 'view/callbacks.html'
 		})
 		.state('attributes', {
 			url: '/attributes',
@@ -139,7 +144,7 @@ app.controller('standaloneCtrl', ['$scope', function ($scope) {
 	];
 }]);
 
-app.controller('eventsCtrl', ['$scope', function ($scope) {
+app.controller('methodsCtrl', ['$scope', function ($scope) {
 	$scope.content = [
 		{ 'value': '<p><span>stuff</span></p>' },
 		{ 'value': '<p><span>stuff</span></p>' },
@@ -151,6 +156,52 @@ app.controller('eventsCtrl', ['$scope', function ($scope) {
 		{ 'value': '<p><span>stuff</span></p>' },
 		{ 'value': '<p><span>stuff</span></p>' }
 	];
+
+	$scope.$on('accordian2:expand', function (e, index) {
+		console.log('accordian2:expand ' + index);
+	});
+
+	$scope.$on('accordian2:collapse', function (e, index) {
+		console.log('accordian2:collapse' + index);
+	});
+
+	$scope.$on('accordian:expand', function (e, index) {
+		console.log('accordian:expand' + index);
+	});
+
+	$scope.$on('accordian:collapse', function (e, index) {
+		console.log('accordian:collapse' + index);
+	});
+}]);
+
+app.controller('callbacksCtrl', ['$scope', function ($scope) {
+	$scope.content = [
+		{ 'value': '<p><span>stuff</span></p>' },
+		{ 'value': '<p><span>stuff</span></p>' },
+		{ 'value': '<p><span>stuff</span></p>' }
+	];
+
+	$scope.content2 = [
+		{ 'value': '<p><span>stuff</span></p>' },
+		{ 'value': '<p><span>stuff</span></p>' },
+		{ 'value': '<p><span>stuff</span></p>' }
+	];
+
+	$scope.$on('accordian2:expand', function () {
+		console.log('accordian2:expand');
+	});
+
+	$scope.$on('accordian2:collapse', function () {
+		console.log('accordian2:collapse');
+	});
+
+	$scope.$on('accordian:expand', function () {
+		console.log('accordian:expand');
+	});
+
+	$scope.$on('accordian:collapse', function () {
+		console.log('accordian:collapse');
+	});
 }]);
 
 app.controller('attributesCtrl', ['$scope', function ($scope) {
