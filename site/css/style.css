@@ -127,10 +127,11 @@ table.attributes tr td:last-of-type {
   background-color: #f5f2f0; }
 
 table.icons td {
-  padding: 0.5em; }
+  padding: 0.500em; }
 
 table.icons tr td:first-of-type {
-  background-color: #f5f2f0; }
+  background-color: #f5f2f0;
+  padding-top: 1.500em; }
 
 .icon-example {
   width: 3.000em;

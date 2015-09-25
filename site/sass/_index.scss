@@ -158,24 +158,21 @@ table {
 
 	&.attributes {
 		tr {
-
 			td:last-of-type {
-				background-color: #f5f2f0;
+				background-color: $gray-lighter;
 			}
 		}
 	}
 
 	&.icons {
-
-
 		td {
-			padding: 0.5em;
+			padding: 0.500em;
 		}
 
 		tr {
-
 			td:first-of-type {
-				background-color: #f5f2f0;
+				background-color: $gray-lighter;
+				padding-top: 1.500em;
 			}
 		}
 	}
