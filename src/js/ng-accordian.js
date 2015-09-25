@@ -55,6 +55,15 @@
 				if (attrs.handle) {
 					scope.$root[attrs.handle] = scope;
 
+					function onCollapse(index) {
+						scope.$root[attrs.handle].$emit(attrs.handle + ':collapse', index);
+					}
+
+					function onExpand(index) {
+
+						scope.$root[attrs.handle].$emit(attrs.handle + ':expand', index);
+					}
+
 					scope.collapse = function (index) {
 						if (index) {
 							angular.element(elem.children().children()[index]).scope().toggle = false;
@@ -64,7 +73,7 @@
 							});
 						}
 
-						scope.$root[attrs.handle].$emit(attrs.handle + ':collapse', index);
+						return onCollapse(index);
 					}
 
 					scope.expand = function (index) {
@@ -76,11 +85,12 @@
 							});
 						}
 
-						scope.$root[attrs.handle].$emit(attrs.handle + ':expand', index);
+						return onExpand(index);
 					}
 
-					scope.callback = function(event, data) {
-						console.log('cb')
+					scope.handler = {
+						'onCollapse': onCollapse,
+						'onExpand': onExpand
 					}
 				}
 			},
@@ -92,6 +102,10 @@
 						'timing': $scope.timing,
 						'callback': $scope.callback
 					}
+				}
+
+				this.getHandler = function () {
+					return $scope.handler;
 				}
 			}]
 		}
@@ -109,14 +123,30 @@
 			link: function (scope, elem, attrs, parent) {
 
 				if (attrs.handle) {
+
 					scope.$root[attrs.handle] = scope;
+
+					function onCollapse() {
+						scope.$root[attrs.handle].$emit(attrs.handle + ':collapse');
+					}
+
+					function onExpand() {
+						scope.$root[attrs.handle].$emit(attrs.handle + ':expand');
+					}
+
+					this.handler = {
+						'onCollapse': onCollapse,
+						'onExpand': onExpand
+					}
 
 					scope.collapse = function () {
 						scope.toggle = false;
+						return onCollapse();
 					}
 
 					scope.expand = function () {
 						scope.toggle = true;
+						return onExpand();
 					}
 				}
 
@@ -124,7 +154,9 @@
 					throw new NgAccordianException('ngAccordian: ng-model requires attribute model-name to be specified.');
 				}
 
-				scope.parent = parent[0] ? parent[0].getConfiguration() : {};
+				scope.config = parent[0] ? parent[0].getConfiguration() : {};
+
+				scope.handler = parent[0] ? parent[0].getHandler() : attrs.handle ? this.handler : null;
 
 				if (parent[1]) {
 					$timeout(function () {
@@ -134,7 +166,7 @@
 
 				elem.css('display', 'block');
 
-				var style = scope.toggleIcon ? accordianStyleFactory.getStyle(scope.toggleIcon) : parent[0] ? scope.parent.toggleIcon : '';
+				var style = scope.toggleIcon ? accordianStyleFactory.getStyle(scope.toggleIcon) : parent[0] ? scope.config.toggleIcon : '';
 
 				var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" ng-html="content" class="toggle-body"></div>';
 
@@ -156,7 +188,7 @@
 
 				scope.height = elem[0].firstChild.clientHeight;
 
-				scope.timing = scope.parent.timing ? scope.parent.timing : attrs.timing;
+				scope.timing = scope.config.timing ? scope.config.timing : attrs.timing;
 
 				scope.toggleBody = function ($event) {
 
@@ -164,7 +196,7 @@
 
 					var closing = scope.toggle ? false : true;
 
-					if (scope.parent.closeOthers) {
+					if (scope.config.closeOthers) {
 						var toggle = angular.element($event.currentTarget).parent();
 
 						var accordian = toggle.parent();
@@ -178,7 +210,9 @@
 
 					scope.toggle = closing;
 
-					scope.parent.callback();
+					if (scope.handler) {
+						scope.toggle ? scope.handler.onExpand() : scope.handler.onCollapse();
+					}
 				}
 			}
 		}

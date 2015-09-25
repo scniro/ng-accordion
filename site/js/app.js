@@ -172,6 +172,16 @@ app.controller('methodsCtrl', ['$scope', function ($scope) {
 	$scope.$on('accordian:collapse', function (e, index) {
 		console.log('accordian:collapse' + index);
 	});
+
+	$scope.$on('toggle:collapse', function (e) {
+		console.log('toggle:collapse');
+	});
+
+	$scope.$on('toggle:expand', function (e) {
+		console.log('toggle:expand');
+	});
+
+	
 }]);
 
 app.controller('callbacksCtrl', ['$scope', function ($scope) {
