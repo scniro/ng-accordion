@@ -15,9 +15,7 @@ toggle {
     .toggle-body {
 
         &.border {
-            border-left: solid 0.063em $accordian-border-color;
-            border-right: solid 0.063em $accordian-border-color;
-            border-bottom: solid 0.063em $accordian-border-color;
+            border: solid 0.063em $accordian-border-color;
         }
     }
 

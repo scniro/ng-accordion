@@ -167,7 +167,7 @@
 					elem.css(css);
 
 					if (n) {
-						elem.addClass('border');
+						elem.addClass('border').css('border-top', '0');
 					} else {
 						$timeout(function () {
 							elem.removeClass('border');

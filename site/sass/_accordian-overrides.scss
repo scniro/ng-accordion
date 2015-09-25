@@ -1,0 +1,14 @@
+﻿section.basic {
+	toggle {
+		margin-bottom: 4px;
+	}
+
+	toggle .toggle-header {
+		height: 48px;
+		background-color: #CCC;
+	}
+
+	toggle .toggle-body.border {
+		border: solid 1px #CCC;
+	}
+}

@@ -211,6 +211,16 @@ pre[class*="language-shell"] {
     text-shadow: none;
     color: white; }
 
+section.basic toggle {
+  margin-bottom: 4px; }
+
+section.basic toggle .toggle-header {
+  height: 48px;
+  background-color: #CCC; }
+
+section.basic toggle .toggle-body.border {
+  border: solid 1px #CCC; }
+
 tabs .header {
   list-style: none;
   padding: 0;
