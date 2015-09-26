@@ -14,14 +14,6 @@
 	           toggle-icon="chevron">
 		<toggle ng-repeat="c in content2" content="c.value"></toggle>
 	</accordian>
-
-	<br/>
-
-	<toggle
-		handle="toggle"
-		toggle-icon="plus"
-		content-url="'template/accordian/standalone/toggle-content.html'"
-		timing="0.2s"></toggle>
 </section>
 
 <section class="pane right">
@@ -35,9 +27,4 @@
 	<button ng-click="accordian2.expand()">expand 2</button>
 
 	<button ng-click="accordian2.collapse()">collapse 2</button>
-
-	<hr/>
-	<button ng-click="toggle.expand()">expand toggle</button>
-
-	<button ng-click="toggle.collapse()">collapse toggle</button>
 </section>

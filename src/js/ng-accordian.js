@@ -60,7 +60,6 @@
 					}
 
 					function onExpand(index) {
-
 						scope.$root[attrs.handle].$emit(attrs.handle + ':expand', index);
 					}
 
@@ -88,10 +87,7 @@
 						return onExpand(index);
 					}
 
-					scope.handler = {
-						'onCollapse': onCollapse,
-						'onExpand': onExpand
-					}
+					scope.handler = attrs.handle ? { 'onCollapse': onCollapse, 'onExpand': onExpand } : undefined;
 				}
 			},
 			controller: ['$scope', function ($scope) {
@@ -115,48 +111,18 @@
 			scope: {
 				content: '=',
 				contentUrl: '=',
-				toggleIcon: '@',
 				model: '=',
 				heading: '='
 			},
-			require: ['?^accordian', '?^ngModel'],
+			require: ['^accordian', '?^ngModel'],
 			link: function (scope, elem, attrs, parent) {
 
-				if (attrs.handle) {
-
-					scope.$root[attrs.handle] = scope;
-
-					function onCollapse() {
-						scope.$root[attrs.handle].$emit(attrs.handle + ':collapse');
-					}
-
-					function onExpand() {
-						scope.$root[attrs.handle].$emit(attrs.handle + ':expand');
-					}
-
-					this.handler = {
-						'onCollapse': onCollapse,
-						'onExpand': onExpand
-					}
-
-					scope.collapse = function () {
-						scope.toggle = false;
-						return onCollapse();
-					}
-
-					scope.expand = function () {
-						scope.toggle = true;
-						return onExpand();
-					}
-				}
-
-				if (parent[1] && !attrs.modelName) {
+				if (parent[1] && !attrs.modelName) 
 					throw new NgAccordianException('ngAccordian: ng-model requires attribute model-name to be specified.');
-				}
 
-				scope.config = parent[0] ? parent[0].getConfiguration() : {};
+				var config = parent[0].getConfiguration();
 
-				scope.handler = parent[0] ? parent[0].getHandler() : attrs.handle ? this.handler : null;
+				var handler = parent[0].getHandler();
 
 				if (parent[1]) {
 					$timeout(function () {
@@ -166,15 +132,13 @@
 
 				elem.css('display', 'block');
 
-				var style = scope.toggleIcon ? accordianStyleFactory.getStyle(scope.toggleIcon) : parent[0] ? scope.config.toggleIcon : '';
-
 				var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" ng-html="content" class="toggle-body"></div>';
 
 				var heading = scope.heading ? '<span ng-style="{\'font-size\': (height * 0.50 | number: 0) + \'px\'}">' + scope.heading + '</span>' : '';
 
 				var tpl =
 				'<div class="toggle-header" ng-click="toggleBody($event)" >' +
-					style + heading +
+					config.toggleIcon + heading +
 				'</div>' +
 				'</div>' +
 					'<div ng-class="{\'open\': toggle}">' +
@@ -188,31 +152,22 @@
 
 				scope.height = elem[0].firstChild.clientHeight;
 
-				scope.timing = scope.config.timing ? scope.config.timing : attrs.timing;
+				scope.timing = config.timing ? config.timing : attrs.timing;
 
-				scope.toggleBody = function ($event) {
-
-					$event.stopPropagation();
+				scope.toggleBody = function ($event) { // TODO - get index
 
 					var closing = scope.toggle ? false : true;
 
-					if (scope.config.closeOthers) {
-						var toggle = angular.element($event.currentTarget).parent();
-
-						var accordian = toggle.parent();
-
-						if (accordian[0].nodeName.toUpperCase() === 'ACCORDIAN') {
-							angular.forEach(accordian.children().children(), function (value) {
-								angular.element(value).scope().toggle = false;
-							});
-						}
+					if (config.closeOthers) {
+						angular.forEach(elem.parent().children().children(), function (value, i) {
+							angular.element(value).scope().toggle = false;
+						});
 					}
 
 					scope.toggle = closing;
 
-					if (scope.handler) {
-						scope.toggle ? scope.handler.onExpand() : scope.handler.onCollapse();
-					}
+					if (handler)
+						return scope.toggle ? handler.onExpand() : handler.onCollapse();
 				}
 			}
 		}

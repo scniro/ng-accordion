@@ -34,11 +34,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 			controller: 'modelBindingCtrl',
 			templateUrl: 'view/examples/model-binding.html'
 		})
-		.state('standalone', {
-			url: '/examples/standalone',
-			controller: 'standaloneCtrl',
-			templateUrl: 'view/examples/standalone.html'
-		})
 		.state('methods', {
 			url: '/methods',
 			controller: 'methodsCtrl',
@@ -167,14 +162,6 @@ app.controller('methodsCtrl', ['$scope', function ($scope) {
 
 	$scope.$on('accordian:collapse', function (e, index) {
 		console.log('accordian:collapse' + index);
-	});
-
-	$scope.$on('toggle:collapse', function (e) {
-		console.log('toggle:collapse');
-	});
-
-	$scope.$on('toggle:expand', function (e) {
-		console.log('toggle:expand');
 	});
 }]);
 
