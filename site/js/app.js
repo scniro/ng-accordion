@@ -142,49 +142,25 @@ app.controller('methodsCtrl', ['$scope', function ($scope) {
 		{ 'value': '<p><span>stuff</span></p>' }
 	];
 
-	$scope.content2 = [
-		{ 'value': '<p><span>stuff</span></p>' },
-		{ 'value': '<p><span>stuff</span></p>' },
-		{ 'value': '<p><span>stuff</span></p>' }
-	];
-
-	$scope.$on('accordian2:expand', function (e, index) {
-		console.log('accordian2:expand ' + index);
-	});
-
-	$scope.$on('accordian2:collapse', function (e, index) {
-		console.log('accordian2:collapse' + index);
-	});
-
-	$scope.$on('accordian:expand', function (e, index) {
-		console.log('accordian:expand' + index);
-	});
-
-	$scope.$on('accordian:collapse', function (e, index) {
-		console.log('accordian:collapse' + index);
-	});
-}]);
-
-app.controller('callbacksCtrl', ['$scope', function ($scope) {
-	$scope.content = [
-		{ 'value': '<p><span>stuff</span></p>' },
-		{ 'value': '<p><span>stuff</span></p>' },
-		{ 'value': '<p><span>stuff</span></p>' }
-	];
-
-	$scope.content2 = [
-		{ 'value': '<p><span>stuff</span></p>' },
-		{ 'value': '<p><span>stuff</span></p>' },
-		{ 'value': '<p><span>stuff</span></p>' }
-	];
-
 	$scope.$on('accordian:expand', function (e, index) {
 		console.log('accordian:expand ' + index);
 	});
 
-	$scope.$on('accordian:collapse', function (e, index) {
-		console.log('accordian:collapse' + index);
+	$scope.$on('accordian:expand:animation', function (e, index) {
+		console.log('accordian:expand:animation ' + index);
 	});
+
+	$scope.$on('accordian:collapse', function (e, index) {
+		console.log('accordian:collapse ' + index);
+	});
+
+	$scope.$on('accordian:collapse:animation', function (e, index) {
+		console.log('accordian:collapse:collapse ' + index);
+	});
+}]);
+
+app.controller('callbacksCtrl', ['$scope', function ($scope) {
+
 }]);
 
 app.controller('attributesCtrl', ['$scope', function ($scope) {

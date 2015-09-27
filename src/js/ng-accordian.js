@@ -17,7 +17,7 @@
 				case 'chevron':
 					this.style =
 						'<div class="icon chevron" ' +
-							'ng-style="{\'width\': height + \'px\', \'transition\': \'transform \' + timing + \' ease\'}" ' +
+							'ng-style="{\'width\': height + \'px\', \'transition\': \'transform \' + timing + \'ms\'}" ' +
 							'ng-class="{\'open\': toggle}">' +
 							'<div ng-style="{\'border-bottom-width\': (height / 12) + \'px\',  \'border-right-width\': (height / 12) + \'px\'}"></div>' +
 						'</div>';
@@ -25,7 +25,7 @@
 				case 'plus':
 					this.style =
 						'<div class="icon plus" ' +
-							'ng-style="{\'width\': ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\', \'transition\': \'transform \' + timing + \' ease\'}" ' +
+							'ng-style="{\'width\': ((height * 0.67) | number: 0 ) + \'px\', \'padding\': (height / 6) + \'px\', \'transition\': \'transform \' + timing + \'ms\'}" ' +
 							'ng-class="{\'open\': toggle}">' +
 								'<div ng-style="{\'border-bottom-width\': (height / 24 | number: 0) + \'px\', \'border-right-width\': (height / 24 | number: 0) + \'px\' }"></div>' +
 								'<div ng-style="{\'border-bottom-width\': (height / 24 | number: 0) + \'px\', \'border-left-width\':  (height / 24 | number: 0) + \'px\' }"></div>' +
@@ -44,7 +44,7 @@
 			getStyle: getStyle
 		}
 	}])
-	.directive('accordian', ['accordianStyleFactory', function (accordianStyleFactory) {
+	.directive('accordian', ['accordianStyleFactory', '$timeout', function (accordianStyleFactory, $timeout) {
 		return {
 			scope: {
 				closeOthers: '@',
@@ -57,10 +57,15 @@
 
 					function onCollapse(index) {
 						scope.$root[attrs.handle].$emit(attrs.handle + ':collapse', index);
+
+						if(scope.timing)
+							$timeout(function () { scope.$root[attrs.handle].$emit(attrs.handle + ':collapse:animation', index); }, scope.timing);
 					}
 
 					function onExpand(index) {
 						scope.$root[attrs.handle].$emit(attrs.handle + ':expand', index);
+						if (scope.timing)
+							$timeout(function () { scope.$root[attrs.handle].$emit(attrs.handle + ':expand:animation', index); }, scope.timing);
 					}
 
 					scope.collapse = function (index) {
@@ -141,7 +146,7 @@
 				var heading = scope.heading ? '<span ng-style="{\'font-size\': (height * 0.50 | number: 0) + \'px\'}">' + scope.heading + '</span>' : '';
 
 				var tpl =
-				'<div class="toggle-header" ng-click="toggleBody($event)" >' +
+				'<div class="toggle-header" ng-click="toggleBody()" >' +
 					config.toggleIcon + heading +
 				'</div>' +
 				'</div>' +
@@ -158,7 +163,7 @@
 
 				scope.timing = config.timing ? config.timing : attrs.timing;
 
-				scope.toggleBody = function ($event) { // TODO - get index
+				scope.toggleBody = function () { // TODO - get index
 
 					var closing = scope.toggle ? false : true;
 
@@ -181,30 +186,9 @@
 			restrict: 'C',
 			link: function (scope, elem, attrs) {
 
-				function transitionToMilliseconds(value) {
-					var num = parseFloat(value, 10),
-						unit = value.match(/m?s/),
-						milliseconds;
-
-					if (unit)
-						unit = unit[0];
-
-					switch (unit) {
-						case 's': milliseconds = num * 1000; break;
-						case 'ms': milliseconds = num; break;
-						default: milliseconds = 0; break;
-					}
-
-					return milliseconds;
-				}
-
 				scope.$watch('toggle', function (n, o) {
 
-					if (!scope.transition && scope.timing) {
-						scope.transition = transitionToMilliseconds(scope.timing);
-					}
-
-					var css = n ? { 'max-height': elem[0].scrollHeight + 'px', 'transition': 'max-height ' + scope.timing + ' ease-out' } : { 'max-height': 0, 'transition': 'max-height ' + scope.timing + ' ease-out' }
+					var css = n ? { 'max-height': elem[0].scrollHeight + 'px', 'transition': 'max-height ' + scope.timing + 'ms' } : { 'max-height': 0, 'transition': 'max-height ' + scope.timing + 'ms' }
 					elem.css(css);
 
 					if (n) {
@@ -212,7 +196,7 @@
 					} else {
 						$timeout(function () {
 							elem.removeClass('border');
-						}, scope.transition);
+						}, scope.timing);
 					}
 				});
 			}
