@@ -92,7 +92,7 @@
 						return onExpand(index);
 					}
 
-					scope.handler = attrs.handle ? { 'onCollapse': onCollapse, 'onExpand': onExpand } : undefined;
+					scope.handler = { 'onCollapse': onCollapse, 'onExpand': onExpand };
 				}
 			},
 			controller: ['$scope', function ($scope) {
@@ -131,7 +131,7 @@
 
 				var config = parent[0].getConfiguration();
 
-				var handler = parent[0].getHandler();
+				var handle = parent[0].getHandler();
 
 				if (parent[1]) {
 					$timeout(function () {
@@ -163,7 +163,7 @@
 
 				scope.timing = config.timing ? config.timing : attrs.timing;
 
-				scope.toggleBody = function () { // TODO - get index
+				scope.toggleBody = function () {
 
 					var closing = scope.toggle ? false : true;
 
@@ -175,8 +175,8 @@
 
 					scope.toggle = closing;
 
-					if (handler)
-						return scope.toggle ? handler.onExpand(config.index) : handler.onCollapse(config.index);
+					if (handle)
+						return scope.toggle ? handle.onExpand(config.index) : handle.onCollapse(config.index);
 				}
 			}
 		}
