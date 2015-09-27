@@ -64,7 +64,7 @@
 					}
 
 					scope.collapse = function (index) {
-						if (index) {
+						if (index || index === 0) {
 							angular.element(elem.children().children()[index]).scope().toggle = false;
 						} else {
 							angular.forEach(elem.children().children(), function (value) {
@@ -76,7 +76,7 @@
 					}
 
 					scope.expand = function (index) {
-						if (index) {
+						if (index || index === 0) {
 							angular.element(elem.children().children()[index]).scope().toggle = true;
 						} else {
 							angular.forEach(elem.children().children(), function (value) {
@@ -91,12 +91,16 @@
 				}
 			},
 			controller: ['$scope', function ($scope) {
+
+				var index = -1;
+
 				this.getConfiguration = function () {
 					return {
 						'closeOthers': JSON.parse($scope.closeOthers || false) || false,
 						'toggleIcon': accordianStyleFactory.getStyle($scope.toggleIcon || 0),
 						'timing': $scope.timing,
-						'callback': $scope.callback
+						'callback': $scope.callback,
+						'index': index += 1
 					}
 				}
 
@@ -167,7 +171,7 @@
 					scope.toggle = closing;
 
 					if (handler)
-						return scope.toggle ? handler.onExpand() : handler.onCollapse();
+						return scope.toggle ? handler.onExpand(config.index) : handler.onCollapse(config.index);
 				}
 			}
 		}

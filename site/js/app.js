@@ -178,20 +178,12 @@ app.controller('callbacksCtrl', ['$scope', function ($scope) {
 		{ 'value': '<p><span>stuff</span></p>' }
 	];
 
-	$scope.$on('accordian2:expand', function () {
-		console.log('accordian2:expand');
+	$scope.$on('accordian:expand', function (e, index) {
+		console.log('accordian:expand ' + index);
 	});
 
-	$scope.$on('accordian2:collapse', function () {
-		console.log('accordian2:collapse');
-	});
-
-	$scope.$on('accordian:expand', function () {
-		console.log('accordian:expand');
-	});
-
-	$scope.$on('accordian:collapse', function () {
-		console.log('accordian:collapse');
+	$scope.$on('accordian:collapse', function (e, index) {
+		console.log('accordian:collapse' + index);
 	});
 }]);
 
