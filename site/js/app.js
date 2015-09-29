@@ -157,7 +157,7 @@ app.controller('methodsCtrl', ['$scope', function ($scope) {
 	});
 }]);
 
-app.controller('callbacksCtrl', ['$scope', function ($scope) {
+app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($scope, $interval, $timeout) {
 	$scope.tabs = [
 			{ 'title': 'Markup', 'url': 'template/accordian/callbacks/markup.html' },
 			{ 'title': 'JavaScript', 'url': 'template/accordian/callbacks/javascript.html' }
@@ -169,9 +169,31 @@ app.controller('callbacksCtrl', ['$scope', function ($scope) {
 		{ 'value': '<p><span>stuff</span></p>' }
 	];
 
+	var console = angular.element(document.getElementById('console'));
+
+	var consolebody = angular.element(document.getElementById('console-entries'));
+
 	var cursor = angular.element(document.getElementById('cursor'));
 
-	console.log(cursor);
+	function toggleCursor() {
+		$timeout(function () {
+			cursor.css('visibility', 'hidden');
+		}, 500);
+		$timeout(function () {
+			cursor.css('visibility', 'visible');
+		}, 1000);
+	}
+
+	toggleCursor();
+
+	$interval(toggleCursor, 1000);
+
+	$scope.$on('accordian:expand', function (e, index) {
+
+		consolebody.append('<span class="console-entry">accordian:expand ' + index + '</span>');
+
+		console[0].scrollTop = console[0].scrollHeight;
+	});
 }]);
 
 app.controller('attributesCtrl', ['$scope', function ($scope) {
