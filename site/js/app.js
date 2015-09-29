@@ -127,15 +127,14 @@ app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 	];
 }]);
 
-app.controller('standaloneCtrl', ['$scope', function ($scope) {
+app.controller('methodsCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'template/accordian/standalone/markup.html' },
-		{ 'title': 'CSS', 'url': 'template/accordian/standalone/css.html' }
+			{ 'title': 'Markup', 'url': 'template/accordian/methods/markup.html' },
+			{ 'title': 'JavaScript', 'url': 'template/accordian/methods/javascript.html' },
+			{ 'title': 'CSS', 'url': 'template/accordian/methods/css.html' }
 	];
-}]);
 
-app.controller('methodsCtrl', ['$scope', function ($scope) {
 	$scope.content = [
 		{ 'value': '<p><span>stuff</span></p>' },
 		{ 'value': '<p><span>stuff</span></p>' },
