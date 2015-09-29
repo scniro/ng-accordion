@@ -168,6 +168,10 @@ app.controller('callbacksCtrl', ['$scope', function ($scope) {
 		{ 'value': '<p><span>stuff</span></p>' },
 		{ 'value': '<p><span>stuff</span></p>' }
 	];
+
+	var cursor = angular.element(document.getElementById('cursor'));
+
+	console.log(cursor);
 }]);
 
 app.controller('attributesCtrl', ['$scope', function ($scope) {
