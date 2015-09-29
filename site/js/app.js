@@ -57,13 +57,13 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 }]);
 
 app.run(['$rootScope', 'tplBase', function ($rootScope, tplBase) {
-		$rootScope.tplBase = tplBase;
+	$rootScope.tplBase = tplBase;
 
-		$rootScope.scripts = [
-			{ 'src': 'js/app.js' },
-			{ 'src': '../src/js/ng-accordian.js' }
-		];
-	}]);
+	$rootScope.scripts = [
+		{ 'src': 'js/app.js' },
+		{ 'src': '../src/js/ng-accordian.js' }
+	];
+}]);
 
 app.controller('gettingStartedCtrl', ['$scope', function ($scope) {
 	$scope.intro = 'getting started';
@@ -131,8 +131,7 @@ app.controller('methodsCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
 			{ 'title': 'Markup', 'url': 'template/accordian/methods/markup.html' },
-			{ 'title': 'JavaScript', 'url': 'template/accordian/methods/javascript.html' },
-			{ 'title': 'CSS', 'url': 'template/accordian/methods/css.html' }
+			{ 'title': 'JavaScript', 'url': 'template/accordian/methods/javascript.html' }
 	];
 
 	$scope.content = [
@@ -159,7 +158,16 @@ app.controller('methodsCtrl', ['$scope', function ($scope) {
 }]);
 
 app.controller('callbacksCtrl', ['$scope', function ($scope) {
+	$scope.tabs = [
+			{ 'title': 'Markup', 'url': 'template/accordian/callbacks/markup.html' },
+			{ 'title': 'JavaScript', 'url': 'template/accordian/callbacks/javascript.html' }
+	];
 
+	$scope.content = [
+		{ 'value': '<p><span>stuff</span></p>' },
+		{ 'value': '<p><span>stuff</span></p>' },
+		{ 'value': '<p><span>stuff</span></p>' }
+	];
 }]);
 
 app.controller('attributesCtrl', ['$scope', function ($scope) {
