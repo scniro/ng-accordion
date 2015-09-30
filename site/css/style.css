@@ -250,6 +250,15 @@ table.icons tr td:first-of-type {
       color: white;
       background-color: #FD971F; }
 
+#console .console-entry .pink {
+  color: #F92672; }
+
+#console .console-entry .green {
+  color: #A6E22E; }
+
+#console .console-entry .blue {
+  color: #66D9EF; }
+
 pre, code {
   font-size: 10pt; }
 

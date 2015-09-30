@@ -1,8 +1,11 @@
 ﻿<h1>callbacks</h1>
 
 <section class="pane left events">
-	<accordian close-others="true"
-	           handle="accordian"
+
+	<p>adding <code prism class="language-markup">&lt;accordian handle="myAccordian">&lt;/accordian></code> will make your element publically available to register callback listeners as <code prism class="language-javascript">myAccordian</code></p>
+
+	<accordian close-others="false"
+	           handle="myAccordian"
 	           timing="200"
 	           toggle-icon="chevron">
 		<toggle ng-repeat="c in content" content="c.value"></toggle>

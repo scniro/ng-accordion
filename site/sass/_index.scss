@@ -341,3 +341,21 @@ table {
 		}
 	}
 }
+
+#console {
+
+	.console-entry {
+
+		.pink {
+			color: $pink;
+		}
+
+		.green {
+			color: $green
+		}
+
+		.blue {
+			color: $blue;
+		}
+	}
+}

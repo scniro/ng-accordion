@@ -193,13 +193,26 @@ app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($s
 		toggleCursor();
 
 		$interval(toggleCursor, 1000);
-	}, 100); // callback
+	}, 100); // callback mayhaps?
 
 
-	$scope.$on('accordian:expand', function (e, index) {
+	$scope.$on('myAccordian:expand', function (e, index) {
+		consolebody.append('<span class="console-entry"><span class="pink">myAccordian:expand</span><span> index: </span><span class="blue">' + index + '</span></span>');
+		console[0].scrollTop = console[0].scrollHeight;
+	});
 
-		consolebody.append('<span class="console-entry">accordian:expand ' + index + '</span>');
+	$scope.$on('myAccordian:expand:animation', function (e, index) {
+		consolebody.append('<span class="console-entry"><span class="pink">myAccordian:expand:animation</span><span> index: </span><span class="blue">' + index + '</span></span>');
+		console[0].scrollTop = console[0].scrollHeight;
+	});
 
+	$scope.$on('myAccordian:collapse', function (e, index) {
+		consolebody.append('<span class="console-entry"><span class="pink">myAccordian:collpse</span><span> index: </span><span class="blue">' + index + '</span></span>');
+		console[0].scrollTop = console[0].scrollHeight;
+	});
+
+	$scope.$on('myAccordian:collapse:animation', function (e, index) {
+		consolebody.append('<span class="console-entry"><span class="pink">myAccordian:collpse:animation</span><span> index: </span><span class="blue">' + index + '</span></span>');
 		console[0].scrollTop = console[0].scrollHeight;
 	});
 }]);
