@@ -1,30 +1,12 @@
 ﻿<h1>callbacks</h1>
 
 <section class="pane left events">
-
-	<div id="console">
-		<div id="console-entries"></div>
-		<span id="carot">></span><span id="cursor">|</span>
-	</div>
-
 	<accordian close-others="true"
 	           handle="accordian"
 	           timing="200"
 	           toggle-icon="chevron">
 		<toggle ng-repeat="c in content" content="c.value"></toggle>
 	</accordian>
-	<br/>
-
-	<button ng-click="accordian.expand(0)">expand 1</button>
-	<button ng-click="accordian.expand(1)">expand 2</button>
-
-	<button ng-click="accordian.collapse(0)">collapse 1</button>
-	<button ng-click="accordian.collapse(1)">collapse 2</button>
-	<hr/>
-
-	<button ng-click="accordian.expand()">expand all</button>
-
-	<button ng-click="accordian.collapse()">collapse all</button>
 </section>
 
 <section class="pane right">

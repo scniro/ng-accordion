@@ -159,6 +159,7 @@ app.controller('methodsCtrl', ['$scope', function ($scope) {
 
 app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($scope, $interval, $timeout) {
 	$scope.tabs = [
+			{ 'title': 'Console', 'url': 'template/accordian/callbacks/console.html' },
 			{ 'title': 'Markup', 'url': 'template/accordian/callbacks/markup.html' },
 			{ 'title': 'JavaScript', 'url': 'template/accordian/callbacks/javascript.html' }
 	];
@@ -169,24 +170,31 @@ app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($s
 		{ 'value': '<p><span>stuff</span></p>' }
 	];
 
-	var console = angular.element(document.getElementById('console'));
+	var console, consolebody, cursor;
 
-	var consolebody = angular.element(document.getElementById('console-entries'));
+	$timeout(function () {
 
-	var cursor = angular.element(document.getElementById('cursor'));
+		function toggleCursor() {
 
-	function toggleCursor() {
-		$timeout(function () {
-			cursor.css('visibility', 'hidden');
-		}, 500);
-		$timeout(function () {
-			cursor.css('visibility', 'visible');
-		}, 1000);
-	}
+			console = angular.element(document.getElementById('console'));
 
-	toggleCursor();
+			consolebody = angular.element(document.getElementById('console-entries'));
 
-	$interval(toggleCursor, 1000);
+			cursor = angular.element(document.getElementById('cursor'));
+
+			$timeout(function () {
+				cursor.css('visibility', 'visible');
+			}, 500);
+			$timeout(function () {
+				cursor.css('visibility', 'hidden');
+			}, 1000);
+		}
+
+		toggleCursor();
+
+		$interval(toggleCursor, 1000);
+	}, 100); // callback
+
 
 	$scope.$on('accordian:expand', function (e, index) {
 

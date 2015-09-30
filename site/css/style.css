@@ -205,10 +205,10 @@ table.icons tr td:first-of-type {
         border-left: solid 0.125em white; }
 
 #console {
-  width: 100%;
+  width: calc(100% - .5em);
+  margin: 0.25em;
   height: 12em;
   border: solid 1px #CCC;
-  margin-bottom: 2.000em;
   font-family: Consolas 'Courier New' monospace;
   background-color: #383838;
   color: white;
@@ -220,10 +220,35 @@ table.icons tr td:first-of-type {
     padding: 0.25em 1em;
     font-size: 10pt; }
   #console #cursor {
-    font-size: 12pt; }
+    font-size: 12pt;
+    visibility: hidden; }
   #console #carot {
     font-size: 12pt;
     color: #A6E22E; }
+
+.methods-example {
+  height: 3em;
+  margin-bottom: 1em; }
+  .methods-example > button {
+    padding: 1em;
+    border: none;
+    width: 25%;
+    float: left;
+    background-color: white;
+    color: #3E3D32;
+    outline: none;
+    box-sizing: border-box;
+    border: solid 1px #FD971F; }
+    .methods-example > button:first-of-type {
+      border-right: none; }
+    .methods-example > button:last-of-type {
+      border-left: none; }
+    .methods-example > button:nth-child(2), .methods-example > button:nth-child(3) {
+      border-left: none;
+      border-right: none; }
+    .methods-example > button:hover {
+      color: white;
+      background-color: #FD971F; }
 
 pre, code {
   font-size: 10pt; }

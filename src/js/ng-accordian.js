@@ -58,7 +58,7 @@
 					function onCollapse(index) {
 						scope.$root[attrs.handle].$emit(attrs.handle + ':collapse', index);
 
-						if(scope.timing)
+						if (scope.timing)
 							$timeout(function () { scope.$root[attrs.handle].$emit(attrs.handle + ':collapse:animation', index); }, scope.timing);
 					}
 
@@ -69,8 +69,9 @@
 					}
 
 					scope.collapse = function (index) {
+
 						if (index || index === 0) {
-							angular.element(elem.children().children()[(index + 1)]).scope().toggle = false;
+							angular.element(angular.element(elem.children()[index]).children()[1]).scope().toggle = false;
 						} else {
 							angular.forEach(elem.children().children(), function (value) {
 								angular.element(value).scope().toggle = false;
@@ -81,8 +82,9 @@
 					}
 
 					scope.expand = function (index) {
+
 						if (index || index === 0) {
-							angular.element(elem.children().children()[(index + 1)]).scope().toggle = true;
+							angular.element(angular.element(elem.children()[index]).children()[1]).scope().toggle = true;
 						} else {
 							angular.forEach(elem.children().children(), function (value) {
 								angular.element(value).scope().toggle = true;
@@ -126,7 +128,7 @@
 			require: ['^accordian', '?^ngModel'],
 			link: function (scope, elem, attrs, parent) {
 
-				if (parent[1] && !attrs.modelName) 
+				if (parent[1] && !attrs.modelName)
 					throw new NgAccordianException('ngAccordian: ng-model requires attribute model-name to be specified.');
 
 				var config = parent[0].getConfiguration();

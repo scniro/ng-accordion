@@ -78,7 +78,7 @@ section.content {
 aside.spine {
 	width: 12.000em;
 	padding-top: 2.000em;
-	
+
 
 	a {
 		text-decoration: none;
@@ -114,7 +114,7 @@ aside.spine {
 			&.sub {
 				padding-left: 2.000em;
 
-				
+
 
 				div {
 					border-bottom: solid 0.063em $pink;
@@ -279,12 +279,11 @@ table {
 }
 
 #console {
-	width: 100%;
+	width: calc(100% - .5em);
+	margin: 0.25em;
 	height: 12em;
 	border: solid 1px #CCC;
-	margin-bottom: 2.000em;
 	font-family: Consolas 'Courier New' monospace;
-	
 	background-color: #383838;
 	color: white;
 	box-sizing: border-box;
@@ -298,11 +297,47 @@ table {
 	}
 
 	#cursor {
-	font-size: 12pt;
+		font-size: 12pt;
+		visibility: hidden;
 	}
 
 	#carot {
-	font-size: 12pt;
-	color: #A6E22E;
+		font-size: 12pt;
+		color: #A6E22E;
+	}
+}
+
+.methods-example {
+	height: 3em;
+	margin-bottom: 1em;
+
+	> button {
+		padding: 1em;
+		border: none;
+		width: 25%;
+		float: left;
+		background-color: white;
+		color: $black;
+		outline: none;
+		box-sizing: border-box;
+		border: solid 1px $orange;
+
+		&:first-of-type {
+			border-right: none;
+		}
+
+		&:last-of-type {
+			border-left: none;
+		}
+
+		&:nth-child(2), &:nth-child(3) {
+			border-left: none;
+			border-right: none;
+		}
+
+		&:hover {
+			color: white;
+			background-color: $orange;
+		}
 	}
 }
