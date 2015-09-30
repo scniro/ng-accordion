@@ -1,72 +1,78 @@
 ﻿<h1>attributes</h1>
 
 <section class="pane left attributes">
-    <table class="attributes">
-        <thead>
-            <tr>
-                <th>attribute</th>
-                <th>description</th>
-                <th>usage</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code prism class="language-markup">close-others</code></td>
-                <td>to open one <code prism class="language-markup">&lt;toggle></code> at a time</td>
-                <td><code prism class="language-markup">&lt;accordian close-others="true"></code></td>
-            </tr>
-            <tr>
-                <td><code prism class="language-markup">content</code></td>
-                <td>display defined markup strings</td>
-                <td>
-                    <code prism class="language-markup">&lt;toggle content="value"></code>
-                    <hr class="separator" />
-                    <code prism class="language-javascript">$scope.value = '&lt;p>&lt;span>ayy!&lt;/span>&lt;/p>'</code>
-                </td>
-            </tr>
-            <tr>
-                <td><code prism class="language-markup">content-url</code></td>
-                <td>display markup templates</td>
-                <td><code prism class="language-markup">&lt;toggle content-url="'/content.html'">&lt;/toggle></code></td>
-            </tr>
+	<table class="attributes">
+		<thead>
+			<tr>
+				<th>attribute</th>
+				<th>description</th>
+				<th>usage</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code prism class="language-markup">close-others</code></td>
+				<td>to open one <code prism class="language-markup">&lt;toggle></code> at a time</td>
+				<td><code prism class="language-markup">&lt;accordian close-others="true"></code></td>
+			</tr>
+			<tr>
+				<td><code prism class="language-markup">content</code></td>
+				<td>display defined markup strings</td>
+				<td>
+					<code prism class="language-markup">&lt;toggle content="value"></code>
+					<hr class="separator" />
+					<code prism class="language-javascript">$scope.value = '&lt;p>&lt;span>ayy!&lt;/span>&lt;/p>'</code>
+				</td>
+			</tr>
+			<tr>
+				<td><code prism class="language-markup">content-url</code></td>
+				<td>display markup templates</td>
+				<td><code prism class="language-markup">&lt;toggle content-url="'/content.html'">&lt;/toggle></code></td>
+			</tr>
 
-            <tr>
-                <td><code prism class="language-markup">heading</code></td>
-                <td>display a heading</td>
-                <td><code prism class="language-markup">&lt;toggle heading="'stuff'">&lt;/toggle></code></td>
-            </tr>
+			<tr>
+				<td><code prism class="language-markup">handle</code></td>
+				<td>make element publicly available for events and callbacks</td>
+				<td><code prism class="language-markup">&lt;accordian handle="myAccordian">&lt;/accordian></code></td>
+			</tr>
 
-            <tr>
-                <td><code prism class="language-markup">model-name</code></td>
-                <td>interpolated model name with <code prism class="language-markup">ng-model</code> usage</td>
-                <td>
-                    <code prism class="language-markup">&lt;toggle ng-model="c" model-name="c">&lt;toggle></code>
-                    <hr class="separator" />
-                    <code prism class="language-markup"><span ng-non-bindable>&lt;span>{{ c.value }}&lt;/span></span></code>
-                </td>
-            </tr>
+			<tr>
+				<td><code prism class="language-markup">heading</code></td>
+				<td>display a heading</td>
+				<td><code prism class="language-markup">&lt;toggle heading="'stuff'">&lt;/toggle></code></td>
+			</tr>
 
-            <tr>
-                <td><code prism class="language-markup">ng-model</code></td>
-                <td>template model. requires <code prism class="language-markup">model-name</code> for template interpolation</td>
-                <td>
-                    <code prism class="language-markup">&lt;toggle ng-model="c" model-name="c">&lt;toggle></code>
-                    <hr class="separator" />
-                    <code prism class="language-markup"><span ng-non-bindable>&lt;span>{{ c.value }}&lt;/span></span></code>
-                </td>
-            </tr>
+			<tr>
+				<td><code prism class="language-markup">model-name</code></td>
+				<td>interpolated model name with <code prism class="language-markup">ng-model</code> usage</td>
+				<td>
+					<code prism class="language-markup">&lt;toggle ng-model="c" model-name="c">&lt;toggle></code>
+					<hr class="separator" />
+					<code prism class="language-markup"><span ng-non-bindable>&lt;span>{{ c.value }}&lt;/span></span></code>
+				</td>
+			</tr>
 
-            <tr>
-                <td><code prism class="language-markup">timing</code></td>
-                <td>expland/collpase animation timing</td>
-                <td><code prism class="language-markup">&lt;accordian timing="0.2s"></code></td>
-            </tr>
+			<tr>
+				<td><code prism class="language-markup">ng-model</code></td>
+				<td>template model. requires <code prism class="language-markup">model-name</code> for template interpolation</td>
+				<td>
+					<code prism class="language-markup">&lt;toggle ng-model="c" model-name="c">&lt;toggle></code>
+					<hr class="separator" />
+					<code prism class="language-markup"><span ng-non-bindable>&lt;span>{{ c.value }}&lt;/span></span></code>
+				</td>
+			</tr>
 
-            <tr>
-                <td><code prism class="language-markup">toggle-icon</code></td>
-                <td>default icon selection</td>
-                <td><code prism class="language-markup">&lt;accordian toggle-icon="plus"></code></td>
-            </tr>
-        </tbody>
-    </table>
+			<tr>
+				<td><code prism class="language-markup">timing</code></td>
+				<td>expland/collpase animation timing</td>
+				<td><code prism class="language-markup">&lt;accordian timing="0.2s"></code></td>
+			</tr>
+
+			<tr>
+				<td><code prism class="language-markup">toggle-icon</code></td>
+				<td>default icon selection</td>
+				<td><code prism class="language-markup">&lt;accordian toggle-icon="plus"></code></td>
+			</tr>
+		</tbody>
+	</table>
 </section>
