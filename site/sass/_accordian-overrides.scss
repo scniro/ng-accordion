@@ -32,23 +32,31 @@ section.content-strings {
 
 	toggle .toggle-header {
 		height: 24px;
-		background-color: #99A7BB;
+		background-color: $gray-darker;
 	}
 
 	toggle .toggle-header:hover {
-		background-color: #8893a4;
+		background-color: $gray-lighter;
+	}
+
+	toggle .toggle-header:hover span {
+		color: $black;
 	}
 
 	toggle .toggle-body.border {
-		border: solid 1px #99A7BB;
+		border: solid 1px $gray-darker;
 	}
 
 	toggle .toggle-header span {
-		color: #E8EA3B;
+		color: $white;
 	}
 
 	toggle .toggle-header .icon.chevron div {
-		border-color: #5b636f;
+		border-color: $black;
+	}
+
+	toggle .toggle-header:hover .icon.chevron div {
+		border-color: $blue;
 	}
 }
 
@@ -59,11 +67,10 @@ section.model-binding {
 
 	toggle .toggle-header {
 		height: 48px;
-		background-color: #A2AFA1;
 	}
 
 	toggle .toggle-body.border {
-		border: solid 1px #A2AFA1;
+		border: solid 1px $gray-darker;
 	}
 
 	toggle .toggle-header .icon {

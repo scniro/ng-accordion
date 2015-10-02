@@ -119,25 +119,25 @@ table th {
 
 table td, table th {
   padding: 1.500em;
-  border: solid 1px #ccc; }
+  border: solid 1px #CCC; }
   table td hr.separator, table th hr.separator {
     border: 0;
-    border-bottom: dashed 1px #ccc;
+    border-bottom: dashed 1px #CCC;
     margin: 0.750em 0; }
 
 table.attributes tr td:last-of-type {
-  background-color: #f5f2f0; }
+  background-color: #F5F2F0; }
 
 table.icons td {
   padding: 0.500em; }
 
 table.icons tr td:first-of-type {
-  background-color: #f5f2f0;
+  background-color: #F5F2F0;
   padding-top: 1.500em; }
 
 .icon-example {
   width: 3.000em;
-  background-color: #ccc;
+  background-color: #CCC;
   height: 3.000em;
   font-size: 12pt;
   cursor: pointer; }
@@ -169,7 +169,7 @@ table.icons tr td:first-of-type {
     padding: 0.500em;
     height: 2.000em;
     width: 2.000em;
-    background-color: #ccc;
+    background-color: #CCC;
     -webkit-transform: rotate(0);
     transform: rotate(0);
     transition: all 0.15s linear;
@@ -290,29 +290,34 @@ section.content-strings toggle {
 
 section.content-strings toggle .toggle-header {
   height: 24px;
-  background-color: #99A7BB; }
+  background-color: #CCC; }
 
 section.content-strings toggle .toggle-header:hover {
-  background-color: #8893a4; }
+  background-color: #F5F2F0; }
+
+section.content-strings toggle .toggle-header:hover span {
+  color: #3E3D32; }
 
 section.content-strings toggle .toggle-body.border {
-  border: solid 1px #99A7BB; }
+  border: solid 1px #CCC; }
 
 section.content-strings toggle .toggle-header span {
-  color: #E8EA3B; }
+  color: #FFF; }
 
 section.content-strings toggle .toggle-header .icon.chevron div {
-  border-color: #5b636f; }
+  border-color: #3E3D32; }
+
+section.content-strings toggle .toggle-header:hover .icon.chevron div {
+  border-color: #66D9EF; }
 
 section.model-binding toggle {
   margin-bottom: 4px; }
 
 section.model-binding toggle .toggle-header {
-  height: 48px;
-  background-color: #A2AFA1; }
+  height: 48px; }
 
 section.model-binding toggle .toggle-body.border {
-  border: solid 1px #A2AFA1; }
+  border: solid 1px #CCC; }
 
 section.model-binding toggle .toggle-header .icon {
   float: right; }
@@ -342,16 +347,16 @@ tabs .header {
     cursor: pointer;
     padding: 0.5em 1em; }
     tabs .header li.active {
-      background-color: #f5f2f0;
-      border-top: solid 0.063em #ccc;
-      border-left: solid 0.063em #ccc;
-      border-right: solid 0.063em #ccc;
+      background-color: #F5F2F0;
+      border-top: solid 0.063em #CCC;
+      border-left: solid 0.063em #CCC;
+      border-right: solid 0.063em #CCC;
       border-bottom: solid 0.063em transparent; }
     tabs .header li:not(.active):hover {
-      background-color: #ccc;
-      border-bottom: solid 0.063em #ccc; }
+      background-color: #CCC;
+      border-bottom: solid 0.063em #CCC; }
 
 tabs .body {
   clear: both;
-  background-color: #f5f2f0;
-  border: solid 0.063em #ccc; }
+  background-color: #F5F2F0;
+  border: solid 0.063em #CCC; }
