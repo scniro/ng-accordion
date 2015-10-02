@@ -289,8 +289,7 @@ section.content-strings toggle {
   margin-bottom: 2px; }
 
 section.content-strings toggle .toggle-header {
-  height: 24px;
-  background-color: #CCC; }
+  height: 24px; }
 
 section.content-strings toggle .toggle-header:hover {
   background-color: #F5F2F0; }
@@ -300,9 +299,6 @@ section.content-strings toggle .toggle-header:hover span {
 
 section.content-strings toggle .toggle-body.border {
   border: solid 1px #CCC; }
-
-section.content-strings toggle .toggle-header span {
-  color: #FFF; }
 
 section.content-strings toggle .toggle-header .icon.chevron div {
   border-color: #3E3D32; }

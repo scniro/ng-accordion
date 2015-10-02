@@ -32,7 +32,6 @@ section.content-strings {
 
 	toggle .toggle-header {
 		height: 24px;
-		background-color: $gray-darker;
 	}
 
 	toggle .toggle-header:hover {
@@ -45,10 +44,6 @@ section.content-strings {
 
 	toggle .toggle-body.border {
 		border: solid 1px $gray-darker;
-	}
-
-	toggle .toggle-header span {
-		color: $white;
 	}
 
 	toggle .toggle-header .icon.chevron div {
