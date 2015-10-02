@@ -1,5 +1,11 @@
 ﻿/* -- ACCORDIAN OVERRIDES -- */
 
+toggle p {
+	padding: 1.000em;
+	font-size: 10pt;
+	line-height: 200%;
+}
+
 section.basic {
 	toggle {
 		margin-bottom: 4px;

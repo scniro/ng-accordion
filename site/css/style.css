@@ -106,14 +106,6 @@ aside.spine {
         margin-top: 0.375em;
         margin-right: 0.500em; }
 
-toggle p {
-  padding: 1.000em;
-  font-size: 10pt;
-  line-height: 200%; }
-
-pre {
-  margin: 0 !important; }
-
 table th {
   font-weight: bolder; }
 
@@ -256,6 +248,9 @@ table.icons tr td:first-of-type {
     font-size: 12pt;
     visibility: hidden; }
 
+pre {
+  margin: 0 !important; }
+
 pre, code {
   font-size: 10pt; }
 
@@ -266,6 +261,11 @@ pre[class*="language-shell"] {
     color: white; }
 
 /* -- ACCORDIAN OVERRIDES -- */
+toggle p {
+  padding: 1.000em;
+  font-size: 10pt;
+  line-height: 200%; }
+
 section.basic toggle {
   margin-bottom: 4px; }
 
