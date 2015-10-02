@@ -82,12 +82,16 @@
 					}
 
 					scope.expand = function (index) {
-
 						if (index || index === 0) {
-							angular.element(angular.element(elem.children()[index]).children()[1]).scope().toggle = true;
+
+							var elements = angular.element(angular.element(elem.children()[index]).children());
+
+							if (!angular.element(elements[0]).parent().attr('disabled'))
+								angular.element(elements[1]).scope().toggle = true;
 						} else {
 							angular.forEach(elem.children().children(), function (value) {
-								angular.element(value).scope().toggle = true;
+								if (!angular.element(value).parent().attr('disabled'))
+									angular.element(value).scope().toggle = true;
 							});
 						}
 
@@ -167,18 +171,20 @@
 
 				scope.toggleBody = function () {
 
-					var closing = scope.toggle ? false : true;
+					if (!elem.attr('disabled')) {
+						var closing = scope.toggle ? false : true;
 
-					if (config.closeOthers) {
-						angular.forEach(elem.parent().children().children(), function (value, i) {
-							angular.element(value).scope().toggle = false;
-						});
+						if (config.closeOthers) {
+							angular.forEach(elem.parent().children().children(), function (value, i) {
+								angular.element(value).scope().toggle = false;
+							});
+						}
+
+						scope.toggle = closing;
+
+						if (handle)
+							return scope.toggle ? handle.onExpand(config.index) : handle.onCollapse(config.index);
 					}
-
-					scope.toggle = closing;
-
-					if (handle)
-						return scope.toggle ? handle.onExpand(config.index) : handle.onCollapse(config.index);
 				}
 			}
 		}
