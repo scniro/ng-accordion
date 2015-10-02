@@ -100,6 +100,18 @@
 
 					scope.handler = { 'onCollapse': onCollapse, 'onExpand': onExpand };
 				}
+
+				$timeout(function () {
+					angular.forEach(elem.children(), function (value) {
+
+						var toggle = angular.element(value);
+
+						if (toggle.attr('disabled'))
+							toggle.addClass('disabled');
+					});
+				});
+
+
 			},
 			controller: ['$scope', function ($scope) {
 
