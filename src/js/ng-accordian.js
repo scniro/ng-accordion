@@ -177,11 +177,9 @@
 				var heading = scope.heading ? '<span ng-style="{\'font-size\': (height * 0.50 | number: 0) + \'px\'}">' + scope.heading + '</span>' : '';
 
 				var tpl =
-				'<div class="toggle-header" ng-click="toggleBody()" >' +
+				'<div class="toggle-header" ng-click="toggleBody()" ng-class="{\'open\': toggle}">' +
 					config.toggleIcon + heading +
 				'</div>' +
-				'</div>' +
-					'<div ng-class="{\'open\': toggle}">' +
 				'<div>' +
 					content +
 				'</div>';
