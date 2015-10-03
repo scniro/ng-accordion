@@ -79,7 +79,6 @@ aside.spine {
 	width: 12.000em;
 	padding-top: 2.000em;
 
-
 	a {
 		text-decoration: none;
 		color: $blue;
@@ -131,16 +130,6 @@ aside.spine {
 			}
 		}
 	}
-}
-
-toggle p {
-	padding: 1.000em;
-	font-size: 10pt;
-	line-height: 200%;
-}
-
-pre {
-	margin: 0 !important;
 }
 
 table {
@@ -278,35 +267,6 @@ table {
 	}
 }
 
-#console {
-	width: calc(100% - .5em);
-	margin: 0.25em;
-	height: 12em;
-	border: solid 1px #CCC;
-	font-family: Consolas 'Courier New' monospace;
-	background-color: #383838;
-	color: white;
-	box-sizing: border-box;
-	padding: 0.5em;
-	overflow-y: auto;
-
-	.console-entry {
-		display: block;
-		padding: .25em 1em;
-		font-size: 10pt;
-	}
-
-	#cursor {
-		font-size: 12pt;
-		visibility: hidden;
-	}
-
-	#carot {
-		font-size: 12pt;
-		color: #A6E22E;
-	}
-}
-
 .methods-example {
 	height: 3em;
 	margin-bottom: 1em;
@@ -343,19 +303,42 @@ table {
 }
 
 #console {
+	width: calc(100% - .5em);
+	margin: 0.25em;
+	height: 12em;
+	border: solid 1px #CCC;
+	font-family: Consolas 'Courier New' monospace;
+	background-color: #383838;
+	color: white;
+	box-sizing: border-box;
+	padding: 0.5em;
+	overflow-y: auto;
+
+	#carot {
+		font-size: 12pt;
+		color: $green;
+	}
 
 	.console-entry {
+		display: block;
+		padding: .25em 1em;
+		font-size: 10pt;
 
 		.pink {
 			color: $pink;
 		}
 
 		.green {
-			color: $green
+			color: $green;
 		}
 
 		.blue {
 			color: $blue;
 		}
+	}
+
+	#cursor {
+		font-size: 12pt;
+		visibility: hidden;
 	}
 }
