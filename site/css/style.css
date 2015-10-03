@@ -318,18 +318,15 @@ section.model-binding toggle .toggle-body.border {
 section.model-binding toggle .toggle-header .icon {
   float: right; }
 
-section.standalone toggle {
-  margin-bottom: 4px; }
+section.disabled toggle {
+  margin-bottom: 2px; }
 
-section.standalone toggle .toggle-header {
-  height: 48px;
-  background-color: #7ACBFF; }
+section.disabled toggle .toggle-header {
+  height: 36px;
+  background-color: #7a7a7a; }
 
-section.standalone toggle .toggle-body.border {
-  border: solid 1px #7ACBFF; }
-
-section.standalone toggle .toggle-header .icon.plus div {
-  border-color: #f14be3; }
+section.disabled toggle .toggle-body.border {
+  border: solid 1px #7a7a7a; }
 
 tabs .header {
   list-style: none;

@@ -34,6 +34,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 			controller: 'modelBindingCtrl',
 			templateUrl: 'view/examples/model-binding.html'
 		})
+		.state('disabled', {
+			url: '/examples/disabled',
+			controller: 'disabledCtrl',
+			templateUrl: 'view/examples/disabled.html'
+		})
 		.state('methods', {
 			url: '/methods',
 			controller: 'methodsCtrl',
@@ -124,6 +129,14 @@ app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 		{ 'value': 'I\'m a model!' },
 		{ 'value': 'I\'m a model!' },
 		{ 'value': 'I\'m a model!' }
+	];
+}]);
+
+app.controller('disabledCtrl', ['$scope', function ($scope) {
+
+	$scope.tabs = [
+		{ 'title': 'Markup', 'url': 'template/accordian/disabled/markup.html' },
+		{ 'title': 'CSS', 'url': 'template/accordian/disabled/css.html' }
 	];
 }]);
 
