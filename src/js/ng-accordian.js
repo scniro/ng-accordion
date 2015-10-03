@@ -81,9 +81,28 @@
 						return onCollapse(index);
 					}
 
+					scope.disable = function (index) {
+						if (index)
+							angular.element(elem.children()[index]).addClass('disabled');
+						else {
+							angular.forEach(elem.children(), function(value) {
+								angular.element(value).addClass('disabled');
+							});
+						}
+					}
+
+					scope.enable = function (index) {
+						if (index) 
+								angular.element(elem.children()[index]).removeClass('disabled');
+						else {
+							angular.forEach(elem.children(), function(value) {
+								angular.element(value).removeClass('disabled');
+							});
+						}
+					}
+
 					scope.expand = function (index) {
 						if (index || index === 0) {
-
 							var elements = angular.element(angular.element(elem.children()[index]).children());
 
 							if (!angular.element(elements[0]).parent().attr('disabled'))
@@ -183,7 +202,7 @@
 
 				scope.toggleBody = function () {
 
-					if (!elem.attr('disabled')) {
+					if (!elem.hasClass('disabled')) {
 						var closing = scope.toggle ? false : true;
 
 						if (config.closeOthers) {

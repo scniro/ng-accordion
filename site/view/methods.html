@@ -9,7 +9,14 @@
 		<button ng-click="myAccordian.collapse()">collapse all</button>
 		<button ng-click="myAccordian.expand(1)">expand index 1</button>
 		<button ng-click="myAccordian.collapse(1)">collapse index 1</button>
+
 	</div>
+
+
+	<button ng-click="myAccordian.disable()">disable all</button>
+	<button ng-click="myAccordian.disable(1)">disable 1</button>
+	<button ng-click="myAccordian.enable()">enable all</button>
+	<button ng-click="myAccordian.enable(1)">enable 1</button>
 
 	<accordian close-others="false"
 			   handle="myAccordian"
