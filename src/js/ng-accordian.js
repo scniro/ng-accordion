@@ -82,9 +82,13 @@
 					}
 
 					scope.disable = function (index) {
-						if (index)
+						if (index) {
+							scope.collapse(index);
 							angular.element(elem.children()[index]).addClass('disabled');
+						}
+							
 						else {
+							scope.collapse();
 							angular.forEach(elem.children(), function(value) {
 								angular.element(value).addClass('disabled');
 							});
@@ -92,8 +96,10 @@
 					}
 
 					scope.enable = function (index) {
-						if (index) 
-								angular.element(elem.children()[index]).removeClass('disabled');
+						if (index) {
+							angular.element(elem.children()[index]).removeClass('disabled');
+						}
+						
 						else {
 							angular.forEach(elem.children(), function(value) {
 								angular.element(value).removeClass('disabled');
@@ -105,11 +111,11 @@
 						if (index || index === 0) {
 							var elements = angular.element(angular.element(elem.children()[index]).children());
 
-							if (!angular.element(elements[0]).parent().attr('disabled'))
+							if (!angular.element(elements[0]).parent().hasClass('disabled'))
 								angular.element(elements[1]).scope().toggle = true;
 						} else {
 							angular.forEach(elem.children().children(), function (value) {
-								if (!angular.element(value).parent().attr('disabled'))
+								if (!angular.element(value).parent().hasClass('disabled'))
 									angular.element(value).scope().toggle = true;
 							});
 						}
@@ -119,18 +125,6 @@
 
 					scope.handler = { 'onCollapse': onCollapse, 'onExpand': onExpand };
 				}
-
-				$timeout(function () {
-					angular.forEach(elem.children(), function (value) {
-
-						var toggle = angular.element(value);
-
-						if (toggle.attr('disabled'))
-							toggle.addClass('disabled');
-					});
-				});
-
-
 			},
 			controller: ['$scope', function ($scope) {
 
