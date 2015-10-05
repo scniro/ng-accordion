@@ -29,7 +29,8 @@ header {
   box-sizing: border-box;
   padding: 0.5em 2em;
   height: 6.000em;
-  background-color: white; }
+  background-color: white;
+  overflow: hidden; }
   header h1 {
     display: inline;
     font-size: 42pt;
@@ -44,7 +45,7 @@ header {
       /*line-height: 135%;
 			color: $pink;*/
       position: relative;
-      top: 35px;
+      top: 36px;
       transition: .10s ease-in; }
       header a:nth-child(2):hover {
         -webkit-transform: translateY(-35px);

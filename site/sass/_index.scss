@@ -13,6 +13,7 @@ header {
 	padding: 0.500em 2.000em;
 	height: 6.000em;
 	background-color: white;
+	overflow: hidden;
 
 	h1 {
 		display: inline;
@@ -31,11 +32,11 @@ header {
 			/*line-height: 135%;
 			color: $pink;*/
 			position: relative;
-			top: 35px;
+			top: 36px;
 			transition: .10s ease-in;
 
 			&:hover {
-			transform: translateY(-35px);
+				transform: translateY(-35px);
 			}
 		}
 	}
