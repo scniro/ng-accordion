@@ -40,10 +40,7 @@ header {
     text-decoration: none;
     color: inherit; }
     header a:nth-child(2) {
-      /*font-size: 42pt;*/
       float: right;
-      /*line-height: 135%;
-			color: $pink;*/
       position: relative;
       top: 36px;
       transition: .10s ease-in; }
