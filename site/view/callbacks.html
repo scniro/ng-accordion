@@ -2,7 +2,14 @@
 
 <section class="pane left callbacks">
 
-	<p>adding <code prism class="language-markup">&lt;accordian handle="myAccordian">&lt;/accordian></code> will make your element publically available to register callback listeners as <code prism class="language-javascript">myAccordian</code></p>
+	<p>adding <code prism class="language-markup">&lt;accordian handle="myAccordian">&lt;/accordian></code> will make your element publically available to register the following callback listeners as <code prism class="language-javascript">myAccordian</code></p>
+
+	<ul>
+		<li><code prism class="language-javascript">myAccordian:expand</code></li>
+		<li><code prism class="language-javascript">myAccordian:expand:animation</code></li>
+		<li><code prism class="language-javascript">myAccordian:collapse</code></li>
+		<li><code prism class="language-javascript">myAccordian:collapse:animation</code></li>
+	</ul>
 
 	<accordian close-others="false"
 	           handle="myAccordian"

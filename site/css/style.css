@@ -39,10 +39,16 @@ header {
     text-decoration: none;
     color: inherit; }
     header a:nth-child(2) {
-      font-size: 42pt;
+      /*font-size: 42pt;*/
       float: right;
-      line-height: 135%;
-      color: #F92672; }
+      /*line-height: 135%;
+			color: $pink;*/
+      position: relative;
+      top: 35px;
+      transition: .10s ease-in; }
+      header a:nth-child(2):hover {
+        -webkit-transform: translateY(-35px);
+        transform: translateY(-35px); }
 
 section.content {
   padding: 2.000em;
@@ -198,38 +204,9 @@ table.icons tr td:first-of-type {
 
 .methods-example {
   height: 3em;
-  margin-bottom: 1em;
+  margin: 1.25em 0;
   background-color: red;
-  height: 5em;
-  /*> button {
-		padding: 1em;
-		border: none;
-		width: 25%;
-		float: left;
-		background-color: white;
-		color: $black;
-		outline: none;
-		box-sizing: border-box;
-		border: solid 1px $orange;
-
-		&:first-of-type {
-			border-right: none;
-		}
-
-		&:last-of-type {
-			border-left: none;
-		}
-
-		&:nth-child(2), &:nth-child(3) {
-			border-left: none;
-			border-right: none;
-		}
-
-		&:hover {
-			color: white;
-			background-color: $orange;
-		}
-	}*/ }
+  height: 5em; }
   .methods-example > button {
     width: 25%;
     margin: 0;

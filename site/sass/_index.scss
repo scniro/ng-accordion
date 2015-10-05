@@ -26,10 +26,17 @@ header {
 		color: inherit;
 
 		&:nth-child(2) {
-			font-size: 42pt;
+			/*font-size: 42pt;*/
 			float: right;
-			line-height: 135%;
-			color: $pink;
+			/*line-height: 135%;
+			color: $pink;*/
+			position: relative;
+			top: 35px;
+			transition: .10s ease-in;
+
+			&:hover {
+			transform: translateY(-35px);
+			}
 		}
 	}
 }
@@ -269,48 +276,19 @@ table {
 
 .methods-example {
 	height: 3em;
-	margin-bottom: 1em;
+	margin: 1.25em 0;
 	background-color: red;
 	height: 5em;
 
 	> button {
 		width: 25%;
-		margin:0;
-		float:left;
+		margin: 0;
+		float: left;
 		border: solid 2px #fff;
 		height: 3em;
 		outline: none;
 		cursor: pointer;
 	}
-	/*> button {
-		padding: 1em;
-		border: none;
-		width: 25%;
-		float: left;
-		background-color: white;
-		color: $black;
-		outline: none;
-		box-sizing: border-box;
-		border: solid 1px $orange;
-
-		&:first-of-type {
-			border-right: none;
-		}
-
-		&:last-of-type {
-			border-left: none;
-		}
-
-		&:nth-child(2), &:nth-child(3) {
-			border-left: none;
-			border-right: none;
-		}
-
-		&:hover {
-			color: white;
-			background-color: $orange;
-		}
-	}*/
 }
 
 #console {
