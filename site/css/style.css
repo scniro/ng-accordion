@@ -106,14 +106,6 @@ aside.spine {
         margin-top: 0.375em;
         margin-right: 0.500em; }
 
-toggle p {
-  padding: 1.000em;
-  font-size: 10pt;
-  line-height: 200%; }
-
-pre {
-  margin: 0 !important; }
-
 table th {
   font-weight: bolder; }
 
@@ -204,28 +196,6 @@ table.icons tr td:first-of-type {
         border-top: solid 0.125em white;
         border-left: solid 0.125em white; }
 
-#console {
-  width: calc(100% - .5em);
-  margin: 0.25em;
-  height: 12em;
-  border: solid 1px #CCC;
-  font-family: Consolas 'Courier New' monospace;
-  background-color: #383838;
-  color: white;
-  box-sizing: border-box;
-  padding: 0.5em;
-  overflow-y: auto; }
-  #console .console-entry {
-    display: block;
-    padding: 0.25em 1em;
-    font-size: 10pt; }
-  #console #cursor {
-    font-size: 12pt;
-    visibility: hidden; }
-  #console #carot {
-    font-size: 12pt;
-    color: #A6E22E; }
-
 .methods-example {
   height: 3em;
   margin-bottom: 1em; }
@@ -250,14 +220,36 @@ table.icons tr td:first-of-type {
       color: white;
       background-color: #FD971F; }
 
-#console .console-entry .pink {
-  color: #F92672; }
+#console {
+  width: calc(100% - .5em);
+  margin: 0.25em;
+  height: 12em;
+  border: solid 1px #CCC;
+  font-family: Consolas 'Courier New' monospace;
+  background-color: #383838;
+  color: white;
+  box-sizing: border-box;
+  padding: 0.5em;
+  overflow-y: auto; }
+  #console #carot {
+    font-size: 12pt;
+    color: #A6E22E; }
+  #console .console-entry {
+    display: block;
+    padding: 0.25em 1em;
+    font-size: 10pt; }
+    #console .console-entry .pink {
+      color: #F92672; }
+    #console .console-entry .green {
+      color: #A6E22E; }
+    #console .console-entry .blue {
+      color: #66D9EF; }
+  #console #cursor {
+    font-size: 12pt;
+    visibility: hidden; }
 
-#console .console-entry .green {
-  color: #A6E22E; }
-
-#console .console-entry .blue {
-  color: #66D9EF; }
+pre {
+  margin: 0 !important; }
 
 pre, code {
   font-size: 10pt; }
@@ -269,20 +261,25 @@ pre[class*="language-shell"] {
     color: white; }
 
 /* -- ACCORDIAN OVERRIDES -- */
+toggle p {
+  padding: 1.000em;
+  font-size: 10pt;
+  line-height: 200%; }
+
 section.basic toggle {
   margin-bottom: 4px; }
 
-section.configuration toggle, section.events toggle {
+section.configuration toggle {
   margin-bottom: 2px; }
 
-section.configuration toggle .toggle-header, section.events toggle .toggle-header {
+section.configuration toggle .toggle-header {
   height: 36px;
   background-color: #7a7a7a; }
 
-section.configuration toggle .toggle-body.border, section.events toggle .toggle-body.border {
+section.configuration toggle .toggle-body.border {
   border: solid 1px #7a7a7a; }
 
-section.configuration toggle .toggle-header .icon.plus div, section.events toggle .toggle-header .icon.plus div {
+section.configuration toggle .toggle-header .icon.plus div {
   border-color: #414141; }
 
 section.content-strings toggle {
@@ -306,6 +303,21 @@ section.content-strings toggle .toggle-header .icon.chevron div {
 section.content-strings toggle .toggle-header:hover .icon.chevron div {
   border-color: #66D9EF; }
 
+section.content-strings toggle .toggle-header span {
+  color: #3E3D32; }
+
+section.content-strings toggle .toggle-header:hover {
+  background-color: #3E3D32; }
+
+section.content-strings toggle .toggle-header:hover span {
+  color: #A6E22E; }
+
+section.content-strings toggle .toggle-body.border {
+  border: solid 1px #66D9EF; }
+
+section.content-strings toggle .toggle-header .icon.chevron div {
+  border-color: #F92672; }
+
 section.model-binding toggle {
   margin-bottom: 4px; }
 
@@ -318,15 +330,18 @@ section.model-binding toggle .toggle-body.border {
 section.model-binding toggle .toggle-header .icon {
   float: right; }
 
-section.disabled toggle {
+section.events toggle, section.callbacks toggle {
   margin-bottom: 2px; }
 
-section.disabled toggle .toggle-header {
+section.events toggle .toggle-header, section.callbacks toggle .toggle-header {
   height: 36px;
   background-color: #7a7a7a; }
 
-section.disabled toggle .toggle-body.border {
+section.events toggle .toggle-body.border, section.callbacks toggle .toggle-body.border {
   border: solid 1px #7a7a7a; }
+
+section.events toggle .toggle-header .icon.plus div, section.callbacks toggle .toggle-header .icon.plus div {
+  border-color: #414141; }
 
 tabs .header {
   list-style: none;

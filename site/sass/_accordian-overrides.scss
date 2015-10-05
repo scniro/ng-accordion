@@ -1,12 +1,18 @@
 ﻿/* -- ACCORDIAN OVERRIDES -- */
 
+toggle p {
+	padding: 1.000em;
+	font-size: 10pt;
+	line-height: 200%;
+}
+
 section.basic {
 	toggle {
 		margin-bottom: 4px;
 	}
 }
 
-section.configuration, section.events {
+section.configuration {
 	toggle {
 		margin-bottom: 2px;
 	}
@@ -53,6 +59,26 @@ section.content-strings {
 	toggle .toggle-header:hover .icon.chevron div {
 		border-color: $blue;
 	}
+
+	toggle .toggle-header span {
+		color: $black;
+	}
+
+	toggle .toggle-header:hover {
+		background-color: $black;
+	}
+
+	toggle .toggle-header:hover span {
+		color: $green;
+	}
+
+	toggle .toggle-body.border {
+		border: solid 1px $blue;
+	}
+
+	toggle .toggle-header .icon.chevron div {
+		border-color: $pink;
+	}
 }
 
 section.model-binding {
@@ -75,6 +101,11 @@ section.model-binding {
 
 section.disabled {
 
+}
+
+
+section.events, section.callbacks {
+
 	toggle {
 		margin-bottom: 2px;
 	}
@@ -86,5 +117,9 @@ section.disabled {
 
 	toggle .toggle-body.border {
 		border: solid 1px #7a7a7a;
+	}
+
+	toggle .toggle-header .icon.plus div {
+		border-color: #414141;
 	}
 }
