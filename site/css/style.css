@@ -198,27 +198,46 @@ table.icons tr td:first-of-type {
 
 .methods-example {
   height: 3em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  background-color: red;
+  height: 5em;
+  /*> button {
+		padding: 1em;
+		border: none;
+		width: 25%;
+		float: left;
+		background-color: white;
+		color: $black;
+		outline: none;
+		box-sizing: border-box;
+		border: solid 1px $orange;
+
+		&:first-of-type {
+			border-right: none;
+		}
+
+		&:last-of-type {
+			border-left: none;
+		}
+
+		&:nth-child(2), &:nth-child(3) {
+			border-left: none;
+			border-right: none;
+		}
+
+		&:hover {
+			color: white;
+			background-color: $orange;
+		}
+	}*/ }
   .methods-example > button {
-    padding: 1em;
-    border: none;
     width: 25%;
+    margin: 0;
     float: left;
-    background-color: white;
-    color: #3E3D32;
+    border: solid 2px #fff;
+    height: 3em;
     outline: none;
-    box-sizing: border-box;
-    border: solid 1px #FD971F; }
-    .methods-example > button:first-of-type {
-      border-right: none; }
-    .methods-example > button:last-of-type {
-      border-left: none; }
-    .methods-example > button:nth-child(2), .methods-example > button:nth-child(3) {
-      border-left: none;
-      border-right: none; }
-    .methods-example > button:hover {
-      color: white;
-      background-color: #FD971F; }
+    cursor: pointer; }
 
 #console {
   width: calc(100% - .5em);

@@ -270,8 +270,19 @@ table {
 .methods-example {
 	height: 3em;
 	margin-bottom: 1em;
+	background-color: red;
+	height: 5em;
 
 	> button {
+		width: 25%;
+		margin:0;
+		float:left;
+		border: solid 2px #fff;
+		height: 3em;
+		outline: none;
+		cursor: pointer;
+	}
+	/*> button {
 		padding: 1em;
 		border: none;
 		width: 25%;
@@ -299,7 +310,7 @@ table {
 			color: white;
 			background-color: $orange;
 		}
-	}
+	}*/
 }
 
 #console {
