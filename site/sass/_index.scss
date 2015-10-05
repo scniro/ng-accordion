@@ -12,23 +12,24 @@ body {
 	overflow: hidden;
 	min-width: 58.000em;
 	overflow-x: auto;
+	background-color: #f5f2f0;
 }
 
 header {
 	width: 100%;
-	border-bottom: solid 0.063em #f5f2f0;
 	box-sizing: border-box;
 	padding: 0.500em 2.000em;
 	height: 4.000em;
 	background-color: white;
 	overflow: hidden;
-	background-color: #f5f2f0;
+	background-color: #4F5063;
 
 	h1 {
 		display: inline;
-		font-size: 28pt;
+		font-size: 20pt;
 		letter-spacing: 2px;
-		color: $black;
+		color: white;
+		line-height: 180%;
 	}
 
 	a {
@@ -63,7 +64,6 @@ section.content {
 	bottom: 0;
 	min-width: 42.000em;
 	background-color: white;
-	border-left: solid 2px #f5f2f0;
 
 	h1 {
 		margin-top: 0;
