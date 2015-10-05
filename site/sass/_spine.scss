@@ -1,0 +1,57 @@
+﻿
+$entry: #E06767;
+
+aside.spine {
+	width: 12.000em;
+	padding-top: 2.000em;
+
+	a {
+		text-decoration: none;
+		color: #6777E0;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	ol {
+		list-style: none;
+		padding-left: 0;
+		margin: 0;
+
+		li {
+			padding-top: 0.125em;
+			padding-bottom: 0.125em;
+
+			span {
+				display: block;
+				padding-left: 2.000em;
+			}
+
+			&.static {
+				color: #000;
+			}
+
+			&.root div {
+				border-bottom: solid 0.063em $entry;
+			}
+
+			&.sub {
+				padding-left: 2.000em;
+
+				div {
+					border-bottom: solid 0.063em $entry;
+					border-left: solid 0.063em $entry;
+				}
+			}
+
+			div {
+				float: left;
+				height: 0.375em;
+				width: 1.250em;
+				margin-top: 0.375em;
+				margin-right: 0.500em;
+			}
+		}
+	}
+}

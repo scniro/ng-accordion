@@ -16,24 +16,25 @@ h1, h2, h3, h4, h5, h6, th, td, caption {
 img {
   border: 0; }
 
+/*$cube: #77B58F;*/
 body {
   font-family: 'Open Sans', sans-serif;
   overflow: hidden;
   min-width: 58.000em;
-  overflow-x: auto;
-  background-color: #3E3D32; }
+  overflow-x: auto; }
 
 header {
   width: 100%;
-  border-bottom: solid 0.063em #3E3D32;
+  border-bottom: solid 0.063em #f5f2f0;
   box-sizing: border-box;
   padding: 0.5em 2em;
-  height: 6.000em;
+  height: 4.000em;
   background-color: white;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #f5f2f0; }
   header h1 {
     display: inline;
-    font-size: 42pt;
+    font-size: 28pt;
     letter-spacing: 2px;
     color: #3E3D32; }
   header a {
@@ -42,23 +43,26 @@ header {
     header a:nth-child(2) {
       float: right;
       position: relative;
-      top: 36px;
+      top: 28px;
       transition: .10s ease-in; }
+      header a:nth-child(2) img {
+        width: 8em; }
       header a:nth-child(2):hover {
-        -webkit-transform: translateY(-35px);
-        transform: translateY(-35px); }
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px); }
 
 section.content {
   padding: 2.000em;
   overflow-y: auto;
   overflow: auto;
   position: absolute;
-  top: 6.000em;
+  top: 4.000em;
   left: 12.000em;
   right: 0;
   bottom: 0;
   min-width: 42.000em;
-  background-color: white; }
+  background-color: white;
+  border-left: solid 2px #f5f2f0; }
   section.content h1 {
     margin-top: 0; }
   section.content section.pane {
@@ -75,40 +79,6 @@ section.content {
         font-size: 10pt; }
     section.content section.pane.right {
       float: right; }
-
-aside.spine {
-  width: 12.000em;
-  padding-top: 2.000em; }
-  aside.spine a {
-    text-decoration: none;
-    color: #66D9EF; }
-    aside.spine a:hover {
-      text-decoration: underline; }
-  aside.spine ol {
-    list-style: none;
-    padding-left: 0;
-    margin: 0; }
-    aside.spine ol li {
-      padding-top: 0.125em;
-      padding-bottom: 0.125em; }
-      aside.spine ol li span {
-        display: block;
-        padding-left: 2.000em; }
-      aside.spine ol li.static {
-        color: #E6DB74; }
-      aside.spine ol li.root div {
-        border-bottom: solid 0.063em #F92672; }
-      aside.spine ol li.sub {
-        padding-left: 2.000em; }
-        aside.spine ol li.sub div {
-          border-bottom: solid 0.063em #F92672;
-          border-left: solid 0.063em #F92672; }
-      aside.spine ol li div {
-        float: left;
-        height: 0.375em;
-        width: 1.250em;
-        margin-top: 0.375em;
-        margin-right: 0.500em; }
 
 table th {
   font-weight: bolder; }
@@ -241,6 +211,40 @@ table.icons tr td:first-of-type {
   #console #cursor {
     font-size: 12pt;
     visibility: hidden; }
+
+aside.spine {
+  width: 12.000em;
+  padding-top: 2.000em; }
+  aside.spine a {
+    text-decoration: none;
+    color: #6777E0; }
+    aside.spine a:hover {
+      text-decoration: underline; }
+  aside.spine ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 0; }
+    aside.spine ol li {
+      padding-top: 0.125em;
+      padding-bottom: 0.125em; }
+      aside.spine ol li span {
+        display: block;
+        padding-left: 2.000em; }
+      aside.spine ol li.static {
+        color: #000; }
+      aside.spine ol li.root div {
+        border-bottom: solid 0.063em #E06767; }
+      aside.spine ol li.sub {
+        padding-left: 2.000em; }
+        aside.spine ol li.sub div {
+          border-bottom: solid 0.063em #E06767;
+          border-left: solid 0.063em #E06767; }
+      aside.spine ol li div {
+        float: left;
+        height: 0.375em;
+        width: 1.250em;
+        margin-top: 0.375em;
+        margin-right: 0.500em; }
 
 pre {
   margin: 0 !important; }

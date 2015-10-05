@@ -1,23 +1,32 @@
-﻿body {
+﻿/*$cube: #77B58F;*/
+
+
+$cube: #6775E0;
+$cube-a: lighten($cube, 1%);
+$cube-b: lighten($cube, 2%);
+$cube-c: lighten($cube, 3%);
+$cube-size: 24px;
+
+body {
 	font-family: 'Open Sans', sans-serif;
 	overflow: hidden;
 	min-width: 58.000em;
 	overflow-x: auto;
-	background-color: $black;
 }
 
 header {
 	width: 100%;
-	border-bottom: solid 0.063em $black;
+	border-bottom: solid 0.063em #f5f2f0;
 	box-sizing: border-box;
 	padding: 0.500em 2.000em;
-	height: 6.000em;
+	height: 4.000em;
 	background-color: white;
 	overflow: hidden;
+	background-color: #f5f2f0;
 
 	h1 {
 		display: inline;
-		font-size: 42pt;
+		font-size: 28pt;
 		letter-spacing: 2px;
 		color: $black;
 	}
@@ -29,11 +38,15 @@ header {
 		&:nth-child(2) {
 			float: right;
 			position: relative;
-			top: 36px;
+			top: 28px;
 			transition: .10s ease-in;
 
+			img {
+				width: 8em;
+			}
+
 			&:hover {
-				transform: translateY(-35px);
+				transform: translateY(-30px);
 			}
 		}
 	}
@@ -44,12 +57,13 @@ section.content {
 	overflow-y: auto;
 	overflow: auto;
 	position: absolute;
-	top: 6.000em;
+	top: 4.000em;
 	left: 12.000em;
 	right: 0;
 	bottom: 0;
 	min-width: 42.000em;
 	background-color: white;
+	border-left: solid 2px #f5f2f0;
 
 	h1 {
 		margin-top: 0;
@@ -76,63 +90,6 @@ section.content {
 
 		&.right {
 			float: right;
-		}
-	}
-}
-
-aside.spine {
-	width: 12.000em;
-	padding-top: 2.000em;
-
-	a {
-		text-decoration: none;
-		color: $blue;
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-
-	ol {
-		list-style: none;
-		padding-left: 0;
-		margin: 0;
-
-		li {
-			padding-top: 0.125em;
-			padding-bottom: 0.125em;
-
-			span {
-				display: block;
-				padding-left: 2.000em;
-			}
-
-			&.static {
-				color: $yellow;
-			}
-
-			&.root div {
-				border-bottom: solid 0.063em $pink;
-			}
-
-			&.sub {
-				padding-left: 2.000em;
-
-
-
-				div {
-					border-bottom: solid 0.063em $pink;
-					border-left: solid 0.063em $pink;
-				}
-			}
-
-			div {
-				float: left;
-				height: 0.375em;
-				width: 1.250em;
-				margin-top: 0.375em;
-				margin-right: 0.500em;
-			}
 		}
 	}
 }
