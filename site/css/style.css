@@ -182,6 +182,8 @@ table.icons tr td:first-of-type {
     height: 3em;
     outline: none;
     cursor: pointer; }
+    .methods-example > button:hover {
+      background-color: #f5f2f0; }
 
 #console {
   width: calc(100% - .5em);
@@ -274,16 +276,17 @@ section.configuration toggle .toggle-header {
   background-color: #EAC991; }
 
 section.configuration toggle .toggle-body.border {
-  border: solid 1px #EAC991; }
+  border: solid 1px #CCC; }
 
 section.content-strings toggle {
   margin-bottom: 2px; }
 
 section.content-strings toggle .toggle-header {
-  height: 24px; }
+  height: 24px;
+  background-color: #7a7a7a; }
 
 section.content-strings toggle .toggle-header:hover {
-  background-color: #F5F2F0; }
+  background-color: #CCC; }
 
 section.content-strings toggle .toggle-header:hover span {
   color: #3E3D32; }
@@ -295,27 +298,13 @@ section.content-strings toggle .toggle-header .icon.chevron div {
   border-color: #3E3D32; }
 
 section.content-strings toggle .toggle-header:hover .icon.chevron div {
-  border-color: #66D9EF; }
-
-section.content-strings toggle .toggle-header span {
-  color: #3E3D32; }
-
-section.content-strings toggle .toggle-header:hover {
-  background-color: #3E3D32; }
-
-section.content-strings toggle .toggle-header:hover span {
-  color: #A6E22E; }
-
-section.content-strings toggle .toggle-body.border {
-  border: solid 1px #66D9EF; }
-
-section.content-strings toggle .toggle-header .icon.chevron div {
-  border-color: #F92672; }
+  border-color: #FFF; }
 
 section.model-binding toggle {
   margin-bottom: 4px; }
 
 section.model-binding toggle .toggle-header {
+  background-color: #EAC991;
   height: 48px; }
 
 section.model-binding toggle .toggle-body.border {
@@ -323,6 +312,12 @@ section.model-binding toggle .toggle-body.border {
 
 section.model-binding toggle .toggle-header .icon {
   float: right; }
+
+section.disabled toggle .toggle-header {
+  background-color: #8D8E9C; }
+
+section.disabled toggle .toggle-body.border {
+  border: solid 1px #8D8E9C; }
 
 section.events toggle, section.callbacks toggle {
   margin-bottom: 2px; }

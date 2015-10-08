@@ -23,7 +23,7 @@ section.configuration {
 	}
 
 	toggle .toggle-body.border {
-		border: solid 1px #EAC991;;
+		border: solid 1px #CCC;
 	}
 }
 
@@ -34,10 +34,11 @@ section.content-strings {
 
 	toggle .toggle-header {
 		height: 24px;
+		background-color: #7a7a7a;
 	}
 
 	toggle .toggle-header:hover {
-		background-color: $gray-lighter;
+		background-color: #CCC;
 	}
 
 	toggle .toggle-header:hover span {
@@ -53,27 +54,7 @@ section.content-strings {
 	}
 
 	toggle .toggle-header:hover .icon.chevron div {
-		border-color: $blue;
-	}
-
-	toggle .toggle-header span {
-		color: $black;
-	}
-
-	toggle .toggle-header:hover {
-		background-color: $black;
-	}
-
-	toggle .toggle-header:hover span {
-		color: $green;
-	}
-
-	toggle .toggle-body.border {
-		border: solid 1px $blue;
-	}
-
-	toggle .toggle-header .icon.chevron div {
-		border-color: $pink;
+		border-color: #FFF;
 	}
 }
 
@@ -83,6 +64,7 @@ section.model-binding {
 	}
 
 	toggle .toggle-header {
+		background-color: #EAC991;
 		height: 48px;
 	}
 
@@ -96,9 +78,14 @@ section.model-binding {
 }
 
 section.disabled {
+	toggle .toggle-header {
+		background-color: #8D8E9C;
+	}
 
+	toggle .toggle-body.border {
+		border: solid 1px #8D8E9C;
+	}
 }
-
 
 section.events, section.callbacks {
 

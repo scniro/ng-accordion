@@ -240,6 +240,10 @@ table {
 		height: 3em;
 		outline: none;
 		cursor: pointer;
+
+		&:hover {
+			background-color: #f5f2f0;
+		}
 	}
 }
 
