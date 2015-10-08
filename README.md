@@ -1,5 +1,5 @@
 ﻿# ng-accordian
-A simple, dependency free AngularJS accordian style directive
+A simple AngularJS accordian style directive
 
 # Getting Started
 

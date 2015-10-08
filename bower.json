@@ -5,7 +5,7 @@
   "authors": [
     "Sal Niro @scniro"
   ],
-  "description": "A simple, dependency free AngularJS accordian style directive",
+  "description": "A simple AngularJS accordian style directive",
   "main": "ngAccordian.js",
   "keywords": [
     "accordian",
