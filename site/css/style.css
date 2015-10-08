@@ -292,7 +292,7 @@ section.content-strings toggle .toggle-header:hover span {
   color: #3E3D32; }
 
 section.content-strings toggle .toggle-body.border {
-  border: solid 1px #7a7a7a; }
+  border: solid 1px #CCC; }
 
 section.content-strings toggle .toggle-header .icon.chevron div {
   border-color: #3E3D32; }
@@ -308,7 +308,7 @@ section.model-binding toggle .toggle-header {
   height: 48px; }
 
 section.model-binding toggle .toggle-body.border {
-  border: solid 1px #7a7a7a; }
+  border: solid 1px #CCC; }
 
 section.model-binding toggle .toggle-header .icon {
   float: right; }

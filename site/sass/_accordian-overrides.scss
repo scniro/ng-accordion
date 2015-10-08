@@ -38,7 +38,7 @@ section.content-strings {
 	}
 
 	toggle .toggle-header:hover {
-		background-color: #CCC;
+		background-color: $gray;
 	}
 
 	toggle .toggle-header:hover span {
@@ -46,7 +46,7 @@ section.content-strings {
 	}
 
 	toggle .toggle-body.border {
-		border: solid 1px $gray-darker;
+		border: solid 1px $gray;
 	}
 
 	toggle .toggle-header .icon.chevron div {
@@ -54,7 +54,7 @@ section.content-strings {
 	}
 
 	toggle .toggle-header:hover .icon.chevron div {
-		border-color: #FFF;
+		border-color: $white;
 	}
 }
 
@@ -69,7 +69,7 @@ section.model-binding {
 	}
 
 	toggle .toggle-body.border {
-		border: solid 1px $gray-darker;
+		border: solid 1px $gray;
 	}
 
 	toggle .toggle-header .icon {
