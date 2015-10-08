@@ -5,7 +5,9 @@ toggle {
   margin-bottom: 0.250em;
   cursor: pointer; }
   toggle.disabled .toggle-header {
-    background-color: #E37676; }
+    background-color: #E37676 !important; }
+    toggle.disabled .toggle-header:hover {
+      cursor: not-allowed; }
   toggle .toggle-header {
     height: 3em;
     background-color: #CCC; }

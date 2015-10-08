@@ -15,7 +15,11 @@ toggle {
 	&.disabled {
 
 		.toggle-header {
-			background-color: #E37676;
+			background-color: #E37676 !important;
+
+			&:hover {
+				cursor: not-allowed;
+			}
 		}
 	}
 
