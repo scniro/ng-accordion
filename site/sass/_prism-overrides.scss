@@ -7,7 +7,7 @@ pre, code {
 }
 
 pre[class*="language-shell"] {
-	background-color: #383838;
+	background-color: $black;
 
 	code {
 		text-shadow: none;

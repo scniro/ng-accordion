@@ -1,13 +1,10 @@
-﻿
-$entry: #E06767;
-
-aside.spine {
+﻿aside.spine {
 	width: 12.000em;
 	padding-top: 2.000em;
 
 	a {
 		text-decoration: none;
-		color: #6777E0;
+		color: $link;
 
 		&:hover {
 			text-decoration: underline;
@@ -29,19 +26,19 @@ aside.spine {
 			}
 
 			&.static {
-				color: #000;
+				color: $black;
 			}
 
 			&.root div {
-				border-bottom: solid 0.063em $entry;
+				border-bottom: solid 0.063em $spine-entry;
 			}
 
 			&.sub {
 				padding-left: 2.000em;
 
 				div {
-					border-bottom: solid 0.063em $entry;
-					border-left: solid 0.063em $entry;
+					border-bottom: solid 0.063em $spine-entry;
+					border-left: solid 0.063em $spine-entry;
 				}
 			}
 

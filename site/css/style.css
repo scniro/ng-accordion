@@ -1,3 +1,4 @@
+/* moonkai */
 html, body, div, form, fieldset, legend, label {
   margin: 0;
   padding: 0; }
@@ -28,14 +29,14 @@ header {
   box-sizing: border-box;
   padding: 0.5em 2em;
   height: 4.000em;
-  background-color: white;
+  background-color: #FFF;
   overflow: hidden;
   background-color: #4F5063; }
   header h1 {
     display: inline;
     font-size: 20pt;
-    letter-spacing: 2px;
-    color: white;
+    letter-spacing: 0.125em;
+    color: #FFF;
     line-height: 180%; }
   header a {
     text-decoration: none;
@@ -43,13 +44,13 @@ header {
     header a:nth-child(2) {
       float: right;
       position: relative;
-      top: 28px;
+      top: 1.750em;
       transition: .10s ease-in; }
       header a:nth-child(2) img {
-        width: 8em; }
+        width: 8.000em; }
       header a:nth-child(2):hover {
-        -webkit-transform: translateY(-30px);
-        transform: translateY(-30px); }
+        -webkit-transform: translateY(-1.875em);
+        transform: translateY(-1.875em); }
 
 section.content {
   padding: 2.000em;
@@ -61,7 +62,7 @@ section.content {
   right: 0;
   bottom: 0;
   min-width: 42.000em;
-  background-color: white; }
+  background-color: #FFF; }
   section.content h1 {
     margin-top: 0; }
   section.content section.pane {
@@ -87,22 +88,22 @@ table td, table th {
   border: solid 1px #CCC; }
   table td hr.separator, table th hr.separator {
     border: 0;
-    border-bottom: dashed 1px #CCC;
+    border-bottom: dashed 1px #7a7a7a;
     margin: 0.750em 0; }
 
 table.attributes tr td:last-of-type {
-  background-color: #F5F2F0; }
+  background-color: #f5f2f0; }
 
 table.icons td {
   padding: 0.500em; }
 
 table.icons tr td:first-of-type {
-  background-color: #F5F2F0;
+  background-color: #f5f2f0;
   padding-top: 1.500em; }
 
 .icon-example {
   width: 3.000em;
-  background-color: #CCC;
+  background-color: #7a7a7a;
   height: 3.000em;
   font-size: 12pt;
   cursor: pointer; }
@@ -123,8 +124,8 @@ table.icons tr td:first-of-type {
       height: 1.500em;
       width: 1.500em;
       transition: all 0.15s linear;
-      border-right: .25em solid white;
-      border-bottom: .25em solid white;
+      border-right: 0.25em solid #FFF;
+      border-bottom: 0.25em solid #FFF;
       position: relative;
       box-sizing: border-box;
       top: 25%;
@@ -134,7 +135,7 @@ table.icons tr td:first-of-type {
     padding: 0.500em;
     height: 2.000em;
     width: 2.000em;
-    background-color: #CCC;
+    background-color: #7a7a7a;
     -webkit-transform: rotate(0);
     transform: rotate(0);
     transition: all 0.15s linear;
@@ -157,44 +158,43 @@ table.icons tr td:first-of-type {
       float: left;
       box-sizing: border-box; }
       .icon-example .plus div:nth-child(1) {
-        border-bottom: solid 0.125em white;
-        border-right: solid 0.125em white; }
+        border-bottom: solid 0.125em #FFF;
+        border-right: solid 0.125em #FFF; }
       .icon-example .plus div:nth-child(2) {
-        border-bottom: solid 0.125em white;
-        border-left: solid 0.125em white; }
+        border-bottom: solid 0.125em #FFF;
+        border-left: solid 0.125em #FFF; }
       .icon-example .plus div:nth-child(3) {
-        border-top: solid 0.125em white;
-        border-right: solid 0.125em white; }
+        border-top: solid 0.125em #FFF;
+        border-right: solid 0.125em #FFF; }
       .icon-example .plus div:nth-child(4) {
-        border-top: solid 0.125em white;
-        border-left: solid 0.125em white; }
+        border-top: solid 0.125em #FFF;
+        border-left: solid 0.125em #FFF; }
 
 .methods-example {
-  height: 3em;
-  margin: 1.25em 0;
-  background-color: red;
-  height: 5em; }
+  height: 3.000em;
+  margin: 1.250em 0;
+  height: 5.000em; }
   .methods-example > button {
     width: 25%;
     margin: 0;
     float: left;
-    border: solid 2px #fff;
-    height: 3em;
+    border: solid 2px #FFF;
+    height: 3.000em;
     outline: none;
     cursor: pointer; }
     .methods-example > button:hover {
       background-color: #f5f2f0; }
 
 #console {
-  width: calc(100% - .5em);
-  margin: 0.25em;
-  height: 12em;
-  border: solid 1px #CCC;
+  width: calc(100% - 0.500em);
+  margin: 0.250em;
+  height: 12.000em;
+  border: solid 0.063em #CCC;
   font-family: Consolas 'Courier New' monospace;
-  background-color: #383838;
-  color: white;
+  background-color: #3E3D32;
+  color: #FFF;
   box-sizing: border-box;
-  padding: 0.5em;
+  padding: 0.500em;
   overflow-y: auto; }
   #console #carot {
     font-size: 12pt;
@@ -232,7 +232,7 @@ aside.spine {
         display: block;
         padding-left: 2.000em; }
       aside.spine ol li.static {
-        color: #000; }
+        color: #3E3D32; }
       aside.spine ol li.root div {
         border-bottom: solid 0.063em #E06767; }
       aside.spine ol li.sub {
@@ -254,7 +254,7 @@ pre, code {
   font-size: 10pt; }
 
 pre[class*="language-shell"] {
-  background-color: #383838; }
+  background-color: #3E3D32; }
   pre[class*="language-shell"] code {
     text-shadow: none;
     color: white; }
@@ -292,7 +292,7 @@ section.content-strings toggle .toggle-header:hover span {
   color: #3E3D32; }
 
 section.content-strings toggle .toggle-body.border {
-  border: solid 1px #CCC; }
+  border: solid 1px #7a7a7a; }
 
 section.content-strings toggle .toggle-header .icon.chevron div {
   border-color: #3E3D32; }
@@ -308,7 +308,7 @@ section.model-binding toggle .toggle-header {
   height: 48px; }
 
 section.model-binding toggle .toggle-body.border {
-  border: solid 1px #CCC; }
+  border: solid 1px #7a7a7a; }
 
 section.model-binding toggle .toggle-header .icon {
   float: right; }
@@ -344,7 +344,7 @@ tabs .header {
     cursor: pointer;
     padding: 0.5em 1em; }
     tabs .header li.active {
-      background-color: #F5F2F0;
+      background-color: #f5f2f0;
       border-top: solid 0.063em #CCC;
       border-left: solid 0.063em #CCC;
       border-right: solid 0.063em #CCC;
@@ -355,5 +355,5 @@ tabs .header {
 
 tabs .body {
   clear: both;
-  background-color: #F5F2F0;
+  background-color: #f5f2f0;
   border: solid 0.063em #CCC; }

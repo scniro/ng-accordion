@@ -15,15 +15,15 @@
 
 			&.active {
 				background-color: $gray-lighter;
-				border-top: solid 0.063em $gray-darker;
-				border-left: solid 0.063em $gray-darker;
-				border-right: solid 0.063em $gray-darker;
+				border-top: solid 0.063em $gray;
+				border-left: solid 0.063em $gray;
+				border-right: solid 0.063em $gray;
 				border-bottom: solid 0.063em transparent;
 			}
 
 			&:not(.active):hover {
-				background-color: $gray-darker;
-				border-bottom: solid 0.063em $gray-darker;
+				background-color: $gray;
+				border-bottom: solid 0.063em $gray;
 			}
 		}
 	}
@@ -31,6 +31,6 @@
 	.body {
 		clear: both;
 		background-color: $gray-lighter;
-		border: solid 0.063em $gray-darker;
+		border: solid 0.063em $gray;
 	}
 }
