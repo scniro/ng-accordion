@@ -5,7 +5,7 @@ toggle {
   margin-bottom: 0.250em;
   cursor: pointer; }
   toggle.disabled .toggle-header {
-    background-color: #E37676 !important; }
+    background-color: #E37676; }
   toggle .toggle-header {
     height: 3em;
     background-color: #CCC; }
