@@ -187,21 +187,23 @@ app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($s
 
 	$timeout(function () {
 
+		console = angular.element(document.getElementById('console'));
+
+		consolebody = angular.element(document.getElementById('console-entries'));
+
+		cursor = angular.element(document.getElementById('cursor'));
+
 		function toggleCursor() {
 
-			console = angular.element(document.getElementById('console'));
-
-			consolebody = angular.element(document.getElementById('console-entries'));
-
-			cursor = angular.element(document.getElementById('cursor'));
-
-			$timeout(function () {
-				cursor.css('visibility', 'visible');
-			}, 500);
 			$timeout(function () {
 				cursor.css('visibility', 'hidden');
+			}, 500);
+			$timeout(function () {
+				cursor.css('visibility', 'visible');
 			}, 1000);
 		}
+
+		cursor.css('visibility', 'visible');
 
 		toggleCursor();
 
