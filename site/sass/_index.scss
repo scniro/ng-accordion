@@ -133,7 +133,7 @@ table {
 
 .icon-example {
 	width: 3.000em;
-	background-color: $gray-darker;
+	background-color: $gray;
 	height: 3.000em;
 	font-size: 12pt;
 	cursor: pointer;
@@ -169,7 +169,7 @@ table {
 		padding: 0.500em;
 		height: 2.000em;
 		width: 2.000em;
-		background-color: $gray-darker;
+		background-color: $gray;
 		transform: rotate(0);
 		transition: all .15s linear;
 		border-radius: 50%;
