@@ -205,6 +205,10 @@ app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($s
 
 		cursor.css('visibility', 'visible');
 
+		$timeout(function () {
+			cursor.css('visibility', 'hidden');
+		}, 400);
+
 		toggleCursor();
 
 		$interval(toggleCursor, 1000);
