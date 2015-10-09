@@ -273,7 +273,7 @@ section.configuration toggle {
 
 section.configuration toggle .toggle-header {
   height: 36px;
-  background-color: #EAC991; }
+  background-color: #B4A694; }
 
 section.configuration toggle .toggle-body.border {
   border: solid 1px #CCC; }
@@ -304,7 +304,7 @@ section.model-binding toggle {
   margin-bottom: 4px; }
 
 section.model-binding toggle .toggle-header {
-  background-color: #EAC991;
+  background-color: #B4A694;
   height: 48px; }
 
 section.model-binding toggle .toggle-body.border {
@@ -317,7 +317,7 @@ section.disabled toggle .toggle-header {
   background-color: #8D8E9C; }
 
 section.disabled toggle .toggle-body.border {
-  border: solid 1px #8D8E9C; }
+  border: solid 1px #CCC; }
 
 section.events toggle, section.callbacks toggle {
   margin-bottom: 2px; }
@@ -327,10 +327,10 @@ section.events toggle .toggle-header, section.callbacks toggle .toggle-header {
   background-color: #7a7a7a; }
 
 section.events toggle .toggle-body.border, section.callbacks toggle .toggle-body.border {
-  border: solid 1px #7a7a7a; }
+  border: solid 1px #CCC; }
 
-section.events toggle .toggle-header .icon.plus div, section.callbacks toggle .toggle-header .icon.plus div {
-  border-color: #414141; }
+section.events toggle .toggle-header .icon.chevron div, section.callbacks toggle .toggle-header .icon.chevron div {
+  border-color: #FFF; }
 
 tabs .header {
   list-style: none;

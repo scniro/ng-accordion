@@ -19,11 +19,11 @@ section.configuration {
 
 	toggle .toggle-header {
 		height: 36px;
-		background-color: #EAC991;
+		background-color: $brown-accent;
 	}
 
 	toggle .toggle-body.border {
-		border: solid 1px #CCC;
+		border: solid 1px $gray;
 	}
 }
 
@@ -64,7 +64,7 @@ section.model-binding {
 	}
 
 	toggle .toggle-header {
-		background-color: #EAC991;
+		background-color: $brown-accent;
 		height: 48px;
 	}
 
@@ -79,11 +79,11 @@ section.model-binding {
 
 section.disabled {
 	toggle .toggle-header {
-		background-color: #8D8E9C;
+		background-color: $blue-accent-lighter;
 	}
 
 	toggle .toggle-body.border {
-		border: solid 1px #8D8E9C;
+		border: solid 1px $gray;
 	}
 }
 
@@ -95,14 +95,14 @@ section.events, section.callbacks {
 
 	toggle .toggle-header {
 		height: 36px;
-		background-color: #7a7a7a;
+		background-color: $gray-darker;
 	}
 
 	toggle .toggle-body.border {
-		border: solid 1px #7a7a7a;
+		border: solid 1px $gray;
 	}
 
-	toggle .toggle-header .icon.plus div {
-		border-color: #414141;
+	toggle .toggle-header .icon.chevron div {
+		border-color: $white;
 	}
 }
