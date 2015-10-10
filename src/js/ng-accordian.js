@@ -10,7 +10,6 @@
 
 	angular.module('ngAccordian', [])
 	.factory('accordianStyleFactory', [function () {
-
 		function getStyle(code) {
 
 			switch (code) {
@@ -46,6 +45,7 @@
 	}])
 	.directive('accordian', ['accordianStyleFactory', '$timeout', function (accordianStyleFactory, $timeout) {
 		return {
+			restrict: 'E',
 			scope: {
 				closeOthers: '@',
 				toggleIcon: '@',
@@ -148,6 +148,7 @@
 	}])
 	.directive('toggle', ['$compile', 'accordianStyleFactory', '$timeout', function ($compile, accordianStyleFactory, $timeout) {
 		return {
+			restrict: 'E',
 			scope: {
 				content: '=',
 				contentUrl: '=',
@@ -234,18 +235,21 @@
 		}
 	}])
 	.directive('ngHtml', ['$compile', function ($compile) {
-		return function (scope, elem, attrs) {
-			if (attrs.ngHtml) {
-				elem.html(scope.$eval(attrs.ngHtml));
-				$compile(elem.contents())(scope);
-			}
-			scope.$watch(attrs.ngHtml, function (newValue, oldValue) {
-				if (newValue && newValue !== oldValue) {
-					elem.html(newValue);
+		return {
+			restrict: 'A',
+			link: function (scope, elem, attrs) {
+				if (attrs.ngHtml) {
+					elem.html(scope.$eval(attrs.ngHtml));
 					$compile(elem.contents())(scope);
 				}
-			});
-		};
+				scope.$watch(attrs.ngHtml, function (newValue, oldValue) {
+					if (newValue && newValue !== oldValue) {
+						elem.html(newValue);
+						$compile(elem.contents())(scope);
+					}
+				});
+			}
+		}	
 	}]);
 }
 
