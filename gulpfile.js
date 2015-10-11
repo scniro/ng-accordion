@@ -11,20 +11,39 @@ var rename = require('gulp-rename');
 
 var minifyCss = require('gulp-minify-css');
 
-var del = require('del');
-
-var util = require('gulp-util');
-
 gulp.task('sass', function () {
-	return gulp.src('src/sass/*.scss')
+	return gulp.src('ngAccordian/src/*.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		.pipe(gulp.dest('src/css'));
+		.pipe(gulp.dest('ngAccordian/src/'));
 });
 
+gulp.task('minify-css', function () {
+	return gulp.src('ngAccordian/src/*.css')
+		.pipe(minifyCss())
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(gulp.dest('ngAccordian/dist'));
+});
+
+gulp.task('minify-js', function () {
+	return gulp.src('ngAccordian/src/*.js')
+		.pipe(uglify())
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(gulp.dest('ngAccordian/dist'));
+});
+
+gulp.task('sass:watch', function () {
+	gulp.watch('ngAccordian/src/*.scss', ['sass']);
+});
+
+// -- demo site
 gulp.task('sass-site', function () {
 	return gulp.src('site/sass/*.scss')
 		.pipe(sass().on('error', sass.logError))
@@ -33,40 +52,6 @@ gulp.task('sass-site', function () {
 			cascade: false
 		}))
 		.pipe(gulp.dest('site/css'));
-});
-
-gulp.task('minify-css', ['clean-css-dist'], function () {
-	return gulp.src('src/css/*.css')
-		.pipe(minifyCss())
-		.pipe(rename({
-			suffix: '.min'
-		}))
-		.pipe(gulp.dest('dist'));
-});
-
-gulp.task('minify-js', ['clean-js-dist'], function () {
-	return gulp.src('src/js/*.js')
-		.pipe(uglify())
-		.pipe(rename({
-			suffix: '.min'
-		}))
-		.pipe(gulp.dest('dist'));
-});
-
-gulp.task('clean-css-dist', function (done) {
-	var file = 'dist/ng-accordian.min.css';
-	util.log(util.colors.green('cleaning'), ' -- ', util.colors.yellow(file));
-	del(file, done);
-});
-
-gulp.task('clean-js-dist', function (done) {
-	var file = 'dist/ng-accordian.min.js';
-	util.log(util.colors.green('cleaning'), ' -- ', util.colors.yellow(file));
-	del(file, done);
-});
-
-gulp.task('sass:watch', function () {
-	gulp.watch('src/sass/*.scss', ['sass']);
 });
 
 gulp.task('sass-site:watch', function () {
