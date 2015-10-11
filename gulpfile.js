@@ -12,35 +12,35 @@ var rename = require('gulp-rename');
 var minifyCss = require('gulp-minify-css');
 
 gulp.task('sass', function () {
-	return gulp.src('ngAccordian/src/*.scss')
+	return gulp.src('ng-accordian/src/*.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		.pipe(gulp.dest('ngAccordian/src/'));
+		.pipe(gulp.dest('ng-accordian/src/'));
 });
 
 gulp.task('minify-css', function () {
-	return gulp.src('ngAccordian/src/*.css')
+	return gulp.src('ng-accordian/src/*.css')
 		.pipe(minifyCss())
 		.pipe(rename({
 			suffix: '.min'
 		}))
-		.pipe(gulp.dest('ngAccordian/dist'));
+		.pipe(gulp.dest('ng-accordian/dist'));
 });
 
 gulp.task('minify-js', function () {
-	return gulp.src('ngAccordian/src/*.js')
+	return gulp.src('ng-accordian/src/*.js')
 		.pipe(uglify())
 		.pipe(rename({
 			suffix: '.min'
 		}))
-		.pipe(gulp.dest('ngAccordian/dist'));
+		.pipe(gulp.dest('ng-accordian/dist'));
 });
 
 gulp.task('sass:watch', function () {
-	gulp.watch('ngAccordian/src/*.scss', ['sass']);
+	gulp.watch('ng-accordian/src/*.scss', ['sass']);
 });
 
 // -- demo site
