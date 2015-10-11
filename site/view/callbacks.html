@@ -1,0 +1,24 @@
+﻿<h1>callbacks</h1>
+
+<section class="pane left callbacks">
+
+	<p>adding <code prism class="language-markup">&lt;accordian handle="myAccordian">&lt;/accordian></code> will make your element publically available to register the following callback listeners as <code prism class="language-javascript">myAccordian</code></p>
+
+	<ul>
+		<li><code prism class="language-javascript">myAccordian:expand</code></li>
+		<li><code prism class="language-javascript">myAccordian:expand:animation</code></li>
+		<li><code prism class="language-javascript">myAccordian:collapse</code></li>
+		<li><code prism class="language-javascript">myAccordian:collapse:animation</code></li>
+	</ul>
+
+	<accordian close-others="false"
+	           handle="myAccordian"
+	           timing="200"
+	           toggle-icon="chevron">
+		<toggle ng-repeat="c in content" content="c.value"></toggle>
+	</accordian>
+</section>
+
+<section class="pane right">
+	<tabs tabs="tabs" selected="0"></tabs>
+</section>

@@ -1,0 +1,19 @@
+﻿<div>
+	<pre><code prism class="language-javascript">$scope.content = [
+	{ 'value': '&lt;p>&lt;span>stuff&lt;/span>&lt;/p>' },
+	{ 'value': '&lt;p>&lt;span>stuff&lt;/span>&lt;/p>' },
+	{ 'value': '&lt;p>&lt;span>stuff&lt;/span>&lt;/p>' },
+];
+
+$scope.$on('myAccordian:expand', function (e, index) {
+	console.log('accordian:expand index: ' + index)
+});
+$scope.$on('myAccordian:expand:animation', function (e, index) {
+	console.log('accordian:expand:animation index: ' + index)
+});
+$scope.$on('myAccordian:collapse', function (e, index) {
+	console.log('accordian:collpse index: ' + index)
+});
+$scope.$on('myAccordian:collapse:animation', function (e, index) {
+	console.log('accordian:collpse:animation index: ' + index)
+});</code></pre></div>

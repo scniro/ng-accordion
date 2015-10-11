@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" class="ng-cloak">
+<head>
+	<base href="/" />
+	<title>ngAccordian</title>
+
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" href="ngAccordian/src/ng-accordian.css" />
+	<link rel="stylesheet" href="site/lib/prism.css" />
+	<link rel="stylesheet" href="site/css/style.css" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+</head>
+<body>
+	<style>
+		.ng-cloak {
+			display: none !important;
+		}
+	</style>
+	<div>
+		<header>
+			<h1>
+				<a ui-sref="home">ngAccordian</a>
+			</h1>
+
+			<a href="https://github.com/scniro/ng-accordian" target="_blank">
+				<img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" />
+			</a>
+		</header>
+
+		<aside class="spine">
+			<ol>
+				<li class="root">
+					<div></div><a ui-sref="home"><span>getting started</span></a>
+				</li>
+				<li class="static">
+					<span>examples</span>
+				</li>
+
+				<li class="sub">
+					<div></div><a ui-sref="basic"><span>basic</span></a>
+				</li>
+				<li class="sub">
+					<div></div><a ui-sref="configuration"><span>configuration</span></a>
+				</li>
+
+				<li class="sub">
+					<div></div><a ui-sref="contentStrings"><span>content strings</span></a>
+				</li>
+
+				<li class="sub">
+					<div></div><a ui-sref="modelBinding"><span>model binding</span></a>
+				</li>
+
+				<li class="sub">
+					<div></div><a ui-sref="disabled"><span>disabled</span></a>
+				</li>
+
+				<li class="root">
+					<div></div><a ui-sref="methods"><span>methods</span></a>
+				</li>
+
+				<li class="root">
+					<div></div><a ui-sref="callbacks"><span>callbacks</span></a>
+				</li>
+
+				<li class="root">
+					<div></div><a ui-sref="attributes"><span>attributes</span></a>
+				</li>
+
+				<li class="root">
+					<div></div><a ui-sref="icons"><span>icons</span></a>
+				</li>
+			</ol>
+		</aside>
+
+		<section ui-view class="content"></section>
+	</div>
+
+	<script src="site/lib/prism.js"></script>
+	<script src="site/js/app.js"></script>
+	<script src="ngAccordian/src/ng-accordian.js"></script>
+</body>
+</html>

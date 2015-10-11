@@ -2,12 +2,3 @@ bower_components
 node_modules
 .*
 *.sln
-css
-js
-lib
-index.html
-favicon.ico
-sass
-template
-view
-Web.config

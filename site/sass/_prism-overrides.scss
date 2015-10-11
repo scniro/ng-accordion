@@ -1,0 +1,17 @@
+﻿pre {
+	margin: 0 !important;
+}
+
+pre, code {
+	font-size: 10pt;
+}
+
+pre[class*="language-shell"] {
+	background-color: $black;
+
+	code {
+		text-shadow: none;
+		color: white;
+	}
+}
+
