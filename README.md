@@ -1,4 +1,4 @@
-﻿# ng-accordian
+﻿# ngAccordian
 A simple AngularJS accordian style directive
 
 # Getting Started
