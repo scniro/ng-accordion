@@ -10,52 +10,52 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 		.state('home', {
 			url: '/',
 			controller: 'gettingStartedCtrl',
-			templateUrl: 'site/view/getting-started.html'
+			templateUrl: 'demo-site/view/getting-started.html'
 		})
 		.state('basic', {
 			url: '/examples/basic',
 			controller: 'basicCtrl',
-			templateUrl: 'site/view/examples/basic.html'
+			templateUrl: 'demo-site/view/examples/basic.html'
 		})
 		.state('configuration', {
 			url: '/examples/configuration',
 			controller: 'configurationCtrl',
-			templateUrl: 'site/view/examples/configuration.html'
+			templateUrl: 'demo-site/view/examples/configuration.html'
 		})
 		.state('contentStrings', {
 			url: '/examples/content-strings',
 			controller: 'contentStringsCtrl',
-			templateUrl: 'site/view/examples/content-strings.html'
+			templateUrl: 'demo-site/view/examples/content-strings.html'
 		})
 		.state('modelBinding', {
 			url: '/examples/model-binding',
 			controller: 'modelBindingCtrl',
-			templateUrl: 'site/view/examples/model-binding.html'
+			templateUrl: 'demo-site/view/examples/model-binding.html'
 		})
 		.state('disabled', {
 			url: '/examples/disabled',
 			controller: 'disabledCtrl',
-			templateUrl: 'site/view/examples/disabled.html'
+			templateUrl: 'demo-site/view/examples/disabled.html'
 		})
 		.state('methods', {
 			url: '/methods',
 			controller: 'methodsCtrl',
-			templateUrl: 'site/view/methods.html'
+			templateUrl: 'demo-site/view/methods.html'
 		})
 		.state('callbacks', {
 			url: '/callbacks',
 			controller: 'callbacksCtrl',
-			templateUrl: 'site/view/callbacks.html'
+			templateUrl: 'demo-site/view/callbacks.html'
 		})
 		.state('attributes', {
 			url: '/attributes',
 			controller: 'attributesCtrl',
-			templateUrl: 'site/view/attributes.html'
+			templateUrl: 'demo-site/view/attributes.html'
 		})
 		.state('icons', {
 			url: '/icons',
 			controller: 'iconsCtrl',
-			templateUrl: 'site/view/icons.html'
+			templateUrl: 'demo-site/view/icons.html'
 		});
 }]);
 
@@ -66,33 +66,33 @@ app.controller('gettingStartedCtrl', ['$scope', function ($scope) {
 app.controller('basicCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'site/template/accordian/basic/markup.html' },
-		{ 'title': 'CSS', 'url': 'site/template/accordian/basic/css.html' }
+		{ 'title': 'Markup', 'url': 'demo-site/template/accordian/basic/markup.html' },
+		{ 'title': 'CSS', 'url': 'demo-site/template/accordian/basic/css.html' }
 	];
 }]);
 
 app.controller('configurationCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'site/template/accordian/configuration/markup.html' },
-		{ 'title': 'JavaScript', 'url': 'site/template/accordian/configuration/javascript.html' },
-		{ 'title': 'CSS', 'url': 'site/template/accordian/configuration/css.html' }
+		{ 'title': 'Markup', 'url': 'demo-site/template/accordian/configuration/markup.html' },
+		{ 'title': 'JavaScript', 'url': 'demo-site/template/accordian/configuration/javascript.html' },
+		{ 'title': 'CSS', 'url': 'demo-site/template/accordian/configuration/css.html' }
 	];
 
 	$scope.content = [
-		{ 'value': 'site/template/accordian/configuration/accordian-content.html' },
-		{ 'value': 'site/template/accordian/configuration/accordian-content.html' },
-		{ 'value': 'site/template/accordian/configuration/accordian-content.html' },
-		{ 'value': 'site/template/accordian/configuration/accordian-content.html' }
+		{ 'value': 'demo-site/template/accordian/configuration/accordian-content.html' },
+		{ 'value': 'demo-site/template/accordian/configuration/accordian-content.html' },
+		{ 'value': 'demo-site/template/accordian/configuration/accordian-content.html' },
+		{ 'value': 'demo-site/template/accordian/configuration/accordian-content.html' }
 	];
 }]);
 
 app.controller('contentStringsCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'site/template/accordian/content-strings/markup.html' },
-		{ 'title': 'JavaScript', 'url': 'site/template/accordian/content-strings/javascript.html' },
-		{ 'title': 'CSS', 'url': 'site/template/accordian/content-strings/css.html' }
+		{ 'title': 'Markup', 'url': 'demo-site/template/accordian/content-strings/markup.html' },
+		{ 'title': 'JavaScript', 'url': 'demo-site/template/accordian/content-strings/javascript.html' },
+		{ 'title': 'CSS', 'url': 'demo-site/template/accordian/content-strings/css.html' }
 	];
 
 	$scope.content = [
@@ -108,10 +108,10 @@ app.controller('contentStringsCtrl', ['$scope', function ($scope) {
 app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'site/template/accordian/model-binding/markup.html' },
-		{ 'title': 'Template', 'url': 'site/template/accordian/model-binding/model-binding-template-display.html' },
-		{ 'title': 'JavaScript', 'url': 'site/template/accordian/model-binding/javascript.html' },
-		{ 'title': 'CSS', 'url': 'site/template/accordian/model-binding/css.html' }
+		{ 'title': 'Markup', 'url': 'demo-site/template/accordian/model-binding/markup.html' },
+		{ 'title': 'Template', 'url': 'demo-site/template/accordian/model-binding/model-binding-template-display.html' },
+		{ 'title': 'JavaScript', 'url': 'demo-site/template/accordian/model-binding/javascript.html' },
+		{ 'title': 'CSS', 'url': 'demo-site/template/accordian/model-binding/css.html' }
 	];
 
 	$scope.content = [
@@ -124,16 +124,16 @@ app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 app.controller('disabledCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'site/template/accordian/disabled/markup.html' },
-		{ 'title': 'CSS', 'url': 'site/template/accordian/disabled/css.html' }
+		{ 'title': 'Markup', 'url': 'demo-site/template/accordian/disabled/markup.html' },
+		{ 'title': 'CSS', 'url': 'demo-site/template/accordian/disabled/css.html' }
 	];
 }]);
 
 app.controller('methodsCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-			{ 'title': 'Markup', 'url': 'site/template/accordian/methods/markup.html' },
-			{ 'title': 'JavaScript', 'url': 'site/template/accordian/methods/javascript.html' }
+			{ 'title': 'Markup', 'url': 'demo-site/template/accordian/methods/markup.html' },
+			{ 'title': 'JavaScript', 'url': 'demo-site/template/accordian/methods/javascript.html' }
 	];
 
 	$scope.content = [
@@ -161,9 +161,9 @@ app.controller('methodsCtrl', ['$scope', function ($scope) {
 
 app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($scope, $interval, $timeout) {
 	$scope.tabs = [
-			{ 'title': 'Console', 'url': 'site/template/accordian/callbacks/console.html' },
-			{ 'title': 'Markup', 'url': 'site/template/accordian/callbacks/markup.html' },
-			{ 'title': 'JavaScript', 'url': 'site/template/accordian/callbacks/javascript.html' }
+			{ 'title': 'Console', 'url': 'demo-site/template/accordian/callbacks/console.html' },
+			{ 'title': 'Markup', 'url': 'demo-site/template/accordian/callbacks/markup.html' },
+			{ 'title': 'JavaScript', 'url': 'demo-site/template/accordian/callbacks/javascript.html' }
 	];
 
 	$scope.content = [
@@ -234,7 +234,7 @@ app.controller('iconsCtrl', ['$scope', function ($scope) {
 app.directive('tabs', [function () {
 	return {
 		restrict: 'E',
-		templateUrl: 'site/template/tabs.html',
+		templateUrl: 'demo-site/template/tabs.html',
 		scope: {
 			tabs: '=',
 			selected: '@'
