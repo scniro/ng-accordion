@@ -18,7 +18,3 @@ angular.module('app', ['ngAccordian'])
 ```html
 <link rel="stylesheet" href="/ng-accordian.css" />
 ```
-
-# Core Team Members
-
- - [@scniro](https://twitter.com/scniro)
