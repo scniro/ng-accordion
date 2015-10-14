@@ -168,7 +168,6 @@ app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($s
 				executed = true;
 
 				var terminal = angular.element(document.getElementById('console'));
-
 				var terminalbody = angular.element(document.getElementById('console-entries'));
 
 				$scope.$on('myAccordian:expand', function (e, index) {
@@ -232,14 +231,16 @@ app.directive('tabs', [function () {
 		},
 		link: function (scope, elem, attrs) {
 
-			scope.currentTab = scope.tabs[scope.selected].url;
+			if (scope.tabs) {
+				scope.currentTab = scope.tabs[scope.selected].url;
 
-			scope.onClickTab = function (tab) {
-				scope.currentTab = tab.url;
-			}
+				scope.onClickTab = function(tab) {
+					scope.currentTab = tab.url;
+				}
 
-			scope.isActiveTab = function (tabUrl) {
-				return tabUrl === scope.currentTab;
+				scope.isActiveTab = function(tabUrl) {
+					return tabUrl === scope.currentTab;
+				}
 			}
 		}
 	}

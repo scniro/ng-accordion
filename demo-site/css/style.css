@@ -181,9 +181,12 @@ table.icons tr td:first-of-type {
     border: solid 2px #FFF;
     height: 3.000em;
     outline: none;
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: #8D8E9C;
+    color: #FFF; }
     .methods-example > button:hover {
-      background-color: #f5f2f0; }
+      background-color: #CCC;
+      color: #4F5063; }
 
 #console {
   width: calc(100% - 0.500em);
@@ -209,9 +212,6 @@ table.icons tr td:first-of-type {
       color: #A6E22E; }
     #console .console-entry .blue {
       color: #66D9EF; }
-  #console #cursor {
-    font-size: 12pt;
-    visibility: hidden; }
 
 aside.spine {
   width: 12.000em;
@@ -273,7 +273,7 @@ section.configuration toggle {
 
 section.configuration toggle .toggle-header {
   height: 36px;
-  background-color: #B4A694; }
+  background-color: #B4B194; }
 
 section.configuration toggle .toggle-body.border {
   border: solid 1px #CCC; }
@@ -295,7 +295,7 @@ section.content-strings toggle .toggle-body.border {
   border: solid 1px #CCC; }
 
 section.content-strings toggle .toggle-header .icon.chevron div {
-  border-color: #3E3D32; }
+  border-color: #B4B194; }
 
 section.content-strings toggle .toggle-header:hover .icon.chevron div {
   border-color: #FFF; }
@@ -304,7 +304,7 @@ section.model-binding toggle {
   margin-bottom: 4px; }
 
 section.model-binding toggle .toggle-header {
-  background-color: #B4A694;
+  background-color: #B4B194;
   height: 48px; }
 
 section.model-binding toggle .toggle-body.border {

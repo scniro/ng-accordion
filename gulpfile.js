@@ -45,17 +45,17 @@ gulp.task('sass:watch', function () {
 
 // -- demo site
 gulp.task('sass-site', function () {
-	return gulp.src('site/sass/*.scss')
+	return gulp.src('demo-site/sass/*.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		.pipe(gulp.dest('site/css'));
+		.pipe(gulp.dest('demo-site/css'));
 });
 
 gulp.task('sass-site:watch', function () {
-	gulp.watch('site/sass/*.scss', ['sass-site']);
+	gulp.watch('demo-site/sass/*.scss', ['sass-site']);
 });
 
 gulp.task('build', ['sass', 'minify-css', 'minify-js']);

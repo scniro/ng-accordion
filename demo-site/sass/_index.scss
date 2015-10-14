@@ -233,9 +233,12 @@ table {
 		height: 3.000em;
 		outline: none;
 		cursor: pointer;
+		background-color: $blue-accent-lighter;
+		color: $white;
 
 		&:hover {
-			background-color: $gray-lighter;
+			background-color: $gray;
+			color: $blue-accent;
 		}
 	}
 }
@@ -273,10 +276,5 @@ table {
 		.blue {
 			color: $blue;
 		}
-	}
-
-	#cursor {
-		font-size: 12pt;
-		visibility: hidden;
 	}
 }

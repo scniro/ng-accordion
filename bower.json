@@ -1,12 +1,12 @@
 {
   "name": "ng-accordian",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "homepage": "https://github.com/scniro/ng-accordian",
   "authors": [
     "Sal Niro @scniro"
   ],
   "description": "A simple AngularJS accordian style directive",
-  "main": "ngAccordian.js",
+  "main": "ng-accordian.js",
   "keywords": [
     "accordian",
     "angular",
@@ -24,6 +24,6 @@
     "**/.*",
 	"bower_components",
 	"node_modules",
-	"site"
+	"demo-site"
   ]
 }
