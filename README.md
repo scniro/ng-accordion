@@ -1,6 +1,8 @@
 ﻿# ngAccordian
 A simple AngularJS accordian style directive
 
+ - [demo site](http://ng-accordian.azurewebsites.net/)
+
 # Getting Started
 
 ```
@@ -18,6 +20,8 @@ angular.module('app', ['ngAccordian'])
 ```html
 <link rel="stylesheet" href="/ng-accordian.css" />
 ```
+
+
 
 # Core Team Members
 
