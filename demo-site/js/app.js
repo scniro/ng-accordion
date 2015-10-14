@@ -160,6 +160,41 @@ app.controller('methodsCtrl', ['$scope', function ($scope) {
 }]);
 
 app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($scope, $interval, $timeout) {
+
+	var registerCallbacks = (function () {
+		var executed = false;
+		return function () {
+			if (!executed) {
+				executed = true;
+
+				var terminal = angular.element(document.getElementById('console'));
+
+				var terminalbody = angular.element(document.getElementById('console-entries'));
+
+				$scope.$on('myAccordian:expand', function (e, index) {
+					terminalbody.append('<span class="console-entry"><span class="pink">myAccordian:expand</span><span> index: </span><span class="blue">' + index + '</span></span>');
+					terminal[0].scrollTop = terminal[0].scrollHeight;
+				});
+
+				$scope.$on('myAccordian:expand:animation', function (e, index) {
+					terminalbody.append('<span class="console-entry"><span class="pink">myAccordian:expand:animation</span><span> index: </span><span class="blue">' + index + '</span></span>');
+					terminal[0].scrollTop = terminal[0].scrollHeight;
+				});
+
+				$scope.$on('myAccordian:collapse', function (e, index) {
+					terminalbody.append('<span class="console-entry"><span class="pink">myAccordian:collpse</span><span> index: </span><span class="blue">' + index + '</span></span>');
+					terminal[0].scrollTop = terminal[0].scrollHeight;
+				});
+
+				$scope.$on('myAccordian:collapse:animation', function (e, index) {
+					terminalbody.append('<span class="console-entry"><span class="pink">myAccordian:collpse:animation</span><span> index: </span><span class="blue">' + index + '</span></span>');
+					terminal[0].scrollTop = terminal[0].scrollHeight;
+				});
+
+			}
+		};
+	})();
+
 	$scope.tabs = [
 			{ 'title': 'Console', 'url': 'demo-site/template/accordian/callbacks/console.html' },
 			{ 'title': 'Markup', 'url': 'demo-site/template/accordian/callbacks/markup.html' },
@@ -172,56 +207,12 @@ app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($s
 		{ 'value': '<p><span>stuff</span></p>' }
 	];
 
-	var console, consolebody, cursor;
 
-	$timeout(function () {
-
-		console = angular.element(document.getElementById('console'));
-
-		consolebody = angular.element(document.getElementById('console-entries'));
-
-		cursor = angular.element(document.getElementById('cursor'));
-
-		function toggleCursor() {
-
-			$timeout(function () {
-				cursor.css('visibility', 'hidden');
-			}, 500);
-			$timeout(function () {
-				cursor.css('visibility', 'visible');
-			}, 1000);
-		}
-
-		cursor.css('visibility', 'visible');
-
-		$timeout(function () {
-			cursor.css('visibility', 'hidden');
-		}, 400);
-
-		toggleCursor();
-
-		$interval(toggleCursor, 1000);
-	}, 100); // callback mayhaps?
-
-
-	$scope.$on('myAccordian:expand', function (e, index) {
-		consolebody.append('<span class="console-entry"><span class="pink">myAccordian:expand</span><span> index: </span><span class="blue">' + index + '</span></span>');
-		console[0].scrollTop = console[0].scrollHeight;
-	});
-
-	$scope.$on('myAccordian:expand:animation', function (e, index) {
-		consolebody.append('<span class="console-entry"><span class="pink">myAccordian:expand:animation</span><span> index: </span><span class="blue">' + index + '</span></span>');
-		console[0].scrollTop = console[0].scrollHeight;
-	});
-
-	$scope.$on('myAccordian:collapse', function (e, index) {
-		consolebody.append('<span class="console-entry"><span class="pink">myAccordian:collpse</span><span> index: </span><span class="blue">' + index + '</span></span>');
-		console[0].scrollTop = console[0].scrollHeight;
-	});
-
-	$scope.$on('myAccordian:collapse:animation', function (e, index) {
-		consolebody.append('<span class="console-entry"><span class="pink">myAccordian:collpse:animation</span><span> index: </span><span class="blue">' + index + '</span></span>');
-		console[0].scrollTop = console[0].scrollHeight;
+	$scope.$watch(function() {
+		return angular.element(document.getElementById('console')).html();
+	}, function (n, o) {
+		if(n && n!== o)
+			registerCallbacks();
 	});
 }]);
 

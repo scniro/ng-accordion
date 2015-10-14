@@ -2,6 +2,7 @@ bin
 bower_components
 node_modules
 obj
+Properties
 *.config
 *.cs
 *.csproj
