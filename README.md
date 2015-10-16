@@ -1,7 +1,7 @@
-﻿# ngAccordian
+# ngAccordian
 A simple AngularJS accordian style directive
 
- - [demo site](http://ng-accordian.azurewebsites.net/)
+- [demo site](http://ng-accordian.azurewebsites.net/)
 
 # Getting Started
 
@@ -9,20 +9,14 @@ A simple AngularJS accordian style directive
 bower install ng-accordian
 ```
 
- * Include the `ngAccordian` module as a dependency in your AngularJS application 
+* Include the `ngAccordian` module as a dependency in your AngularJS application
 
 ```javascript
 angular.module('app', ['ngAccordian'])
 ```
 
- * Include the `ng-accordian.css` style sheet
+* Include the `ng-accordian.css` style sheet
 
 ```html
 <link rel="stylesheet" href="/ng-accordian.css" />
 ```
-
-
-
-# Core Team Members
-
- - [@scniro](https://twitter.com/scniro)
