@@ -1,7 +1,7 @@
 # ngAccordian
 A simple AngularJS accordian style directive
 
-- [demo site](http://ng-accordian.azurewebsites.net/)
+- [demo/api](http://ng-accordian.azurewebsites.net/)
 
 # Getting Started
 
