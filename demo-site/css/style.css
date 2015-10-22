@@ -259,7 +259,7 @@ pre[class*="language-shell"] {
     text-shadow: none;
     color: white; }
 
-/* -- ACCORDIAN OVERRIDES -- */
+/* -- accordion OVERRIDES -- */
 toggle p {
   padding: 0 0.5em;
   font-size: 10pt;

@@ -1,17 +1,17 @@
 {
-  "name": "ng-accordian",
+  "name": "ng-accordion",
   "version": "1.0.0",
-  "homepage": "https://github.com/scniro/ng-accordian",
+  "homepage": "https://github.com/scniro/ng-accordion",
   "authors": [
     "Sal Niro @scniro"
   ],
-  "description": "A simple AngularJS accordian style directive",
-  "main": "ng-accordian.js",
+  "description": "A simple AngularJS accordion style directive",
+  "main": "ng-accordion.js",
   "keywords": [
-    "accordian",
+    "accordion",
     "angular",
     "angularjs",
-	"ngaccordian",
+	"ngaccordion",
 	"angularui",
 	"angularstrap",
 	"bootstrap"

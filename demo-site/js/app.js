@@ -1,4 +1,4 @@
-﻿var app = angular.module('app', ['ngAccordian', 'ui.router']);
+﻿var app = angular.module('app', ['ngAccordion', 'ui.router']);
 
 app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -66,33 +66,33 @@ app.controller('gettingStartedCtrl', ['$scope', function ($scope) {
 app.controller('basicCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'demo-site/template/accordian/basic/markup.html' },
-		{ 'title': 'CSS', 'url': 'demo-site/template/accordian/basic/css.html' }
+		{ 'title': 'Markup', 'url': 'demo-site/template/accordion/basic/markup.html' },
+		{ 'title': 'CSS', 'url': 'demo-site/template/accordion/basic/css.html' }
 	];
 }]);
 
 app.controller('configurationCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'demo-site/template/accordian/configuration/markup.html' },
-		{ 'title': 'JavaScript', 'url': 'demo-site/template/accordian/configuration/javascript.html' },
-		{ 'title': 'CSS', 'url': 'demo-site/template/accordian/configuration/css.html' }
+		{ 'title': 'Markup', 'url': 'demo-site/template/accordion/configuration/markup.html' },
+		{ 'title': 'JavaScript', 'url': 'demo-site/template/accordion/configuration/javascript.html' },
+		{ 'title': 'CSS', 'url': 'demo-site/template/accordion/configuration/css.html' }
 	];
 
 	$scope.content = [
-		{ 'value': 'demo-site/template/accordian/configuration/accordian-content.html' },
-		{ 'value': 'demo-site/template/accordian/configuration/accordian-content.html' },
-		{ 'value': 'demo-site/template/accordian/configuration/accordian-content.html' },
-		{ 'value': 'demo-site/template/accordian/configuration/accordian-content.html' }
+		{ 'value': 'demo-site/template/accordion/configuration/accordion-content.html' },
+		{ 'value': 'demo-site/template/accordion/configuration/accordion-content.html' },
+		{ 'value': 'demo-site/template/accordion/configuration/accordion-content.html' },
+		{ 'value': 'demo-site/template/accordion/configuration/accordion-content.html' }
 	];
 }]);
 
 app.controller('contentStringsCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'demo-site/template/accordian/content-strings/markup.html' },
-		{ 'title': 'JavaScript', 'url': 'demo-site/template/accordian/content-strings/javascript.html' },
-		{ 'title': 'CSS', 'url': 'demo-site/template/accordian/content-strings/css.html' }
+		{ 'title': 'Markup', 'url': 'demo-site/template/accordion/content-strings/markup.html' },
+		{ 'title': 'JavaScript', 'url': 'demo-site/template/accordion/content-strings/javascript.html' },
+		{ 'title': 'CSS', 'url': 'demo-site/template/accordion/content-strings/css.html' }
 	];
 
 	$scope.content = [
@@ -108,10 +108,10 @@ app.controller('contentStringsCtrl', ['$scope', function ($scope) {
 app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'demo-site/template/accordian/model-binding/markup.html' },
-		{ 'title': 'Template', 'url': 'demo-site/template/accordian/model-binding/model-binding-template-display.html' },
-		{ 'title': 'JavaScript', 'url': 'demo-site/template/accordian/model-binding/javascript.html' },
-		{ 'title': 'CSS', 'url': 'demo-site/template/accordian/model-binding/css.html' }
+		{ 'title': 'Markup', 'url': 'demo-site/template/accordion/model-binding/markup.html' },
+		{ 'title': 'Template', 'url': 'demo-site/template/accordion/model-binding/model-binding-template-display.html' },
+		{ 'title': 'JavaScript', 'url': 'demo-site/template/accordion/model-binding/javascript.html' },
+		{ 'title': 'CSS', 'url': 'demo-site/template/accordion/model-binding/css.html' }
 	];
 
 	$scope.content = [
@@ -124,16 +124,16 @@ app.controller('modelBindingCtrl', ['$scope', function ($scope) {
 app.controller('disabledCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-		{ 'title': 'Markup', 'url': 'demo-site/template/accordian/disabled/markup.html' },
-		{ 'title': 'CSS', 'url': 'demo-site/template/accordian/disabled/css.html' }
+		{ 'title': 'Markup', 'url': 'demo-site/template/accordion/disabled/markup.html' },
+		{ 'title': 'CSS', 'url': 'demo-site/template/accordion/disabled/css.html' }
 	];
 }]);
 
 app.controller('methodsCtrl', ['$scope', function ($scope) {
 
 	$scope.tabs = [
-			{ 'title': 'Markup', 'url': 'demo-site/template/accordian/methods/markup.html' },
-			{ 'title': 'JavaScript', 'url': 'demo-site/template/accordian/methods/javascript.html' }
+			{ 'title': 'Markup', 'url': 'demo-site/template/accordion/methods/markup.html' },
+			{ 'title': 'JavaScript', 'url': 'demo-site/template/accordion/methods/javascript.html' }
 	];
 
 	$scope.content = [
@@ -142,20 +142,20 @@ app.controller('methodsCtrl', ['$scope', function ($scope) {
 		{ 'value': '<p><span>stuff</span></p>' }
 	];
 
-	$scope.$on('accordian:expand', function (e, index) {
-		console.log('accordian:expand ' + index);
+	$scope.$on('accordion:expand', function (e, index) {
+		console.log('accordion:expand ' + index);
 	});
 
-	$scope.$on('accordian:expand:animation', function (e, index) {
-		console.log('accordian:expand:animation ' + index);
+	$scope.$on('accordion:expand:animation', function (e, index) {
+		console.log('accordion:expand:animation ' + index);
 	});
 
-	$scope.$on('accordian:collapse', function (e, index) {
-		console.log('accordian:collapse ' + index);
+	$scope.$on('accordion:collapse', function (e, index) {
+		console.log('accordion:collapse ' + index);
 	});
 
-	$scope.$on('accordian:collapse:animation', function (e, index) {
-		console.log('accordian:collapse:collapse ' + index);
+	$scope.$on('accordion:collapse:animation', function (e, index) {
+		console.log('accordion:collapse:collapse ' + index);
 	});
 }]);
 
@@ -170,23 +170,23 @@ app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($s
 				var terminal = angular.element(document.getElementById('console'));
 				var terminalbody = angular.element(document.getElementById('console-entries'));
 
-				$scope.$on('myAccordian:expand', function (e, index) {
-					terminalbody.append('<span class="console-entry"><span class="pink">myAccordian:expand</span><span> index: </span><span class="blue">' + index + '</span></span>');
+				$scope.$on('myaccordion:expand', function (e, index) {
+					terminalbody.append('<span class="console-entry"><span class="pink">myaccordion:expand</span><span> index: </span><span class="blue">' + index + '</span></span>');
 					terminal[0].scrollTop = terminal[0].scrollHeight;
 				});
 
-				$scope.$on('myAccordian:expand:animation', function (e, index) {
-					terminalbody.append('<span class="console-entry"><span class="pink">myAccordian:expand:animation</span><span> index: </span><span class="blue">' + index + '</span></span>');
+				$scope.$on('myaccordion:expand:animation', function (e, index) {
+					terminalbody.append('<span class="console-entry"><span class="pink">myaccordion:expand:animation</span><span> index: </span><span class="blue">' + index + '</span></span>');
 					terminal[0].scrollTop = terminal[0].scrollHeight;
 				});
 
-				$scope.$on('myAccordian:collapse', function (e, index) {
-					terminalbody.append('<span class="console-entry"><span class="pink">myAccordian:collpse</span><span> index: </span><span class="blue">' + index + '</span></span>');
+				$scope.$on('myaccordion:collapse', function (e, index) {
+					terminalbody.append('<span class="console-entry"><span class="pink">myaccordion:collpse</span><span> index: </span><span class="blue">' + index + '</span></span>');
 					terminal[0].scrollTop = terminal[0].scrollHeight;
 				});
 
-				$scope.$on('myAccordian:collapse:animation', function (e, index) {
-					terminalbody.append('<span class="console-entry"><span class="pink">myAccordian:collpse:animation</span><span> index: </span><span class="blue">' + index + '</span></span>');
+				$scope.$on('myaccordion:collapse:animation', function (e, index) {
+					terminalbody.append('<span class="console-entry"><span class="pink">myaccordion:collpse:animation</span><span> index: </span><span class="blue">' + index + '</span></span>');
 					terminal[0].scrollTop = terminal[0].scrollHeight;
 				});
 
@@ -195,9 +195,9 @@ app.controller('callbacksCtrl', ['$scope', '$interval', '$timeout', function ($s
 	})();
 
 	$scope.tabs = [
-			{ 'title': 'Console', 'url': 'demo-site/template/accordian/callbacks/console.html' },
-			{ 'title': 'Markup', 'url': 'demo-site/template/accordian/callbacks/markup.html' },
-			{ 'title': 'JavaScript', 'url': 'demo-site/template/accordian/callbacks/javascript.html' }
+			{ 'title': 'Console', 'url': 'demo-site/template/accordion/callbacks/console.html' },
+			{ 'title': 'Markup', 'url': 'demo-site/template/accordion/callbacks/markup.html' },
+			{ 'title': 'JavaScript', 'url': 'demo-site/template/accordion/callbacks/javascript.html' }
 	];
 
 	$scope.content = [

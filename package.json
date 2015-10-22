@@ -1,7 +1,7 @@
 {
-	"name": "ngAccordian",
+	"name": "ngAccordion",
 	"version": "1.0.0",
-	"description": "A simple AngularJS accordian style directive",
+	"description": "A simple AngularJS accordion style directive",
 	"dependencies": {
 		"angular": "^1.2"
 	},
@@ -16,12 +16,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/scniro/ng-accordian.git"
+		"url": "git+https://github.com/scniro/ng-accordion.git"
 	},
 	"author": "Sal Niro @scniro",
 	"license": "GPL-2.0",
 	"bugs": {
-		"url": "https://github.com/scniro/ng-accordian/issues"
+		"url": "https://github.com/scniro/ng-accordion/issues"
 	},
-	"homepage": "https://github.com/scniro/ng-accordian#readme"
+	"homepage": "https://github.com/scniro/ng-accordion#readme"
 }

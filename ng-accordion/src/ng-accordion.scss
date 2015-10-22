@@ -1,0 +1,127 @@
+﻿$icon-color: #FFF;
+$toggle-header-color: #CCC;
+$toggle-header-text-color: #FFF;
+$toggle-header-height: 3.000em;
+
+
+accordion {
+	width: 100%;
+}
+
+toggle {
+	margin-bottom: 0.250em;
+	cursor: pointer;
+
+	&.disabled {
+
+		.toggle-header {
+			background-color: #E37676 !important;
+
+			&:hover {
+				cursor: not-allowed;
+			}
+		}
+	}
+
+	.toggle-header {
+
+		> span {
+			float: left;
+			line-height: 200%;
+			color: $toggle-header-text-color;
+		}
+
+		height: $toggle-header-height;
+		background-color: $toggle-header-color;
+	}
+}
+
+.icon {
+	transform: rotate(0deg);
+	float: left;
+
+	div {
+		box-sizing: border-box;
+	}
+
+	&.chevron {
+		height: 100%;
+
+		&.open {
+			transform: rotate(90deg);
+		}
+
+		> div {
+			border-right-style: solid;
+			border-right-color: $icon-color;
+			border-bottom-style: solid;
+			border-bottom-color: $icon-color;
+			transform: rotate(-45deg);
+			position: relative;
+			height: 50%;
+			width: 50%;
+			left: 12.5%;
+			top: 25%;
+		}
+	}
+
+	&.plus {
+		height: 66.6667%;
+
+		&.open {
+			transform: rotate(90deg);
+
+			div {
+				&:nth-child(1) {
+					border-bottom-width: 0 !important;
+				}
+
+				&:nth-child(2) {
+					border-bottom-width: 0 !important;
+				}
+
+				&:nth-child(3) {
+					border-top-width: 0 !important;
+				}
+
+				&:nth-child(4) {
+					border-top-width: 0 !important;
+				}
+			}
+		}
+
+		div {
+			width: 50%;
+			height: 50%;
+			float: left;
+
+			&:nth-child(1) {
+				border-right-style: solid;
+				border-right-color: $icon-color;
+				border-bottom-style: solid;
+				border-bottom-color: $icon-color;
+			}
+
+			&:nth-child(2) {
+				border-left-style: solid;
+				border-left-color: $icon-color;
+				border-bottom-style: solid;
+				border-bottom-color: $icon-color;
+			}
+
+			&:nth-child(3) {
+				border-right-style: solid;
+				border-right-color: $icon-color;
+				border-top-style: solid;
+				border-top-color: $icon-color;
+			}
+
+			&:nth-child(4) {
+				border-top-style: solid;
+				border-top-color: $icon-color;
+				border-left-style: solid;
+				border-left-color: $icon-color;
+			}
+		}
+	}
+}
