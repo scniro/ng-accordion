@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": "https://github.com/scniro/ng-accordion",
   "authors": [
-    "Sal Niro @scniro"
+    "Sal Niro salvatore.niro@outlook.com"
   ],
   "description": "A simple AngularJS accordion style directive",
   "main": "ng-accordion.js",
