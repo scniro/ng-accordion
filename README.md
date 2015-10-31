@@ -1,4 +1,4 @@
-# ngaccordion
+# ngAccordion
 A simple AngularJS accordion style directive
 
 - [demo/api](http://ng-accordion.azurewebsites.net/)
