@@ -1,24 +1,19 @@
 ﻿<h1>callbacks</h1>
-
 <section class="pane left callbacks">
-
-	<p>adding <code prism class="language-markup">&lt;accordion handle="myaccordion">&lt;/accordion></code> will make your element publically available to register the following callback listeners as <code prism class="language-javascript">myaccordion</code></p>
-
-	<ul>
-		<li><code prism class="language-javascript">myaccordion:expand</code></li>
-		<li><code prism class="language-javascript">myaccordion:expand:animation</code></li>
-		<li><code prism class="language-javascript">myaccordion:collapse</code></li>
-		<li><code prism class="language-javascript">myaccordion:collapse:animation</code></li>
-	</ul>
-
-	<accordion close-others="false"
-	           handle="myaccordion"
-	           timing="200"
-	           toggle-icon="chevron">
-		<toggle ng-repeat="c in content" content="c.value"></toggle>
-	</accordion>
+    <p>adding <code prism class="language-markup">&lt;accordion handle="myaccordion">&lt;/accordion></code> will make your element publically available to register the following callback listeners as <code prism class="language-javascript">myaccordion</code></p>
+    <ul>
+        <li><code prism class="language-javascript">myaccordion:expand</code></li>
+        <li><code prism class="language-javascript">myaccordion:expand:animation</code></li>
+        <li><code prism class="language-javascript">myaccordion:collapse</code></li>
+        <li><code prism class="language-javascript">myaccordion:collapse:animation</code></li>
+    </ul>
+    <accordion close-others="false"
+               handle="myaccordion"
+               timing="200"
+               toggle-icon="chevron">
+        <toggle ng-repeat="c in content" content="c.value"></toggle>
+    </accordion>
 </section>
-
 <section class="pane right">
-	<tabs tabs="tabs" selected="0"></tabs>
+    <tabs tabs="tabs" selected="0"></tabs>
 </section>

@@ -1,27 +1,27 @@
 {
-	"name": "ngAccordion",
-	"version": "1.0.0",
-	"description": "A simple AngularJS accordion style directive",
-	"dependencies": {
-		"angular": "^1.2"
-	},
-	"devDependencies": {
-		"gulp": "^3.9.0",
-		"gulp-autoprefixer": "^2.3.1",
-		"gulp-minify-css": "^1.2.1",
-		"gulp-rename": "^1.2.2",
-		"gulp-sass": "^2.0.4",
-		"gulp-uglify": "^1.3.0",
-		"node-sass": "^3.2.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/scniro/ng-accordion.git"
-	},
-	"author": "Sal Niro <salvatore.niro@outlook.com>",
-	"license": "GPL-2.0",
-	"bugs": {
-		"url": "https://github.com/scniro/ng-accordion/issues"
-	},
-	"homepage": "https://github.com/scniro/ng-accordion#readme"
+    "name": "ngAccordion",
+    "version": "1.0.0",
+    "description": "A simple AngularJS accordion style directive",
+    "dependencies": {
+        "angular": "^1.2"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.0",
+        "gulp-autoprefixer": "^2.3.1",
+        "gulp-minify-css": "^1.2.1",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^2.0.4",
+        "gulp-uglify": "^1.3.0",
+        "node-sass": "^3.2.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/scniro/ng-accordion.git"
+    },
+    "author": "Sal Niro <salvatore.niro@outlook.com>",
+    "license": "GPL-2.0",
+    "bugs": {
+        "url": "https://github.com/scniro/ng-accordion/issues"
+    },
+    "homepage": "https://github.com/scniro/ng-accordion#readme"
 }

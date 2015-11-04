@@ -1,13 +1,11 @@
 ﻿<h1>content strings</h1>
-
 <section class="pane left content-strings">
-	<accordion close-others="true"
-			   timing="200"
-			   toggle-icon="chevron">
-		<toggle ng-repeat="c in content" content="c.value" heading="c.heading"></toggle>
-	</accordion>
+    <accordion close-others="true"
+               timing="200"
+               toggle-icon="chevron">
+        <toggle ng-repeat="c in content" content="c.value" heading="c.heading"></toggle>
+    </accordion>
 </section>
-
 <section class="pane right">
-	<tabs tabs="tabs" selected="0"></tabs>
+    <tabs tabs="tabs" selected="0"></tabs>
 </section>

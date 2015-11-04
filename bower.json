@@ -1,34 +1,34 @@
 {
-  "name": "ng-accordion",
-  "version": "1.0.0",
-  "homepage": "https://github.com/scniro/ng-accordion",
-  "authors": [
-    "Sal Niro salvatore.niro@outlook.com"
-  ],
-  "description": "A simple AngularJS accordion style directive",
-  "main": "ng-accordion.js",
-  "keywords": [
-    "accordion",
-    "angular",
-    "angularjs",
-	"ngaccordion",
-	"angularui",
-	"angularstrap",
-	"bootstrap"
-  ],
-  "license": "GPL-2.0",
-  "dependencies": {
-    "angular": "^1.2"
-  },
-  "ignore": [
-    "**/.*",
-	"bower_components",
-	"node_modules",
-	"demo-site",
-	"index.html",
-	"README.md",
-	"package.json",
-	"bower.json",
-	"gulpfile.js"
-  ]
+    "name": "ng-accordion",
+    "version": "1.0.0",
+    "homepage": "https://github.com/scniro/ng-accordion",
+    "authors": [
+        "Sal Niro salvatore.niro@outlook.com"
+    ],
+    "description": "A simple AngularJS accordion style directive",
+    "main": "ng-accordion.js",
+    "keywords": [
+        "accordion",
+        "angular",
+        "angularjs",
+        "ngaccordion",
+        "angularui",
+        "angularstrap",
+        "bootstrap"
+    ],
+    "license": "GPL-2.0",
+    "dependencies": {
+        "angular": "^1.2"
+    },
+    "ignore": [
+        "**/.*",
+        "bower_components",
+        "node_modules",
+        "demo-site",
+        "index.html",
+        "README.md",
+        "package.json",
+        "bower.json",
+        "gulpfile.js"
+    ]
 }

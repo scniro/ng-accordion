@@ -1,19 +1,19 @@
 ﻿<div>
-	<pre><code prism class="language-javascript">$scope.content = [
-	{ 'value': '&lt;p>&lt;span>stuff&lt;/span>&lt;/p>' },
-	{ 'value': '&lt;p>&lt;span>stuff&lt;/span>&lt;/p>' },
-	{ 'value': '&lt;p>&lt;span>stuff&lt;/span>&lt;/p>' },
+    <pre><code prism class="language-javascript">$scope.content = [
+    { 'value': '&lt;p>&lt;span>stuff&lt;/span>&lt;/p>' },
+    { 'value': '&lt;p>&lt;span>stuff&lt;/span>&lt;/p>' },
+    { 'value': '&lt;p>&lt;span>stuff&lt;/span>&lt;/p>' },
 ];
 
 $scope.$on('myaccordion:expand', function (e, index) {
-	console.log('accordion:expand index: ' + index)
+    console.log('accordion:expand index: ' + index)
 });
 $scope.$on('myaccordion:expand:animation', function (e, index) {
-	console.log('accordion:expand:animation index: ' + index)
+    console.log('accordion:expand:animation index: ' + index)
 });
 $scope.$on('myaccordion:collapse', function (e, index) {
-	console.log('accordion:collpse index: ' + index)
+    console.log('accordion:collpse index: ' + index)
 });
 $scope.$on('myaccordion:collapse:animation', function (e, index) {
-	console.log('accordion:collpse:animation index: ' + index)
+    console.log('accordion:collpse:animation index: ' + index)
 });</code></pre></div>
