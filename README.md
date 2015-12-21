@@ -9,7 +9,7 @@ A simple AngularJS accordion style directive
 bower install ng-accordion
 ```
 
-* Include the `ngaccordion` module as a dependency in your AngularJS application
+* Include the `ngAccordion` module as a dependency in your AngularJS application
 
 ```javascript
 angular.module('app', ['ngaccordion'])
