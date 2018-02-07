@@ -12,7 +12,7 @@ bower install ng-accordion
 * Include the `ngAccordion` module as a dependency in your AngularJS application
 
 ```javascript
-angular.module('app', ['ngaccordion'])
+angular.module('app', ['ngAccordion'])
 ```
 
 * Include the `ng-accordion.css` style sheet

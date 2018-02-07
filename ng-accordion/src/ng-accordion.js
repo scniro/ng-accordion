@@ -11,7 +11,7 @@ NgAccordionException.prototype.constructor = NgAccordionException;
 angular.module('ngAccordion', [])
     .factory('accordionStyleFactory', [function () {
         function getStyle(code) {
-    
+
             switch (code) {
                 case 'chevron':
                     this.style =
@@ -35,10 +35,10 @@ angular.module('ngAccordion', [])
                 default:
                     this.style = '';
             }
-    
+
             return this.style;
         };
-    
+
         return {
             getStyle: getStyle
         }
@@ -54,22 +54,22 @@ angular.module('ngAccordion', [])
             link: function (scope, elem, attrs) {
                 if (attrs.handle) {
                     scope.$root[attrs.handle] = scope;
-    
+
                     function onCollapse(index) {
                         scope.$root[attrs.handle].$emit(attrs.handle + ':collapse', index);
-    
+
                         if (scope.timing)
                             $timeout(function () { scope.$root[attrs.handle].$emit(attrs.handle + ':collapse:animation', index); }, scope.timing);
                     }
-    
+
                     function onExpand(index) {
                         scope.$root[attrs.handle].$emit(attrs.handle + ':expand', index);
                         if (scope.timing)
                             $timeout(function () { scope.$root[attrs.handle].$emit(attrs.handle + ':expand:animation', index); }, scope.timing);
                     }
-    
+
                     scope.collapse = function (index) {
-    
+
                         if (index || index === 0) {
                             angular.element(angular.element(elem.children()[index]).children()[1]).scope().toggle = false;
                         } else {
@@ -77,16 +77,16 @@ angular.module('ngAccordion', [])
                                 angular.element(value).scope().toggle = false;
                             });
                         }
-    
+
                         return onCollapse(index);
                     }
-    
+
                     scope.disable = function (index) {
                         if (index) {
                             scope.collapse(index);
                             angular.element(elem.children()[index]).addClass('disabled');
                         }
-    
+
                         else {
                             scope.collapse();
                             angular.forEach(elem.children(), function (value) {
@@ -94,23 +94,23 @@ angular.module('ngAccordion', [])
                             });
                         }
                     }
-    
+
                     scope.enable = function (index) {
                         if (index) {
                             angular.element(elem.children()[index]).removeClass('disabled');
                         }
-    
+
                         else {
                             angular.forEach(elem.children(), function (value) {
                                 angular.element(value).removeClass('disabled');
                             });
                         }
                     }
-    
+
                     scope.expand = function (index) {
                         if (index || index === 0) {
                             var elements = angular.element(angular.element(elem.children()[index]).children());
-    
+
                             if (!angular.element(elements[0]).parent().hasClass('disabled'))
                                 angular.element(elements[1]).scope().toggle = true;
                         } else {
@@ -119,17 +119,17 @@ angular.module('ngAccordion', [])
                                     angular.element(value).scope().toggle = true;
                             });
                         }
-    
+
                         return onExpand(index);
                     }
-    
+
                     scope.handler = { 'onCollapse': onCollapse, 'onExpand': onExpand };
                 }
             },
             controller: ['$scope', function ($scope) {
-    
+
                 var index = -1;
-    
+
                 this.getConfiguration = function () {
                     return {
                         'closeOthers': JSON.parse($scope.closeOthers || false) || false,
@@ -139,7 +139,7 @@ angular.module('ngAccordion', [])
                         'index': index += 1
                     }
                 }
-    
+
                 this.getHandler = function () {
                     return $scope.handler;
                 }
@@ -157,26 +157,26 @@ angular.module('ngAccordion', [])
             },
             require: ['^accordion', '?^ngModel'],
             link: function (scope, elem, attrs, parent) {
-    
+
                 if (parent[1] && !attrs.modelName)
                     throw new NgAccordionException('ngAccordion: ng-model requires attribute model-name to be specified.');
-    
+
                 var config = parent[0].getConfiguration();
-    
+
                 var handle = parent[0].getHandler();
-    
+
                 if (parent[1]) {
                     $timeout(function () {
                         scope[attrs.modelName] = parent[1].$modelValue;
                     });
                 }
-    
+
                 elem.css('display', 'block');
-    
+
                 var content = scope.contentUrl ? '<div style="overflow: hidden" ng-include="contentUrl" class="toggle-body"></div>' : '<div style="overflow: hidden" ng-html="content" class="toggle-body"></div>';
-    
+
                 var heading = scope.heading ? '<span ng-style="{\'font-size\': (height * 0.50 | number: 0) + \'px\'}">' + scope.heading + '</span>' : '';
-    
+
                 var tpl =
                     '<div class="toggle-header" ng-click="toggleBody()" ng-class="{\'open\': toggle}">' +
                         config.toggleIcon + heading +
@@ -184,28 +184,28 @@ angular.module('ngAccordion', [])
                     '<div>' +
                         content +
                      '</div>';
-    
+
                 elem.append(angular.element(tpl));
-    
+
                 $compile(elem.contents())(scope);
-    
+
                 scope.height = elem[0].firstChild.clientHeight;
-    
+
                 scope.timing = config.timing ? config.timing : attrs.timing;
-    
+
                 scope.toggleBody = function () {
-    
+
                     if (!elem.hasClass('disabled')) {
                         var closing = scope.toggle ? false : true;
-    
+
                         if (config.closeOthers) {
                             angular.forEach(elem.parent().children().children(), function (value, i) {
                                 angular.element(value).scope().toggle = false;
                             });
                         }
-    
+
                         scope.toggle = closing;
-    
+
                         if (handle)
                             return scope.toggle ? handle.onExpand(config.index) : handle.onCollapse(config.index);
                     }
@@ -217,12 +217,12 @@ angular.module('ngAccordion', [])
         return {
             restrict: 'C',
             link: function (scope, elem, attrs) {
-    
+
                 scope.$watch('toggle', function (n, o) {
-    
+
                     var css = n ? { 'max-height': elem[0].scrollHeight + 'px', 'transition': 'max-height ' + scope.timing + 'ms' } : { 'max-height': 0, 'transition': 'max-height ' + scope.timing + 'ms' }
                     elem.css(css);
-    
+
                     if (n) {
                         elem.addClass('border').css('border-top', '0');
                     } else {
@@ -234,7 +234,7 @@ angular.module('ngAccordion', [])
             }
         }
     }])
-    .directive('ngHtml', x['$compile', function ($compile) {
+    .directive('ngHtml', ['$compile', function ($compile) {
         return {
             restrict: 'A',
             link: function (scope, elem, attrs) {
